@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CorePlay Games — Official Studio Website
 
-## Getting Started
+Official website for **CorePlay Games**, an independent mobile gaming studio creating fun, exciting, and immersive 3D simulation and adventure games for players worldwide on Google Play.
 
-First, run the development server:
+---
+
+## 🎮 Highlights & Features
+
+- **Studio Portfolio**: Showcases published mobile games including *Dubai Modern Bus Simulator*, high-resolution screenshot galleries, and gameplay details.
+- **Modern Tech Stack**: Built with Next.js 16 (App Router), TypeScript, Tailwind CSS, and Lucide React.
+- **Dynamic Theming**: Fluid Dark/Light theme switching with smooth transitions and persistent preference.
+- **SEO & Metadata**: Complete OpenGraph, Twitter Cards, dynamic `sitemap.xml`, and `robots.txt` optimized for search discovery.
+- **Player Support**: Interactive support helper for direct email inquiries with pre-formatted diagnostics.
+- **Official Policy Links**: Seamless integration with the studio's official privacy policy.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.17+ or 20+
+- npm, yarn, or pnpm
+
+### Installation
+
+```bash
+git clone https://github.com/ahsan600/coreplay-website.git
+cd coreplay-website
+npm install
+```
+
+### Local Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deploy to Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This repository is optimized for one-click deployment to **[Vercel](https://vercel.com/)**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push your changes to GitHub.
+2. Go to [Vercel Dashboard](https://vercel.com/new).
+3. Import the `coreplay-website` repository.
+4. Framework Preset will automatically detect **Next.js**.
+5. Click **Deploy**.
 
-## Deploy on Vercel
+*(Optional Environment Variable)*:
+- `NEXT_PUBLIC_SITE_URL`: Set to your custom production domain (e.g. `https://coreplaygames.com`). Defaults to your Vercel deployment URL if omitted.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔗 Official Links
+
+- **Google Play Profile**: [CorePlay Games Developer Profile](https://play.google.com/store/apps/dev?id=6807992577867877190)
+- **Privacy Policy**: [Official Privacy Policy](https://coreplay-privacy-site.netlify.app/)
+- **Contact**: `coreplay.games@gmail.com`
