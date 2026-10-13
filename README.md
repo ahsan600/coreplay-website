@@ -47,18 +47,52 @@ npm run start
 
 ---
 
+## 🌐 Deploy to Netlify
+
+This repository includes a pre-configured `netlify.toml` optimized for Next.js App Router on **[Netlify](https://www.netlify.com/)**:
+
+### Option 1: Git Integration (Recommended)
+1. Push your changes to GitHub / GitLab / Bitbucket.
+2. Go to the [Netlify App](https://app.netlify.com/).
+3. Click **Add new site** > **Import an existing project**.
+4. Select your repository.
+5. Netlify will automatically detect the settings from [netlify.toml](file:///d:/SAAS/Coreplay/netlify.toml):
+   - **Build command**: `npm run build`
+   - **Publish directory**: `.next`
+   - **Node version**: `22`
+   - **Plugin**: `@netlify/plugin-nextjs`
+6. Click **Deploy coreplay-games**.
+
+### Option 2: Netlify CLI
+```bash
+# Install Netlify CLI globally (if not already installed)
+npm install -g netlify-cli
+
+# Login and link project
+netlify login
+netlify link
+
+# Deploy preview
+netlify deploy --build
+
+# Deploy to production
+netlify deploy --build --prod
+```
+
+*(Optional Environment Variable)*:
+- `NEXT_PUBLIC_SITE_URL`: Set to your custom production domain (e.g. `https://coreplay-games.netlify.app` or `https://coreplaygames.com`). Defaults to Netlify's `URL` environment variable if omitted.
+
+---
+
 ## 🌐 Deploy to Vercel
 
-This repository is optimized for one-click deployment to **[Vercel](https://vercel.com/)**:
+This repository can also be deployed to **[Vercel](https://vercel.com/)**:
 
 1. Push your changes to GitHub.
 2. Go to [Vercel Dashboard](https://vercel.com/new).
-3. Import the `coreplay-website` repository.
+3. Import the repository.
 4. Framework Preset will automatically detect **Next.js**.
 5. Click **Deploy**.
-
-*(Optional Environment Variable)*:
-- `NEXT_PUBLIC_SITE_URL`: Set to your custom production domain (e.g. `https://coreplaygames.com`). Defaults to your Vercel deployment URL if omitted.
 
 ---
 
