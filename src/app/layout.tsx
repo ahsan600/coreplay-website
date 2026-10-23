@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ||
       process.env.URL ||
-      "https://coreplay-games.netlify.app",
+      "https://coreplay-site.netlify.app",
   ),
   title: {
     default: "Coreplay Technologies — Mobile Games & Apps Studio",

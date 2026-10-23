@@ -14,7 +14,7 @@ export interface PolicySection {
 export const PRIVACY_POLICY_METADATA = {
   developerName: "Coreplay Technologies",
   contactEmail: "muhammadameen188d@gmail.com",
-  liveReferenceUrl: "https://coreplay-privacy-site.netlify.app/",
+  liveReferenceUrl: "https://coreplay-site.netlify.app/privacy-policy",
   lastUpdated: "October 2026",
   title: "Official Privacy Policy",
 };

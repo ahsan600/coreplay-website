@@ -54,7 +54,7 @@ export const STUDIO_INFO: StudioInfo = {
   aboutHeadline: "Engineered for Excitement. Built for Daily Utility.",
   aboutText: "Coreplay Technologies is an independent mobile publisher delivering high-performance simulation games and seamless utility tools. From realistic transit adventures to fast, privacy-focused scanner utilities, our titles bring quality, responsiveness, and reliability to Android users worldwide.",
   developerProfileUrl: "https://play.google.com/store/apps/dev?id=6807992577867877190",
-  privacyPolicyNetlifyUrl: "https://coreplay-privacy-site.netlify.app/",
+  privacyPolicyNetlifyUrl: "https://coreplay-site.netlify.app/privacy-policy",
   contactEmail: "muhammadameen188d@gmail.com",
 };
 

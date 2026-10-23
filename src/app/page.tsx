@@ -12,7 +12,7 @@ export default function HomePage() {
     "@type": "Organization",
     name: STUDIO_INFO.name,
     description: STUDIO_INFO.tagline,
-    url: "https://coreplay-games.netlify.app",
+    url: "https://coreplay-site.netlify.app",
     sameAs: [
       STUDIO_INFO.developerProfileUrl,
       STUDIO_INFO.privacyPolicyNetlifyUrl,

@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     process.env.URL ||
     (process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : "https://coreplay-games.netlify.app");
+      : "https://coreplay-site.netlify.app");
   const currentDate = new Date();
 
   return [

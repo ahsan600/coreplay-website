@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
   images: {
@@ -12,7 +11,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-
+  async redirects() {
+    return [
+      {
+        source: "/privacy",
+        destination: "/privacy-policy",
+        permanent: true,
+      },
+      {
+        source: "/legal/privacy",
+        destination: "/privacy-policy",
+        permanent: true,
+      },
+    ];
+  },
   turbopack: {
     rules: {
       "*.css": {

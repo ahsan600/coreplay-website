@@ -12,6 +12,17 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Privacy URL Redirects
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/legal/privacy"
+  to = "/privacy-policy"
+  status = 301
+
 # Security & Optimization Headers
 [[headers]]
   for = "/*"

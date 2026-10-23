@@ -69,5 +69,5 @@ This repository includes a pre-configured `netlify.toml` optimized for Next.js A
 ## Official Links
 
 - **Google Play Profile**: [Coreplay Technologies Developer Profile](https://play.google.com/store/apps/dev?id=6807992577867877190)
-- **Privacy Policy**: [Official Privacy Policy](https://coreplay-privacy-site.netlify.app/privacy-policy)
+- **Privacy Policy**: [Official Privacy Policy](https://coreplay-site.netlify.app/privacy-policy)
 - **Contact**: `muhammadameen188d@gmail.com`
