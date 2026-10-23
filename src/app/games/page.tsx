@@ -1,7 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowUpRight, Gamepad2, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, Gamepad2, CheckCircle2, Smartphone } from "lucide-react";
 import { GAMES } from "@/data/games";
 import { GameCard } from "@/components/games/GameCard";
 import { GooglePlayCta } from "@/components/sections/GooglePlayCta";
@@ -9,7 +10,7 @@ import { GooglePlayCta } from "@/components/sections/GooglePlayCta";
 export const metadata: Metadata = {
   title: "Our Games",
   description:
-    "Explore mobile titles from CorePlay Games. Download Dubai Modern Bus Simulator and discover exciting 3D mobile games on Google Play.",
+    "Explore mobile titles from Coreplay Technologies. Download Dubai Modern Bus Simulator and discover exciting 3D mobile games on Google Play.",
 };
 
 export default function GamesPage() {
@@ -28,7 +29,9 @@ export default function GamesPage() {
             Our Mobile Games
           </h1>
           <p className="mt-4 text-base sm:text-lg text-theme-secondary leading-relaxed">
-            Discover mobile games published by CorePlay Games on the Google Play Store. We build engaging, responsive experiences that bring excitement to every gaming session.
+            Discover 3D mobile simulations published by Coreplay Technologies on
+            the Google Play Store. We build engaging, responsive experiences
+            that bring excitement to every gaming session.
           </p>
         </div>
 
@@ -104,7 +107,10 @@ export default function GamesPage() {
                   Verified In-Game Features:
                 </h3>
                 {primaryGame.features.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 text-xs text-theme-secondary">
+                  <div
+                    key={idx}
+                    className="flex items-start gap-2.5 text-xs text-theme-secondary"
+                  >
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
@@ -124,11 +130,38 @@ export default function GamesPage() {
                 </a>
 
                 <span className="text-xs text-theme-muted text-center sm:text-left">
-                  Package: <code className="text-theme-secondary font-mono">{primaryGame.packageId}</code>
+                  Package:{" "}
+                  <code className="text-theme-secondary font-mono">
+                    {primaryGame.packageId}
+                  </code>
                 </span>
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Cross-Link Callout to Apps */}
+        <div className="mb-16 p-6 rounded-2xl border border-cyan-500/20 bg-gradient-to-r from-cyan-950/20 to-blue-950/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0">
+              <Smartphone className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-theme-primary">
+                Looking for our utility &amp; productivity applications?
+              </h3>
+              <p className="text-xs text-theme-secondary mt-0.5">
+                Explore ScanPro – QR &amp; Barcode Scanner with local offline privacy and sub-second vision.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/apps"
+            className="py-2 px-4 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-95 shrink-0 flex items-center gap-1.5"
+          >
+            <span>Explore Apps</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
 
         {/* Catalog Grid Section */}
@@ -136,10 +169,10 @@ export default function GamesPage() {
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-theme">
             <div>
               <h2 className="text-2xl font-bold text-theme-primary tracking-tight">
-                All Published Titles
+                All Published Games
               </h2>
               <p className="text-xs sm:text-sm text-theme-secondary mt-1">
-                Verified releases by CorePlay Games
+                Verified releases by Coreplay Technologies
               </p>
             </div>
             <span className="text-xs font-medium px-3 py-1 rounded-full bg-theme-elevated border border-theme text-theme-secondary">

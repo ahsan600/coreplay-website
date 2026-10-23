@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Compass, Gamepad2, Sparkles } from "lucide-react";
+import { ArrowUpRight, Compass, Smartphone, Sparkles, Gamepad2 } from "lucide-react";
 import { STUDIO_INFO, STUDIO_VALUES, GAMES } from "@/data/games";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Compass: <Compass className="w-6 h-6" />,
-  Gamepad2: <Gamepad2 className="w-6 h-6" />,
+  Smartphone: <Smartphone className="w-6 h-6" />,
   Sparkles: <Sparkles className="w-6 h-6" />,
 };
 
@@ -14,7 +14,10 @@ export function AboutStudio() {
   const showcaseGame = GAMES[0];
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-theme-secondary/50 border-y border-theme transition-colors">
+    <section
+      id="about"
+      className="py-20 lg:py-28 bg-theme-secondary/50 border-y border-theme transition-colors"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Split: Studio Philosophy & Visual Artwork */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-20 lg:mb-24">
@@ -22,7 +25,7 @@ export function AboutStudio() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-accent-primary/10 text-accent-primary">
               <Gamepad2 className="w-3.5 h-3.5" />
-              <span>Independent Mobile Publisher</span>
+              <span>Independent Games &amp; Apps Publisher</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-theme-primary tracking-tight leading-tight">
@@ -34,7 +37,7 @@ export function AboutStudio() {
             </p>
 
             <p className="text-sm sm:text-base text-theme-secondary leading-relaxed">
-              Whether navigating intricate urban transit routes in our realistic driving titles or tackling dynamic off-road environments, we believe great mobile games should combine approachable controls with rewarding depth.
+              Whether mastering passenger coach routes across modern Dubai highways in our simulation games or scanning codes in milliseconds with offline privacy using our ScanPro utility, we build software that combines intuitive simplicity with exceptional performance.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4 items-center">
@@ -46,13 +49,21 @@ export function AboutStudio() {
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
 
+              <Link
+                href="/apps"
+                className="py-3 px-5 rounded-xl text-sm font-semibold text-theme-primary bg-theme-elevated hover:bg-theme-card border border-theme transition-all inline-flex items-center gap-2"
+              >
+                <Smartphone className="w-4 h-4 text-cyan-400" />
+                <span>Explore Apps</span>
+              </Link>
+
               <a
                 href={STUDIO_INFO.developerProfileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="py-3 px-6 rounded-xl text-sm font-semibold text-theme-primary bg-theme-elevated hover:bg-theme-card border border-theme transition-all inline-flex items-center gap-2"
+                className="py-3 px-5 rounded-xl text-sm font-semibold text-theme-secondary hover:text-theme-primary border border-theme transition-all inline-flex items-center gap-1.5"
               >
-                <span>Google Play Developer Profile</span>
+                <span>Google Play Profile</span>
                 <ArrowUpRight className="w-4 h-4 text-theme-muted" />
               </a>
             </div>
@@ -63,8 +74,12 @@ export function AboutStudio() {
             <div className="relative rounded-2xl border border-theme bg-theme-card p-3 shadow-xl">
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-theme-elevated border border-theme">
                 <Image
-                  src={showcaseGame.bannerUrl || showcaseGame.featureGraphicUrl || "/images/games/hero-banner.jpg"}
-                  alt="CorePlay Games mobile simulation environment"
+                  src={
+                    showcaseGame.bannerUrl ||
+                    showcaseGame.featureGraphicUrl ||
+                    "/images/games/hero-banner.jpg"
+                  }
+                  alt="Coreplay Technologies mobile simulation environment"
                   fill
                   sizes="(max-width: 768px) 100vw, 450px"
                   className="object-cover"
@@ -73,10 +88,10 @@ export function AboutStudio() {
 
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <span className="text-[11px] font-bold tracking-wider text-cyan-300 uppercase">
-                    In-Game Environment
+                    3D Simulation &amp; Utility Innovation
                   </span>
                   <p className="text-sm font-semibold mt-0.5 drop-shadow-md">
-                    Realistic 3D Simulation &amp; Challenging Routes
+                    High Performance Across Games &amp; Smart Mobile Tools
                   </p>
                 </div>
               </div>
@@ -88,10 +103,10 @@ export function AboutStudio() {
         <div>
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h3 className="text-xs font-bold tracking-wider text-accent-primary uppercase mb-2">
-              Why Play Our Games
+              Our Core Philosophy
             </h3>
             <p className="text-2xl sm:text-3xl font-extrabold text-theme-primary tracking-tight">
-              Crafted Around Three Core Player Values
+              Crafted Around Three Foundational Pillars
             </p>
           </div>
 

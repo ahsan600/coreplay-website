@@ -12,15 +12,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  async redirects() {
-    return [
-      {
-        source: "/privacy-policy",
-        destination: "https://coreplay-privacy-site.netlify.app/",
-        permanent: false,
-      },
-    ];
-  },
+
   turbopack: {
     rules: {
       "*.css": {

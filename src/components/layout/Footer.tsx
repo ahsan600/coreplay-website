@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { Gamepad2, ArrowUpRight, Mail, ShieldCheck } from "lucide-react";
+import { Gamepad2, Smartphone, ArrowUpRight, Mail, ShieldCheck } from "lucide-react";
 import { STUDIO_INFO } from "@/data/games";
 import { CurrentYear } from "@/components/ui/CurrentYear";
 
 export function Footer() {
-
   return (
     <footer className="border-t border-theme bg-theme-secondary/80 mt-auto transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
@@ -14,32 +13,35 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white shadow-md shadow-violet-500/20">
-                <Gamepad2 className="w-6 h-6 stroke-[2.2]" />
+                <div className="flex items-center justify-center relative">
+                  <Gamepad2 className="w-5 h-5 stroke-[2.2]" />
+                  <Smartphone className="w-3 h-3 stroke-[2.2] absolute -bottom-1 -right-1 text-cyan-300 drop-shadow" />
+                </div>
               </div>
               <div className="flex flex-col">
                 <span className="font-extrabold text-xl tracking-tight text-theme-primary">
-                  CorePlay <span className="gradient-text">Games</span>
+                  Coreplay <span className="gradient-text">Technologies</span>
                 </span>
                 <span className="text-[11px] font-medium text-theme-muted uppercase tracking-wider">
-                  Mobile Gaming Studio
+                  Mobile Games &amp; Apps Studio
                 </span>
               </div>
             </Link>
 
             <p className="text-sm text-theme-secondary max-w-sm leading-relaxed">
-              Crafting fun, exciting, and immersive mobile games for players worldwide. Explore new adventures, simulation challenges, and endless gameplay on Google Play.
+              Crafting fun, exciting, and immersive 3D simulation games alongside smart, privacy-first mobile utility tools on Google Play.
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-theme-muted">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>Official Developer ID: 6807992577867877190</span>
+              <span>Developer: Coreplay Technologies (ID: 6807992577867877190)</span>
             </div>
           </div>
 
           {/* Studio Navigation */}
           <div className="space-y-3">
             <h3 className="text-xs font-bold text-theme-primary tracking-wider uppercase">
-              Navigation
+              Portfolio
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -60,6 +62,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/apps"
+                  className="text-theme-secondary hover:text-cyan-400 transition-colors"
+                >
+                  Our Apps
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/about"
                   className="text-theme-secondary hover:text-accent-primary transition-colors"
                 >
@@ -71,7 +81,7 @@ export function Footer() {
                   href="/support"
                   className="text-theme-secondary hover:text-accent-primary transition-colors"
                 >
-                  Player Support
+                  Player &amp; App Support
                 </Link>
               </li>
             </ul>
@@ -80,41 +90,40 @@ export function Footer() {
           {/* Legal & Trust */}
           <div className="space-y-3">
             <h3 className="text-xs font-bold text-theme-primary tracking-wider uppercase">
-              Legal & Privacy
+              Legal &amp; Privacy
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href={STUDIO_INFO.privacyPolicyNetlifyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/privacy-policy"
                   className="text-theme-secondary hover:text-accent-primary inline-flex items-center gap-1 transition-colors"
                 >
                   Privacy Policy (Official)
-                  <ArrowUpRight className="w-3.5 h-3.5 text-theme-muted" />
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href={`${STUDIO_INFO.privacyPolicyNetlifyUrl}#third-party`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/privacy-policy#section-1"
                   className="text-theme-secondary hover:text-accent-primary inline-flex items-center gap-1 transition-colors"
                 >
-                  Third-Party Services
-                  <ArrowUpRight className="w-3.5 h-3.5 text-theme-muted" />
-                </a>
+                  Permissions &amp; Camera Policy
+                </Link>
               </li>
               <li>
-                <a
-                  href={`${STUDIO_INFO.privacyPolicyNetlifyUrl}#children`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/privacy-policy#section-2"
                   className="text-theme-secondary hover:text-accent-primary inline-flex items-center gap-1 transition-colors"
                 >
-                  Children&apos;s Policy
-                  <ArrowUpRight className="w-3.5 h-3.5 text-theme-muted" />
-                </a>
+                  Third-Party Services &amp; AdMob
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy-policy#section-5"
+                  className="text-theme-secondary hover:text-accent-primary inline-flex items-center gap-1 transition-colors"
+                >
+                  Data Deletion Rights
+                </Link>
               </li>
             </ul>
           </div>
@@ -122,7 +131,7 @@ export function Footer() {
           {/* Developer Resources & Contact */}
           <div className="space-y-3">
             <h3 className="text-xs font-bold text-theme-primary tracking-wider uppercase">
-              Connect & Support
+              Connect &amp; Support
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -150,7 +159,7 @@ export function Footer() {
                   href="/support"
                   className="text-xs px-2.5 py-1 rounded bg-theme-elevated text-accent-secondary border border-theme inline-block hover:border-accent-primary transition-colors"
                 >
-                  Help & Troubleshooting
+                  Help &amp; Troubleshooting
                 </Link>
               </li>
             </ul>
@@ -159,17 +168,14 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-theme flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-theme-muted">
-          <p>© <CurrentYear /> CorePlay Games. All rights reserved.</p>
+          <p>&copy; <CurrentYear /> Coreplay Technologies. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <a
-              href={STUDIO_INFO.privacyPolicyNetlifyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/privacy-policy"
               className="hover:text-theme-primary transition-colors inline-flex items-center gap-1"
             >
               Privacy Policy
-              <ArrowUpRight className="w-3 h-3 text-theme-muted" />
-            </a>
+            </Link>
             <Link href="/support" className="hover:text-theme-primary transition-colors">
               Support
             </Link>

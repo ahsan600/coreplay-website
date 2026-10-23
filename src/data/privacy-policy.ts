@@ -1,137 +1,138 @@
+export interface PolicySubsection {
+  subtitle?: string;
+  items?: string[];
+  paragraphs?: string[];
+}
+
 export interface PolicySection {
   id: string;
   title: string;
   content: string[];
-  subsections?: {
-    subtitle?: string;
-    items?: string[];
-    paragraphs?: string[];
-  }[];
+  subsections?: PolicySubsection[];
 }
 
 export const PRIVACY_POLICY_METADATA = {
-  developerName: "CorePlay Games",
+  developerName: "Coreplay Technologies",
   contactEmail: "muhammadameen188d@gmail.com",
   liveReferenceUrl: "https://coreplay-privacy-site.netlify.app/",
-  lastUpdated: "2026",
-  title: "Privacy Policy",
+  lastUpdated: "October 2026",
+  title: "Official Privacy Policy",
 };
 
 export const PRIVACY_POLICY_SECTIONS: PolicySection[] = [
   {
-    id: "overview",
-    title: "Overview & Commitment",
+    id: "scope-overview",
+    title: "Scope & Overview",
     content: [
-      "We are committed to protecting your personal information and your right to privacy.",
-      "We believe in transparency and want you to understand how we collect, use, and protect your information.",
+      "This Privacy Policy applies to all mobile games, mobile utility applications (including Dubai Modern Bus Simulator, ScanPro – QR & Barcode Scanner, and upcoming releases), digital products, and services published by Coreplay Technologies on Google Play.",
+      "We believe in transparency and privacy-by-design: we minimize data collection, process sensitive hardware operations (such as camera scanning) strictly on-device, and never harvest, sell, or monetize your personal files or scan history.",
+    ],
+  },
+  {
+    id: "permissions-hardware",
+    title: "Device Permissions & Hardware Access",
+    content: [
+      "To deliver core utility and gaming capabilities, our applications may request access to specific Android device hardware and system features:",
+      "- Camera Access (android.permission.CAMERA): Used exclusively in scanner utilities (such as ScanPro) to provide a real-time viewfinder for scanning QR codes and 1D/2D barcodes using Google ML Kit. Zero Cloud Transmission: Video frames and images are analyzed strictly in real-time in device RAM and never uploaded to remote servers.",
+      "- Flashlight (android.permission.FLASHLIGHT): Used optionally to illuminate barcodes in low-light environments.",
+      "- Photos & File Storage (READ_MEDIA_IMAGES / Filesystem): Used only when you choose to scan an existing QR code or barcode from your photo gallery, or when you explicitly export your scan history logs (CSV/TXT) or save generated QR codes locally.",
+      "- System Clipboard Access: Enables you to copy decoded barcode data to your clipboard or paste text to generate custom QR codes. Clipboard data is processed locally.",
+      "- Haptic Feedback & Vibration (VIBRATE): Used to provide immediate tactile vibration confirmation upon successful barcode detection.",
+      "- Network & Internet State (INTERNET, ACCESS_NETWORK_STATE): Used to deliver advertisements via verified ad networks, check license verification via Google Play, and open external web links in your preferred browser when you tap on a scanned URL.",
     ],
   },
   {
     id: "information-collection-and-use",
     title: "Information Collection and Use",
     content: [
-      "The Application collects information when you download and use it. This information may include:",
-    ],
-    subsections: [
-      {
-        items: [
-          "Your device's Internet Protocol address (e.g. IP address)",
-          "The pages of the Application that you visit, the time and date of your visit, the time spent on those pages",
-          "The time spent on the Application",
-          "The operating system you use on your mobile device",
-        ],
-      },
-      {
-        paragraphs: [
-          "The Application does not gather precise information about the location of your mobile device.",
-          "The Application collects your device's location, which helps the Service Provider determine your approximate geographical location and make use of it in the following ways:",
-        ],
-        items: [
-          "Geolocation Services: The Service Provider utilizes location data to provide features such as personalized content, relevant recommendations, and location-based services.",
-          "Analytics and Improvements: Aggregated and anonymized location data helps the Service Provider to analyze user behavior, identify trends, and improve the overall performance and functionality of the Application.",
-          "Third-Party Services: Periodically, the Service Provider may transmit anonymized location data to external services. These services assist them in enhancing the Application and optimizing their offerings.",
-        ],
-      },
-      {
-        paragraphs: [
-          "The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices, and marketing promotions.",
-          "For a better experience, while using the Application, the Service Provider may require you to provide certain personally identifiable information. The information requested will be retained and used as described in this privacy policy.",
-        ],
-      },
+      "When you download, install, and interact with our applications and games, certain technical and diagnostic data may be automatically collected:",
+      "- Device Technical Identifiers: Device model, manufacturer, Android OS version, system language, and memory statistics.",
+      "- Diagnostic & Performance Data: Session timestamps, duration, crash logs, and stability metrics.",
+      "- Advertising Identifiers: Non-permanent device identifiers such as the Google Advertising ID (GAID).",
+      "- Approximate Geographic Location: Coarse location derived from IP address (country or metropolitan area) for regional ad compliance. We do not collect precise GPS coordinates.",
+      "- Local User Content & History: In our scanner applications (ScanPro), your scan history logs and generated codes are stored strictly locally on your device.",
     ],
   },
   {
-    id: "third-party-access",
-    title: "Third Party Access",
+    id: "third-party-services",
+    title: "Third-Party Services & SDK Integrations",
     content: [
-      "Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties as described below:",
-      "Please note that the Application utilizes third-party services that have their own Privacy Policy:",
-    ],
-    subsections: [
-      {
-        subtitle: "Third-Party Service Providers",
-        items: ["AdMob", "Unity"],
-      },
-      {
-        paragraphs: [
-          "The Service Provider may disclose User Provided and Automatically Collected Information:",
-        ],
-        items: [
-          "As required by law, such as to comply with a subpoena, or similar legal process;",
-          "When they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;",
-          "With trusted service providers who work on their behalf, do not have an independent use of the information, and have agreed to adhere to the privacy rules.",
-        ],
-      },
+      "Our applications and games integrate trusted third-party Software Development Kits (SDKs) to provide OS connectivity, on-device machine learning, ad monetization, and stability:",
+      "- Google Play Services (Google LLC): Essential for Android distribution, security, and OS integration.",
+      "- Google AdMob & Mobile Ads SDK (Google LLC): Delivers banner, interstitial, and rewarded advertisements.",
+      "- Google ML Kit (Google LLC): Powers on-device computer vision for barcode and QR code recognition locally.",
+      "- Unity Technologies (Unity Ads & Engine): Provides 3D graphics rendering, realistic physics, and in-game ads.",
+      "- Firebase & Crashlytics (Google LLC): Aggregated crash analytics and performance monitoring.",
     ],
   },
   {
-    id: "opt-out-rights",
-    title: "Opt-Out Rights",
+    id: "advertising-choices",
+    title: "Managing Advertising Choices & Advertising ID",
     content: [
-      "You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.",
+      "Our free mobile games and utility apps may display advertisements powered by Google AdMob. You have complete control over personalized advertising through Android settings:",
+      "- Reset Advertising ID: Open Settings > Google > Ads > Reset advertising ID.",
+      "- Delete Advertising ID: On modern Android versions, open Settings > Google > Ads > Delete advertising ID.",
+      "- Opt-Out of Personalized Ads: Toggle Opt out of Ads Personalization in your Google settings.",
     ],
   },
   {
-    id: "data-retention-policy",
-    title: "Data Retention Policy",
+    id: "in-app-purchases",
+    title: "In-App Purchases & Financial Data",
     content: [
-      "The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. To request deletion, contact: muhammadameen188d@gmail.com.",
+      "All payment transactions are handled exclusively through Google Play In-App Billing.",
+      "Coreplay Technologies does not collect, receive, or store your credit card numbers, bank account information, or billing address.",
+    ],
+  },
+  {
+    id: "data-retention-deletion",
+    title: "Data Retention & User Data Deletion Rights",
+    content: [
+      "In compliance with Google Play Store Developer Policies, we provide clear procedures for managing and deleting your data:",
+      "- Local Data Erasure: You can permanently delete your scan history, favorite items, and cached preferences instantly at any time from within the app (Settings > Clear History) or through Android system settings.",
+      "- Account & Server Data Deletion Request: Send an email to muhammadameen188d@gmail.com with the subject line [Data Deletion Request]. We complete all deletion requests within 30 days.",
     ],
   },
   {
     id: "children",
-    title: "Children",
+    title: "Children's Privacy & Families Policy",
     content: [
-      "The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13. The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. If a child under 13 has provided personal information, it will be immediately deleted. Parents may contact the Service Provider at muhammadameen188d@gmail.com for necessary actions.",
+      "Coreplay Technologies complies with COPPA, GDPR-K, and Google Play Families Policies. Our apps and games are designed for general audiences and do not knowingly collect personal information from children under 13.",
+    ],
+  },
+  {
+    id: "global-privacy-rights",
+    title: "Your Global Privacy Rights (GDPR & CCPA/CPRA)",
+    content: [
+      "EEA & UK Users (GDPR): Rights to access, rectification, erasure, restriction, and portability.",
+      "California Residents (CCPA / CPRA): Right to know, right to delete, and right to non-discrimination. We do not sell personal information.",
+    ],
+  },
+  {
+    id: "offline-functionality",
+    title: "Offline Functionality & Privacy by Design",
+    content: [
+      "All barcode scanning, QR code decoding, and code generation calculations execute entirely locally on your device hardware without requiring an internet connection.",
     ],
   },
   {
     id: "security",
-    title: "Security",
+    title: "Data Security",
     content: [
-      "The Service Provider safeguards the confidentiality of your information with physical, electronic, and procedural measures.",
+      "We implement industry-standard safeguards. All communication with third-party service providers is encrypted in transit using TLS/HTTPS.",
     ],
   },
   {
     id: "changes",
-    title: "Changes",
+    title: "Changes to this Privacy Policy",
     content: [
-      "This Privacy Policy may be updated from time to time. The Service Provider will notify you of any changes by updating this page. Continued use signifies approval of all changes.",
-    ],
-  },
-  {
-    id: "your-consent",
-    title: "Your Consent",
-    content: [
-      "By using the Application, you consent to the processing of your information as set forth in this Privacy Policy now and as amended.",
+      "We may update our Privacy Policy periodically. We will notify you by updating the Last Updated date on this page.",
     ],
   },
   {
     id: "contact-us",
     title: "Contact Us",
     content: [
-      "If you have any questions regarding privacy while using the Application, contact the Service Provider via email at muhammadameen188d@gmail.com.",
-      "We may update this policy from time to time. We encourage you to review this page periodically for any changes.",
+      "Contact our Privacy Team via email at muhammadameen188d@gmail.com.",
     ],
   },
 ];

@@ -3,16 +3,26 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
-import { Game } from "@/data/games";
+
+interface MediaItem {
+  title: string;
+  screenshots: string[];
+  playStoreUrl?: string;
+}
 
 interface ScreenshotGalleryProps {
-  game: Game;
+  game?: MediaItem;
+  item?: MediaItem;
   onClose: () => void;
 }
 
-export function ScreenshotGallery({ game, onClose }: ScreenshotGalleryProps) {
+export function ScreenshotGallery({ game, item, onClose }: ScreenshotGalleryProps) {
+  const target = item || game;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const screenshots = game.screenshots || [];
+
+  const screenshots = target?.screenshots || [];
+  const title = target?.title || "Screenshots";
+  const playStoreUrl = target?.playStoreUrl;
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -38,7 +48,7 @@ export function ScreenshotGallery({ game, onClose }: ScreenshotGalleryProps) {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label={`${game.title} screenshots gallery`}
+      aria-label={`${title} screenshots gallery`}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4 sm:p-6 animate-in fade-in duration-200"
     >
       {/* Close button */}
@@ -56,15 +66,15 @@ export function ScreenshotGallery({ game, onClose }: ScreenshotGalleryProps) {
         {/* Header Bar */}
         <div className="w-full flex items-center justify-between pb-3 text-white text-sm">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-base">{game.title}</span>
+            <span className="font-semibold text-base">{title}</span>
             <span className="text-white/60 text-xs">
               ({currentIndex + 1} of {screenshots.length})
             </span>
           </div>
 
-          {game.playStoreUrl && (
+          {playStoreUrl && (
             <a
-              href={game.playStoreUrl}
+              href={playStoreUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-500 text-white flex items-center gap-1 transition-colors"
@@ -79,7 +89,7 @@ export function ScreenshotGallery({ game, onClose }: ScreenshotGalleryProps) {
         <div className="relative w-full max-h-[70vh] aspect-video rounded-xl overflow-hidden bg-black/50 border border-white/15 flex items-center justify-center shadow-2xl">
           <Image
             src={screenshots[currentIndex]}
-            alt={`${game.title} screenshot ${currentIndex + 1}`}
+            alt={`${title} screenshot ${currentIndex + 1}`}
             fill
             sizes="90vw"
             className="object-contain"

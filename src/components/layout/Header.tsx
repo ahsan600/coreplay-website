@@ -3,15 +3,22 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Gamepad2, Menu, X, ArrowUpRight } from "lucide-react";
+import { Gamepad2, Smartphone, Menu, X, ArrowUpRight } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { STUDIO_INFO } from "@/data/games";
 
-const NAV_LINKS = [
+interface NavLinkItem {
+  href: string;
+  label: string;
+  isExternal?: boolean;
+}
+
+const NAV_LINKS: NavLinkItem[] = [
   { href: "/", label: "Home" },
-  { href: "/games", label: "Our Games" },
+  { href: "/games", label: "Games" },
+  { href: "/apps", label: "Apps" },
   { href: "/about", label: "About" },
-  { href: STUDIO_INFO.privacyPolicyNetlifyUrl, label: "Privacy Policy", isExternal: true },
+  { href: "/privacy-policy", label: "Privacy Policy" },
   { href: "/support", label: "Support" },
 ];
 
@@ -52,14 +59,17 @@ export function Header() {
             id="brand-logo-link"
           >
             <div className="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white shadow-md shadow-violet-500/20 group-hover:scale-105 transition-transform duration-200">
-              <Gamepad2 className="w-6 h-6 stroke-[2.2]" />
+              <div className="flex items-center justify-center relative">
+                <Gamepad2 className="w-5 h-5 stroke-[2.2]" />
+                <Smartphone className="w-3.5 h-3.5 stroke-[2.2] absolute -bottom-1 -right-1 text-cyan-300 drop-shadow" />
+              </div>
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-xl tracking-tight text-theme-primary flex items-center gap-1.5">
-                CorePlay <span className="gradient-text">Games</span>
+                Coreplay <span className="gradient-text">Technologies</span>
               </span>
               <span className="text-[11px] font-medium text-theme-muted tracking-wider uppercase">
-                Mobile Game Studio
+                Mobile Games &amp; Apps Studio
               </span>
             </div>
           </Link>
@@ -112,10 +122,20 @@ export function Header() {
             
             <Link
               href="/games"
-              id="header-explore-btn"
-              className="px-4 py-2 rounded-xl text-sm font-semibold text-white gradient-brand hover:opacity-95 hover:shadow-lg hover:shadow-violet-500/25 transition-all duration-200 flex items-center gap-1.5"
+              id="header-explore-games-btn"
+              className="px-3.5 py-2 rounded-xl text-xs font-semibold text-white gradient-brand hover:opacity-95 hover:shadow-md transition-all duration-200 flex items-center gap-1.5"
             >
-              Explore Our Games
+              <Gamepad2 className="w-3.5 h-3.5" />
+              <span>Games</span>
+            </Link>
+
+            <Link
+              href="/apps"
+              id="header-explore-apps-btn"
+              className="px-3.5 py-2 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-95 hover:shadow-md transition-all duration-200 flex items-center gap-1.5"
+            >
+              <Smartphone className="w-3.5 h-3.5" />
+              <span>Apps</span>
             </Link>
           </div>
 
@@ -186,13 +206,24 @@ export function Header() {
               );
             })}
 
-            <div className="pt-3 mt-2 border-t border-theme flex flex-col gap-2">
+            <div className="pt-3 mt-2 border-t border-theme grid grid-cols-2 gap-2">
               <Link
                 href="/games"
-                className="w-full py-3 rounded-xl text-center text-sm font-semibold text-white gradient-brand shadow-md shadow-violet-500/20"
+                className="py-2.5 rounded-xl text-center text-xs font-semibold text-white gradient-brand shadow-sm flex items-center justify-center gap-1.5"
               >
-                Explore Our Games
+                <Gamepad2 className="w-3.5 h-3.5" />
+                <span>Our Games</span>
               </Link>
+              <Link
+                href="/apps"
+                className="py-2.5 rounded-xl text-center text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 shadow-sm flex items-center justify-center gap-1.5"
+              >
+                <Smartphone className="w-3.5 h-3.5" />
+                <span>Our Apps</span>
+              </Link>
+            </div>
+
+            <div className="mt-2">
               <a
                 href={STUDIO_INFO.developerProfileUrl}
                 target="_blank"

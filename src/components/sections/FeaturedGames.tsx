@@ -5,7 +5,10 @@ import { GameCard } from "@/components/games/GameCard";
 
 export function FeaturedGames() {
   return (
-    <section id="games" className="py-20 lg:py-28 bg-theme-main transition-colors">
+    <section
+      id="games"
+      className="py-20 lg:py-28 bg-theme-main transition-colors"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6">
@@ -18,7 +21,9 @@ export function FeaturedGames() {
               Published &amp; Featured Games
             </h2>
             <p className="mt-3 text-base sm:text-lg text-theme-secondary leading-relaxed">
-              Explore our mobile titles available for free download on Google Play, engineered for high-energy gameplay and realistic simulations.
+              Explore our mobile titles available for free download on Google
+              Play, engineered for high-energy gameplay and realistic
+              simulations.
             </p>
           </div>
 
@@ -55,12 +60,15 @@ export function FeaturedGames() {
                 Next Studio Title
               </h3>
               <p className="text-xs sm:text-sm text-theme-secondary max-w-xs leading-relaxed">
-                CorePlay Games is continuously developing new mobile adventures, driving challenges, and immersive gameplay experiences.
+                Coreplay Technologies is continuously developing new mobile
+                adventures, driving challenges, and immersive gameplay
+                experiences.
               </p>
             </div>
 
             <div className="w-full pt-4 border-t border-theme/60 text-xs text-theme-muted">
-              Stay tuned on our Google Play developer profile for upcoming releases.
+              Stay tuned on our Google Play developer profile for upcoming
+              releases.
             </div>
           </div>
         </div>

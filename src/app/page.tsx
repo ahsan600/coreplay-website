@@ -1,9 +1,10 @@
 import React from "react";
 import { Hero } from "@/components/sections/Hero";
 import { FeaturedGames } from "@/components/sections/FeaturedGames";
+import { FeaturedApps } from "@/components/sections/FeaturedApps";
 import { AboutStudio } from "@/components/sections/AboutStudio";
 import { GooglePlayCta } from "@/components/sections/GooglePlayCta";
-import { STUDIO_INFO, GAMES } from "@/data/games";
+import { STUDIO_INFO, GAMES, APPS } from "@/data/games";
 
 export default function HomePage() {
   const structuredData = {
@@ -40,6 +41,21 @@ export default function HomePage() {
     image: GAMES[0].featureGraphicUrl,
   };
 
+  const appStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: APPS[0].title,
+    description: APPS[0].description,
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Android",
+    author: {
+      "@type": "Organization",
+      name: STUDIO_INFO.name,
+    },
+    url: APPS[0].playStoreUrl,
+    image: APPS[0].featureGraphicUrl,
+  };
+
   return (
     <>
       {/* Structured data injection */}
@@ -51,9 +67,14 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(gameStructuredData) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appStructuredData) }}
+      />
 
       <Hero />
       <FeaturedGames />
+      <FeaturedApps />
       <AboutStudio />
       <GooglePlayCta />
     </>

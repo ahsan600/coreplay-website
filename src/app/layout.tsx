@@ -19,26 +19,30 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ||
       process.env.URL ||
-      "https://coreplay-games.netlify.app"
+      "https://coreplay-games.netlify.app",
   ),
   title: {
-    default: "CorePlay Games — Official Mobile Gaming Studio",
-    template: "%s | CorePlay Games",
+    default: "Coreplay Technologies — Mobile Games & Apps Studio",
+    template: "%s | Coreplay Technologies",
   },
   description:
-    "CorePlay Games is an independent mobile gaming studio publishing immersive, exciting 3D simulation and adventure games on Google Play.",
+    "Coreplay Technologies publishes high-energy 3D simulation games and smart, privacy-first utility applications (including ScanPro – QR & Barcode Scanner) on Google Play.",
   keywords: [
-    "CorePlay Games",
+    "Coreplay Technologies",
     "mobile games",
+    "mobile apps",
+    "ScanPro",
+    "QR code scanner",
+    "barcode scanner",
     "Dubai Modern Bus Simulator",
     "bus simulation games",
+    "Android apps",
     "Android games",
-    "Google Play game developer",
-    "indie game studio",
+    "Google Play developer",
   ],
-  authors: [{ name: "CorePlay Games" }],
-  creator: "CorePlay Games",
-  publisher: "CorePlay Games",
+  authors: [{ name: "Coreplay Technologies" }],
+  creator: "Coreplay Technologies",
+  publisher: "Coreplay Technologies",
   formatDetection: {
     email: false,
     address: false,
@@ -47,24 +51,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "CorePlay Games",
-    title: "CorePlay Games — Official Mobile Gaming Studio",
+    siteName: "Coreplay Technologies",
+    title: "Coreplay Technologies — Mobile Games & Apps Studio",
     description:
-      "Play fun, exciting, and immersive mobile games from CorePlay Games. Discover our latest releases on Google Play.",
+      "Play fun, exciting 3D simulation games and discover smart, privacy-conscious utility apps from Coreplay Technologies on Google Play.",
     images: [
       {
         url: "/images/games/feature-graphic.jpg",
         width: 1024,
         height: 500,
-        alt: "CorePlay Games Studio Preview",
+        alt: "Coreplay Technologies Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CorePlay Games — Official Mobile Gaming Studio",
+    title: "Coreplay Technologies — Mobile Games & Apps Studio",
     description:
-      "Play fun, exciting, and immersive mobile games from CorePlay Games.",
+      "Play fun, exciting 3D simulation games and discover smart utility apps from Coreplay Technologies.",
     images: ["/images/games/feature-graphic.jpg"],
   },
   robots: {
