@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "Universal Privacy Policy",
   description:
     "Official Universal Privacy Policy governing all mobile games, utilities, and productivity applications published by Coreplay Technologies on Google Play and Android marketplaces.",
+  icons: {
+    icon: [
+      { url: "/lock-icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/lock-icon.svg",
+    apple: "/lock-icon.svg",
+  },
   openGraph: {
     title: "Universal Privacy Policy | Coreplay Technologies",
     description:

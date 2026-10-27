@@ -378,11 +378,14 @@ export function PrivacyPolicyContent({ data }: PrivacyPolicyContentProps = {}) {
               </div>
 
               <h1
-                className={`text-3xl md:text-5xl font-extrabold tracking-tight mb-4 ${
+                className={`text-3xl md:text-5xl font-extrabold tracking-tight mb-4 flex items-center gap-3.5 flex-wrap ${
                   isDarkMode ? 'text-white' : 'text-slate-900'
                 }`}
               >
-                {heroTitle}
+                <span className="p-2 sm:p-2.5 rounded-2xl bg-amber-500/15 border border-amber-400/30 text-amber-400 dark:text-yellow-400 shrink-0 inline-flex items-center justify-center shadow-[0_0_15px_rgba(250,204,21,0.25)]">
+                  <LockIcon className="w-7 h-7 sm:w-9 sm:h-9 text-amber-400 dark:text-yellow-400" />
+                </span>
+                <span>{heroTitle}</span>
               </h1>
               <p
                 className={`text-base md:text-lg max-w-lg leading-relaxed ${
@@ -397,7 +400,7 @@ export function PrivacyPolicyContent({ data }: PrivacyPolicyContentProps = {}) {
             <div className="md:w-2/5 relative h-48 md:h-64 mt-8 md:mt-0 flex justify-center items-center">
               <div className="relative w-36 h-44 bg-gradient-to-b from-blue-400 via-indigo-500 to-violet-600 rounded-[2rem] rounded-b-[3.5rem] shadow-2xl flex items-center justify-center border-4 border-white/20">
                 <div className="w-20 h-28 bg-gradient-to-b from-blue-300 to-indigo-500 rounded-xl rounded-b-2xl shadow-inner flex items-center justify-center">
-                  <LockIcon className="w-9 h-9 text-white" />
+                  <LockIcon className="w-9 h-9 text-yellow-300 drop-shadow-[0_2px_8px_rgba(234,179,8,0.6)]" />
                 </div>
                 {/* Floating Badges */}
                 <div

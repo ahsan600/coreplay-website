@@ -171,19 +171,12 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
 
   "todo-list": {
     slug: "todo-list",
-    aliases: [
-      "taskflow",
-      "schedule-planner",
-      "daily-planner",
-      "task-flow",
-      "todolist",
-      "com.coreplay.todolist",
-    ],
+    aliases: ["taskflow", "schedule-planner", "daily-planner", "task-flow"],
     appName: "TaskFlow: To-Do List & Planner",
     shortName: "TaskFlow",
     packageId: "com.coreplay.todolist",
     category: "Productivity & Schedule Planning",
-    tagline: "Smart daily planning, recurring task scheduling, category organization, and local reminders with zero-cloud privacy.",
+    tagline: "Smart daily planning, task scheduling, category organization, and local reminders with zero-cloud privacy.",
     heroDescription:
       "Official Privacy Policy for TaskFlow: To-Do List & Planner (com.coreplay.todolist) published by Coreplay Technologies. Learn how your tasks, schedules, and reminders remain 100% on-device with zero ads and zero cloud tracking.",
     badgeText: "100% Offline • Local Reminders • Ad-Free",
@@ -203,13 +196,11 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
         title: "Application Features & Intended Use",
         content: [
           "TaskFlow is a comprehensive daily productivity and schedule management utility. Key features include:",
-          "- **Task & Checklist Management:** Create, edit, prioritize (High, Medium, Low), and check off daily tasks, subtasks, and to-do items.",
-          "- **Custom Categories & Color Tagging:** Organize tasks into custom categories (Work, Personal, Fitness, Study, Shopping) with distinctive color accents.",
-          "- **Recurring Tasks & Automated Rescheduling:** Support for daily, weekday, weekly, monthly, and yearly recurring tasks that automatically calculate and schedule the next instance upon task completion.",
+          "- **Task & Checklist Management:** Create, edit, prioritize, and check off daily tasks, subtasks, and to-do items.",
+          "- **Custom Categories & Color Tagging:** Organize tasks into custom categories (Work, Personal, Fitness, Study, Shopping) with color accents.",
           "- **Local Schedule Reminders:** Schedule time-based reminder notifications and focus alerts for critical deadlines.",
           "- **Interactive Calendar View:** Review daily and monthly task distributions and completion streaks.",
-          "- **Theme & Visual Customization:** Full support for Dark, Light, and System display modes with instantaneous one-tap theme switching in the app header.",
-          "- **Trash Bin Recovery:** Safely review, restore, or permanently delete completed and archived tasks with 30-day retention.",
+          "- **Trash Bin Recovery:** Safely review, restore, or permanently delete completed and archived tasks.",
           "- **Offline Backup & Restore:** Export your complete task database to a portable JSON file and restore without cloud intervention.",
         ],
       },
@@ -231,7 +222,6 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
           "- **Boot Completed (android.permission.RECEIVE_BOOT_COMPLETED):** Enables TaskFlow to restore and reschedule your active user-defined task reminders when your Android device restarts, ensuring your alarms remain preserved without running persistent battery-draining background tracking services.",
           "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile feedback upon task completion celebrations, button taps, and reminder alert vibrations.",
           "- **Network & Internet State (android.permission.INTERNET):** Standard WebView container permission used to open external web links (such as support or this privacy policy) when you explicitly tap an external URL. TaskFlow never transmits your tasks or schedule data over external networks.",
-          "- **No Exact Alarm Permission:** TaskFlow does NOT request or require `android.permission.SCHEDULE_EXACT_ALARM` or `android.permission.USE_EXACT_ALARM`. All notification scheduling is handled cooperatively via Android's power-efficient standard local notification channels, respecting device battery-saver states.",
           "- **Zero Sensitive Permissions:** TaskFlow does not request access to your camera, microphone, photo library, contacts, biometric sensors, or GPS location coordinates.",
         ],
       },
@@ -239,7 +229,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
         title: "Local Storage & Data Transmission",
         content: [
           "TaskFlow operates strictly on a client-side architecture:",
-          "- **On-Device Storage:** All tasks, categories, settings, theme preferences, and reminder schedules are stored exclusively within local device storage using `@capacitor/preferences` (Android SharedPreferences) and local web storage.",
+          "- **On-Device Preferences Storage:** All tasks, categories, settings, and reminders are stored exclusively within local device storage using `@capacitor/preferences`.",
           "- **Zero Cloud Databases:** TaskFlow does not communicate with cloud databases, Firebase Firestore, AWS, or external servers. Your tasks remain solely on your physical device.",
           "- **Complete Data Portability:** TaskFlow provides built-in backup functionality (**Settings > Export Backup**) allowing you to export your entire database to a standard JSON file for manual backup or device transfer without third-party involvement.",
         ],
@@ -273,9 +263,9 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
         title: "Data Retention, Backup & User Deletion Rights",
         content: [
           "You retain complete, unrestricted control over your task data at all times:",
-          "- **Trash Bin Management:** Deleted tasks can be reviewed, restored, or permanently wiped from the Trash Bin with 30-day retention.",
+          "- **Trash Bin Management:** Deleted tasks can be reviewed, restored, or permanently wiped from the Trash Bin.",
           "- **Complete App Reset:** You can permanently wipe all tasks, categories, and settings from device memory instantly via **Settings > Reset App Data**.",
-          "- **System Storage Clear:** You can erase all application data at the operating system level through Android **Settings > Apps > TaskFlow: To-Do List & Planner > Storage > Clear Data**.",
+          "- **System Storage Clear:** You can erase all application data at the operating system level through Android **Settings > Apps > TaskFlow > Storage > Clear Data**.",
           "- **Uninstall Deletion:** Uninstalling TaskFlow completely deletes the application sandbox and all stored tasks from your phone.",
         ],
       },
@@ -759,10 +749,141 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       },
     ],
   },
+
+  "dubai-modern-bus-simulator": {
+    slug: "dubai-modern-bus-simulator",
+    aliases: ["dubai-bus", "dubai-bus-simulator", "bus-simulator"],
+    appName: "Dubai Modern Bus Simulator",
+    shortName: "Dubai Bus Simulator",
+    packageId: "com.coreplay.dubai.bus",
+    category: "Simulation / Role-Playing",
+    tagline: "Realistic 3D city coach driving and mountain passenger transport across modern Dubai.",
+    heroDescription:
+      "Official Privacy Policy for Dubai Modern Bus Simulator (com.coreplay.dubai.bus) published by Coreplay Technologies. Understand our ad-supported monetization, device diagnostic data, and player privacy protections.",
+    badgeText: "3D Simulation • Ad-Supported • COPPA Compliant",
+    lastUpdated: COMMON_LAST_UPDATED,
+    metaDescription:
+      "Official Privacy Policy for Dubai Modern Bus Simulator by Coreplay Technologies. Explains 3D simulation gameplay, Google AdMob integrations, crash diagnostics, and advertising privacy controls.",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.dubai.bus",
+    sections: [
+      {
+        title: "Scope & Overview",
+        content: [
+          "This Privacy Policy applies specifically to **Dubai Modern Bus Simulator** (package name: `com.coreplay.dubai.bus`), developed, published, and maintained by **Coreplay Technologies** (\"we\", \"our\", or \"us\") on Google Play and authorized Android marketplaces.",
+          "Dubai Modern Bus Simulator is a 3D mobile driving simulation game. We are dedicated to providing entertaining, realistic gameplay while upholding transparent data standards and protecting player privacy.",
+        ],
+      },
+      {
+        title: "Application Features & Intended Use",
+        content: [
+          "Dubai Modern Bus Simulator delivers realistic coach bus driving simulation. Key features include:",
+          "- **Authentic 3D Environments:** Drive through Dubai-inspired city highways, coastal promenades, and winding mountain passes.",
+          "- **Passenger Transport Missions:** Pick up and transport passengers across dynamic routes and scheduled transit stops.",
+          "- **Realistic Vehicle Physics:** Customizable steering, tilt, and button controls with multiple internal and external camera perspectives.",
+          "- **Offline Gameplay:** Core driving missions and passenger routes can be played without an active internet connection.",
+        ],
+      },
+      {
+        title: "Information Collection & Processing",
+        content: [
+          "When you play Dubai Modern Bus Simulator, limited diagnostic and technical data may be processed:",
+          "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, phone numbers, or passwords. No account creation or registration is required.",
+          "- **Device Diagnostic Metrics:** Android version, device manufacturer, screen resolution, and GPU profile to optimize 3D graphics rendering and frame rates.",
+          "- **Advertising Identifiers:** Non-permanent device identifiers such as the Google Advertising ID (GAID), used by certified advertising partners to deliver ads and prevent fraud.",
+          "- **Approximate Geographic Location:** Coarse, non-precise location derived from IP address used for regional ad compliance and localization.",
+        ],
+      },
+      {
+        title: "Device Permissions & Hardware Access",
+        content: [
+          "Dubai Modern Bus Simulator requests standard gaming permissions:",
+          "- **Network & Internet State (INTERNET, ACCESS_NETWORK_STATE):** Used to load in-game advertisements, verify Google Play licensing, and check for game updates.",
+          "- **Haptic Feedback & Vibration (VIBRATE):** Delivers tactile rumble effects during vehicle acceleration, braking, collisions, and menu taps.",
+          "- **Zero Invasive Permissions:** The game does not request access to your camera, microphone, contact list, files, photos, or GPS coordinates.",
+        ],
+      },
+      {
+        title: "Local Storage & Data Transmission",
+        content: [
+          "Your mission completion status, unlocked bus models, vehicle paint customizations, and accumulated coins are stored strictly locally on your device storage.",
+          "Game progression is saved within your device's local application sandbox.",
+        ],
+      },
+      {
+        title: "Third-Party Services & SDK Integrations",
+        content: [
+          "The game integrates trusted third-party SDKs to support 3D rendering, performance monitoring, and monetization:",
+          "- **Google Play Services (Google LLC):** Essential for game distribution, updates, and licensing verification. [Google Privacy Policy](https://policies.google.com/privacy)",
+          "- **Google AdMob (Google LLC):** Serves banner, interstitial, and rewarded video ads to support free-to-play access. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
+          "- **Unity Technologies:** Delivers 3D graphics rendering, realistic physics, and runtime game engine capabilities. [Unity Privacy Policy](https://unity.com/legal/privacy-policy)",
+          "- **Firebase Crashlytics (Google LLC):** Collects aggregated, non-personally identifiable crash logs to troubleshoot device-specific bugs and performance bottlenecks. [Firebase Privacy Policy](https://firebase.google.com/support/privacy)",
+        ],
+      },
+      {
+        title: "Advertising Choices & Managing Advertising ID",
+        content: [
+          "As a free-to-play game, Dubai Modern Bus Simulator displays advertisements. You have full control over advertising identifiers through your Android operating system settings:",
+          "- **Reset Advertising ID:** Open Android **Settings > Google > Ads** and tap **Reset advertising ID** to disassociate past activity from your device identifier.",
+          "- **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent apps from accessing your advertising identifier entirely.",
+          "- **Opt-Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads rather than interest-based ads.",
+        ],
+      },
+      {
+        title: "In-App Purchases & Financial Data",
+        content: [
+          "If the game offers optional digital items, coin packs, or vehicle unlocks, transactions are handled exclusively through the **Google Play In-App Billing** system.",
+          "Coreplay Technologies does not collect, receive, or store your credit card numbers, bank account information, or billing address. All financial details are processed securely by Google under [Google Payments Privacy Notice](https://payments.google.com/legaldocument?family=0.privacynotice).",
+        ],
+      },
+      {
+        title: "Data Retention & User Deletion Rights",
+        content: [
+          "All mission progress and vehicle unlocks reside locally on your device:",
+          "- **Local Reset:** You can reset all game progress by clearing app storage via Android system settings (**Settings > Apps > Dubai Modern Bus Simulator > Storage > Clear Data**).",
+          "- **Uninstall Deletion:** Uninstalling the game permanently removes all local progress and settings from your device.",
+        ],
+      },
+      {
+        title: "Data Security Safeguards",
+        content: [
+          "We implement industry-standard safeguards to protect diagnostic information. All communications with Google Play and AdMob are encrypted in transit using Transport Layer Security (TLS/HTTPS).",
+        ],
+      },
+      {
+        title: "Children's Privacy & Families Policy",
+        content: [
+          "Dubai Modern Bus Simulator is designed for general audiences and is not directed to children under 13 years of age. In compliance with **COPPA**, GDPR-K, and Google Play Families Policies, we do not knowingly collect personal information from children under 13.",
+        ],
+      },
+      {
+        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
+        content: [
+          "Players in the EEA, UK, and California hold statutory rights regarding data access and erasure. Coreplay Technologies **does not sell, rent, or trade** personal data to third parties.",
+          "To exercise any statutory rights, please contact **{{contactEmail}}**.",
+        ],
+      },
+      {
+        title: "Changes to this Privacy Policy",
+        content: [
+          "We may update this policy periodically to reflect game updates or platform requirements. Revisions will be posted with an updated \"Last Updated\" timestamp at the top of this page.",
+        ],
+      },
+      {
+        title: "Contact Us & Privacy Officer",
+        content: [
+          "If you have questions, feedback, or privacy inquiries regarding Dubai Modern Bus Simulator, please contact our team:",
+          "- **Developer & Publisher:** Coreplay Technologies",
+          "- **Privacy Officer Email:** {{contactEmail}}",
+          "- **Google Play Game Listing:** [Dubai Modern Bus Simulator on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.dubai.bus)",
+          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
+        ],
+      },
+    ],
+  },
 };
 
 /**
- * Resolves an AppPrivacyPolicy by primary slug, packageId, or recognized alias.
+ * Resolves an AppPrivacyPolicy by primary slug or recognized alias.
  */
 export function getAppPrivacyPolicy(slug: string): AppPrivacyPolicy | undefined {
   const normalized = slug.trim().toLowerCase();
@@ -772,12 +893,9 @@ export function getAppPrivacyPolicy(slug: string): AppPrivacyPolicy | undefined 
     return APP_PRIVACY_POLICIES[normalized];
   }
 
-  // Alias or PackageId match
+  // Alias match
   for (const policy of Object.values(APP_PRIVACY_POLICIES)) {
-    if (
-      policy.aliases.includes(normalized) ||
-      policy.packageId.toLowerCase() === normalized
-    ) {
+    if (policy.aliases.includes(normalized)) {
       return policy;
     }
   }
@@ -800,14 +918,13 @@ export function getAllAppSlugs(): string[] {
 }
 
 /**
- * Returns all slugs, aliases, and packageIds for routing and pre-rendering.
+ * Returns all slugs and aliases for routing.
  */
 export function getAllRouteSlugs(): string[] {
   const slugs: string[] = [];
   for (const policy of Object.values(APP_PRIVACY_POLICIES)) {
     slugs.push(policy.slug);
     slugs.push(...policy.aliases);
-    slugs.push(policy.packageId);
   }
   return Array.from(new Set(slugs));
 }

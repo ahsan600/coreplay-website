@@ -27,6 +27,11 @@ export async function generateMetadata({
     return {
       title: "Privacy Policy Not Found",
       description: "The requested application privacy policy could not be found.",
+      icons: {
+        icon: [{ url: "/lock-icon.svg", type: "image/svg+xml" }],
+        shortcut: "/lock-icon.svg",
+        apple: "/lock-icon.svg",
+      },
     };
   }
 
@@ -35,6 +40,11 @@ export async function generateMetadata({
   return {
     title: `${policy.appName} Privacy Policy`,
     description: policy.metaDescription,
+    icons: {
+      icon: [{ url: "/lock-icon.svg", type: "image/svg+xml" }],
+      shortcut: "/lock-icon.svg",
+      apple: "/lock-icon.svg",
+    },
     openGraph: {
       title: `${policy.appName} Privacy Policy | Coreplay Technologies`,
       description: policy.metaDescription,
@@ -57,4 +67,3 @@ export default async function AppPrivacyPolicyPage({ params }: PageProps) {
 
   return <PrivacyPolicyContent data={policy} />;
 }
-
