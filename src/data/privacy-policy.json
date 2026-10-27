@@ -16,66 +16,74 @@
     {
       "title": "Scope & Overview",
       "content": [
-        "This Privacy Policy applies to all mobile games, mobile utility applications (including **Dubai Modern Bus Simulator**, **ScanPro – QR & Barcode Scanner**, and upcoming releases), digital products, and services published by **Coreplay Technologies** (\"we\", \"our\", or \"us\") on Google Play and authorized Android marketplaces.",
-        "We are committed to protecting your privacy and being transparent about our data practices. Our core philosophy is privacy-by-design: we minimize data collection, process sensitive hardware operations (such as camera scanning) strictly on-device, and never harvest, sell, or monetize your personal files or scan history."
+        "This Privacy Policy applies to all mobile games, productivity tools, and mobile utility applications (including **Dubai Modern Bus Simulator**, **ScanPro – QR & Barcode Scanner**, **TacTix – Tactical Board Games**, **RepeatIt – Text Repeater**, **TaskFlow – Daily Schedule Planner & To-Do List**, and upcoming releases), digital products, and services published by **Coreplay Technologies** (\"we\", \"our\", or \"us\") on Google Play and authorized Android marketplaces.",
+        "We are committed to protecting your privacy and being transparent about our data practices. Our core philosophy is privacy-by-design: we minimize data collection, process sensitive operations (such as camera scanning, task scheduling, text styling, and tactical game logic) strictly on-device, and never harvest, sell, or monetize your personal files, schedule entries, gameplay history, or scan logs."
       ]
     },
     {
       "title": "Device Permissions & Hardware Access",
       "content": [
-        "To deliver core utility and gaming capabilities, our applications may request access to specific Android device hardware and system features. These permissions are requested at runtime only when strictly needed:",
+        "To deliver core utility, productivity, and gaming capabilities, our applications may request access to specific Android device hardware and system features. These permissions are requested at runtime only when strictly needed:",
         "- **Camera Access (android.permission.CAMERA):** Used exclusively in our scanner utilities (such as ScanPro) to provide a real-time viewfinder for scanning QR codes and 1D/2D barcodes using Google ML Kit. **Zero Cloud Transmission:** Video frames and images captured by your camera are analyzed strictly in real-time in your device's temporary memory. We do not record, store, upload, or transmit your camera video stream or captured photos to any external server.",
         "- **Flashlight (android.permission.FLASHLIGHT):** Used optionally to toggle your device flashlight so you can scan barcodes and QR codes in dark or low-light conditions.",
         "- **Photos, Media & File Storage (READ_MEDIA_IMAGES / Filesystem):** Used only when you voluntarily choose to scan an existing QR code or barcode from your saved device photo gallery, or when you explicitly export your scan history logs (such as CSV or text files) or save generated QR codes to your local device storage.",
-        "- **System Clipboard Access:** Enables you to copy decoded barcode data, Wi-Fi passwords, or URLs to your device clipboard with a single tap, or paste text to generate custom QR codes. Clipboard data is processed locally and never transmitted to our servers.",
-        "- **Haptic Feedback & Vibration (VIBRATE):** Used to provide immediate tactile vibration confirmation upon successful detection of a barcode or QR code.",
-        "- **Network & Internet State (INTERNET, ACCESS_NETWORK_STATE):** Used to deliver advertisements via verified ad networks, check license verification via Google Play, and open external web links in your preferred browser when you tap on a scanned URL.",
+        "- **System Clipboard Access:** Enables you to copy decoded barcode data, Wi-Fi passwords, or URLs to your device clipboard with a single tap, or paste text to generate custom QR codes or repeated text. Clipboard data is processed locally and never transmitted to our servers.",
+        "- **Haptic Feedback & Vibration (VIBRATE):** Used to provide tactile confirmation upon user interactions (such as task completion celebrations, button taps, and game marker placement) and for notification reminder vibrations.",
+        "- **Post Notifications (android.permission.POST_NOTIFICATIONS):** Used in task planning and reminder utilities (such as TaskFlow) to deliver user-scheduled task reminder alerts, upcoming deadline notifications, and motivational focus nudges. Notifications are scheduled strictly through local on-device alarms, and users can toggle reminders or configure timing at any time within application settings (**Settings > Task Reminders**).",
+        "- **Boot Completed (android.permission.RECEIVE_BOOT_COMPLETED):** Used in reminder utilities (such as TaskFlow) strictly to restore and reschedule active user-defined task reminders when the Android device is restarted, ensuring scheduled alerts are preserved without running persistent background tracking services.",
+        "- **Network & Internet State (INTERNET, ACCESS_NETWORK_STATE):** Used in online or ad-supported releases to deliver advertisements via verified ad networks, check license verification via Google Play, and open external web links in your preferred browser when you tap on an external URL or resource. Standalone offline utilities and titles (such as TaskFlow and TacTix) do not transmit user data across external networks.",
+        "- **Zero Invasive Permissions in Standalone Titles:** Standalone productivity and board titles such as **TaskFlow**, **RepeatIt**, and **TacTix** request zero sensitive device permissions (no camera, microphone, contacts, biometric sensors, GPS location, or external media library access).",
         "You can manage, grant, or revoke any of these permissions at any time through your Android device settings (**Settings > Apps > [App Name] > Permissions**)."
       ]
     },
     {
       "title": "Information Collection and Use",
       "content": [
-        "When you download, install, and interact with our applications and games, certain technical and diagnostic data may be automatically collected:",
+        "When you download, install, and interact with our applications and games, certain technical and diagnostic data may be automatically collected based on the application type:",
         "- **Device Technical Identifiers:** Device model, manufacturer, Android operating system version, system language, screen resolution, and available memory.",
         "- **Diagnostic & Performance Data:** Application launch timestamps, session duration, in-game level progress, crash logs, and stability metrics.",
-        "- **Advertising Identifiers:** Non-permanent device identifiers such as the Google Advertising ID (GAID), used to measure advertising attribution and frequency capping.",
-        "- **Approximate Geographic Location:** Non-precise, coarse location derived from IP address (e.g. country or metropolitan area) used for regional advertising compliance, language localization, and fraud prevention. **We do not collect precise GPS coordinates.**",
-        "- **Local User Content & History:** In our scanner applications (ScanPro), your scan history logs, favorites, generated codes, and user preferences are stored **strictly locally on your device** (via local app preferences). They are never synced to our servers without your explicit action."
+        "- **Advertising Identifiers:** Non-permanent device identifiers such as the Google Advertising ID (GAID), used in ad-supported titles to measure advertising attribution and frequency capping.",
+        "- **Approximate Geographic Location:** Non-precise, coarse location derived from IP address (e.g. country or metropolitan area) used in ad-supported titles for regional advertising compliance, language localization, and fraud prevention. **We do not collect precise GPS coordinates.**",
+        "- **Local User Content & Personal Data Sovereignty:** In our utility tools, productivity applications, and board games (such as TaskFlow, ScanPro, TacTix, and RepeatIt), all user content—including task titles, notes, subtask checklists, schedules, categories, scan history, player preferences, and text repeats—is stored **strictly locally on your device** (via on-device Preferences and local storage). They are never synced to our servers without your explicit action, never transmitted externally, and never accessible to third parties.",
+        "- **No Account Registration or Cloud Profiles:** Standalone utilities such as TaskFlow and RepeatIt require no account creation, sign-up, email login, or passwords. You remain completely anonymous."
       ]
     },
     {
       "title": "Third-Party Services & SDK Integrations",
       "content": [
-        "Our applications and games integrate trusted third-party Software Development Kits (SDKs) to provide operating system connectivity, on-device machine learning, advertising monetization, and performance stability. Each provider processes data in accordance with their respective privacy policies:",
+        "Our applications and games integrate trusted third-party Software Development Kits (SDKs) based on the specific application's functionality. Each provider processes data in accordance with their respective privacy policies:",
         "- **Google Play Services (Google LLC):** Essential for Android app distribution, security verification, and operating system integration. [Google Privacy Policy](https://policies.google.com/privacy)",
-        "- **Google AdMob & Mobile Ads SDK (Google LLC):** Delivers banner, interstitial, and rewarded video advertisements. AdMob may collect and process device advertising IDs (GAID), IP address, and interaction data to serve relevant ads and prevent fraud. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
-        "- **Google ML Kit (Google LLC):** Powers high-speed on-device computer vision for barcode and QR code recognition. Machine learning inference occurs 100% locally on your phone's processor without sending image frames to Google servers. [Google ML Kit Terms](https://developers.google.com/ml-kit/terms)",
+        "- **Google AdMob & Mobile Ads SDK (Google LLC):** Delivers banner, interstitial, and rewarded video advertisements in ad-supported titles (such as Dubai Modern Bus Simulator). AdMob may collect and process device advertising IDs (GAID), IP address, and interaction data to serve relevant ads and prevent fraud. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
+        "- **Google ML Kit (Google LLC):** Powers high-speed on-device computer vision for barcode and QR code recognition in scanner utilities. Machine learning inference occurs 100% locally on your phone's processor without sending image frames to Google servers. [Google ML Kit Terms](https://developers.google.com/ml-kit/terms)",
         "- **Unity Technologies (Unity Ads & Engine):** Provides 3D graphics rendering, realistic physics simulation, and in-game ad delivery for mobile games. [Unity Privacy Policy](https://unity.com/legal/privacy-policy)",
-        "- **Firebase & Crashlytics (Google LLC):** Aggregated crash analytics and performance monitoring used to troubleshoot device-specific crashes and optimize frame rates. [Firebase Privacy Policy](https://firebase.google.com/support/privacy)"
+        "- **Firebase & Crashlytics (Google LLC):** Aggregated crash analytics and performance monitoring used in simulation games to troubleshoot device-specific crashes and optimize frame rates. [Firebase Privacy Policy](https://firebase.google.com/support/privacy)",
+        "- **Standalone Offline & Productivity Titles (TaskFlow, TacTix, RepeatIt):** Certain applications published by Coreplay Technologies, including **TaskFlow**, **TacTix**, and **RepeatIt**, operate as 100% standalone, offline applications. They do not integrate third-party advertising SDKs, analytics tracking libraries (such as Firebase or Crashlytics), or remote cloud databases. All task scheduling and data persistence execute strictly on the client device."
       ]
     },
     {
       "title": "Managing Advertising Choices & Advertising ID",
       "content": [
-        "Our free-to-download mobile games and utility apps may display advertisements powered by Google AdMob and certified ad networks. You have complete control over personalized advertising through your Android operating system settings:",
+        "Our free-to-download mobile games and ad-supported apps may display advertisements powered by Google AdMob and certified ad networks. You have complete control over personalized advertising through your Android operating system settings:",
         "- **Reset Advertising ID:** Open Android **Settings > Google > Ads** and tap **Reset advertising ID** to disassociate past activity from your device identifier.",
         "- **Delete Advertising ID:** On modern Android versions (Android 12+), navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent apps from accessing your advertising identifier entirely.",
-        "- **Opt-Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to ensure you receive contextual ads rather than interest-based ads."
+        "- **Opt-Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to ensure you receive contextual ads rather than interest-based ads.",
+        "- **Ad-Free Standalone Titles:** In our 100% ad-free titles (such as TaskFlow and TacTix), advertising identifiers (GAID) are neither accessed nor processed."
       ]
     },
     {
       "title": "In-App Purchases & Financial Data",
       "content": [
         "If our games or applications offer optional in-app purchases, digital unlocks, or subscriptions, all payment transactions are handled exclusively through the **Google Play In-App Billing** system.",
-        "Coreplay Technologies does not collect, receive, or store your credit card numbers, bank account information, or billing address. All financial details are processed securely by Google under [Google Payments Privacy Notice](https://payments.google.com/legaldocument?family=0.privacynotice)."
+        "Coreplay Technologies does not collect, receive, or store your credit card numbers, bank account information, or billing address. All financial details are processed securely by Google under [Google Payments Privacy Notice](https://payments.google.com/legaldocument?family=0.privacynotice).",
+        "- **Free & Non-Monetized Utilities:** Utilities such as **TaskFlow** and **RepeatIt** are completely free to use with no hidden fees, paid subscriptions, or financial transactions."
       ]
     },
     {
       "title": "Data Retention & User Data Deletion Rights",
       "content": [
         "In compliance with Google Play Store Developer Policies and international privacy regulations, we provide clear procedures for managing and deleting your data:",
-        "- **Local Data Erasure:** You can permanently delete your scan history, favorite items, and cached preferences instantly at any time from within the app by navigating to **Settings > Clear History** or through Android system settings (**Settings > Apps > Storage > Clear Data**).",
+        "- **Local Data Erasure & App Reset:** You can permanently delete your data instantly at any time from within our applications. In **TaskFlow**, you can move completed tasks to the Trash Bin, empty the Trash Bin, or perform a complete data reset (**Settings > Reset App Data**) to permanently wipe all tasks, categories, and settings from device storage. In **ScanPro**, you can clear your scan history via **Settings > Clear History**. In **TacTix**, you can reset match records via **Settings > Reset All Statistics & Match History**. You can also clear all stored data instantly at the operating system level through Android system settings (**Settings > Apps > [App Name] > Storage > Clear Data**).",
+        "- **Data Portability & Backup:** Applications such as **TaskFlow** provide full data portability, enabling you to export your entire task database, categories, and preferences to a standard JSON backup file at any time (**Settings > Export Backup**) or restore from a previously exported backup file without server intervention.",
         "- **Account & Server Data Deletion Request:** If you have contacted our support team or submitted diagnostic feedback, you have the right to request the permanent erasure of all associated correspondence and records.",
         "- **How to Request Deletion:** Send an email to **{{contactEmail}}** with the subject line **[Data Deletion Request]** specifying the application name and your details. We verify and complete all data deletion requests within 30 days without charge."
       ]
@@ -101,8 +109,8 @@
     {
       "title": "Offline Functionality & Privacy by Design",
       "content": [
-        "Our utility applications (such as ScanPro) and offline game modes are designed to operate independently of an active internet connection whenever possible.",
-        "All barcode scanning, QR code decoding, and code generation calculations execute entirely locally on your device hardware without requiring an internet connection. Your scanned data remains your private property on your physical device."
+        "Our utility applications (such as **TaskFlow**, **ScanPro**, and **RepeatIt**) and standalone board games (such as **TacTix**) are designed to operate independently of an active internet connection whenever possible.",
+        "All task planning, scheduling, reminder calculations, barcode scanning, QR code decoding, text styling, and tactical board game calculations (including TacTix minimax AI decision-making, move replay review, and streak validation) execute entirely locally on your device hardware without requiring an internet connection. Your schedules, tasks, and private notes remain your private property on your physical device."
       ]
     },
     {
