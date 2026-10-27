@@ -4,7 +4,7 @@ import { PrivacyPolicyContent } from "./PrivacyPolicyContent";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Official Privacy Policy for Coreplay Technologies mobile games and applications on Google Play, detailing camera permissions, data collection, Google ML Kit, AdMob, user rights, and children's privacy.",
+    "Official Privacy Policy for Coreplay Technologies mobile games and applications on Google Play, detailing device permissions (camera, notifications), on-device processing, data collection, user rights, and children's privacy.",
   openGraph: {
     title: "Privacy Policy | Coreplay Technologies",
     description:
