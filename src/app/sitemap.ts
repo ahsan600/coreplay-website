@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { getAllAppSlugs } from "@/data/app-privacy-policies";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
@@ -8,6 +9,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : "https://coreplay-site.netlify.app");
   const currentDate = new Date();
+
+  const appPolicyEntries: MetadataRoute.Sitemap = getAllAppSlugs().map((slug) => ({
+    url: `${baseUrl}/privacy-policy/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
 
   return [
     {
@@ -46,5 +54,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...appPolicyEntries,
   ];
 }

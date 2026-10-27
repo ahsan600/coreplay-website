@@ -1,15 +1,49 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import config from '@/data/privacy-policy.json';
 import { useTheme } from '@/components/ui/ThemeProvider';
+import { getAllAppPrivacyPolicies } from '@/data/app-privacy-policies';
 
-export function PrivacyPolicyContent() {
-  const { companyName, contactEmail, sections, lastUpdated } = config;
+export interface PrivacyPolicyContentProps {
+  data?: {
+    appName?: string;
+    shortName?: string;
+    packageId?: string;
+    category?: string;
+    tagline?: string;
+    heroDescription?: string;
+    badgeText?: string;
+    companyName?: string;
+    contactEmail?: string;
+    lastUpdated?: string;
+    sections: Array<{
+      title: string;
+      content: string[];
+    }>;
+  };
+}
+
+export function PrivacyPolicyContent({ data }: PrivacyPolicyContentProps = {}) {
+  const isAppSpecific = Boolean(data?.appName || data?.packageId);
+  const companyName = data?.companyName || config.companyName;
+  const contactEmail = data?.contactEmail || config.contactEmail;
+  const sections = data?.sections || config.sections;
+  const lastUpdated = data?.lastUpdated || config.lastUpdated;
+
   const [expandedSection, setExpandedSection] = useState<number | null>(0);
   const [activeSidebarItem, setActiveSidebarItem] = useState(-1);
   const { theme } = useTheme();
   const isDarkMode = theme === 'dark';
+
+  const heroTitle = isAppSpecific
+    ? `${data?.appName} Privacy Policy`
+    : 'Privacy Policy';
+
+  const heroDescription = isAppSpecific
+    ? (data?.heroDescription || `Understand how ${data?.appName} (${data?.packageId || ''}) protects your data with on-device processing and zero invasive tracking.`)
+    : `We believe in complete transparency. Understand how we safeguard your data, respect camera permissions, and ensure on-device privacy across all ${companyName} mobile games and applications.`;
 
   // Support direct hash navigation on page load
   useEffect(() => {
@@ -177,6 +211,21 @@ export function PrivacyPolicyContent() {
               : 'border-slate-200/90 bg-white/95 shadow-lg shadow-slate-200/40'
           } backdrop-blur-md p-2.5 hidden lg:flex flex-col gap-1 select-none transition-colors z-20 max-h-[calc(100vh-8rem)] overflow-y-auto`}
         >
+          {/* Back link when viewing an app-specific policy */}
+          {isAppSpecific && (
+            <Link
+              href="/privacy-policy"
+              className={`w-full text-left flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold transition-colors mb-1 border ${
+                isDarkMode
+                  ? 'border-slate-800 bg-white/5 text-slate-300 hover:text-cyan-400 hover:border-slate-700'
+                  : 'border-slate-200 bg-slate-100 text-slate-700 hover:text-blue-600 hover:border-slate-300'
+              }`}
+            >
+              <ArrowLeftIcon className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+              <span className="truncate">All Privacy Policies</span>
+            </Link>
+          )}
+
           {/* Overview button */}
           <button
             type="button"
@@ -252,6 +301,23 @@ export function PrivacyPolicyContent() {
 
         {/* Center Main Content */}
         <main className="flex-1 min-w-0 pb-16">
+          {/* Breadcrumb Navigation when viewing an app-specific policy */}
+          {isAppSpecific && (
+            <nav className="mb-4 flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-blue-500 dark:hover:text-cyan-400 transition-colors flex items-center gap-1.5"
+              >
+                <ArrowLeftIcon className="w-3.5 h-3.5" />
+                <span>All Privacy Policies</span>
+              </Link>
+              <span>/</span>
+              <span className="text-slate-700 dark:text-slate-200 font-semibold">
+                {data?.shortName || data?.appName}
+              </span>
+            </nav>
+          )}
+
           {/* Hero Card */}
           <div
             className={`${
@@ -261,28 +327,56 @@ export function PrivacyPolicyContent() {
             } rounded-2xl p-8 md:p-12 mb-8 flex flex-col md:flex-row items-center justify-between border relative overflow-hidden`}
           >
             <div className="md:w-3/5 z-10">
-              <div
-                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-semibold mb-6 border ${
-                  isDarkMode
-                    ? 'bg-blue-900/30 text-blue-300 border-blue-800/50'
-                    : 'bg-blue-100/50 text-blue-700 border-blue-200'
-                }`}
-              >
-                <CalendarIcon className="w-4 h-4 text-cyan-400" /> Last Updated: {lastUpdated}
+              <div className="flex flex-wrap items-center gap-2 mb-4">
+                <div
+                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-md text-xs font-semibold border ${
+                    isDarkMode
+                      ? 'bg-blue-900/30 text-blue-300 border-blue-800/50'
+                      : 'bg-blue-100/50 text-blue-700 border-blue-200'
+                  }`}
+                >
+                  <CalendarIcon className="w-4 h-4 text-cyan-400" /> Last Updated: {lastUpdated}
+                </div>
+
+                {data?.badgeText && (
+                  <div
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold border ${
+                      isDarkMode
+                        ? 'bg-emerald-950/40 text-emerald-300 border-emerald-800/50'
+                        : 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                    }`}
+                  >
+                    <ShieldIcon className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>{data.badgeText}</span>
+                  </div>
+                )}
+
+                {data?.packageId && (
+                  <div
+                    className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-md text-xs font-mono border ${
+                      isDarkMode
+                        ? 'bg-slate-800/80 text-slate-300 border-slate-700/80'
+                        : 'bg-white text-slate-700 border-slate-200 shadow-sm'
+                    }`}
+                  >
+                    <span>{data.packageId}</span>
+                  </div>
+                )}
               </div>
+
               <h1
                 className={`text-3xl md:text-5xl font-extrabold tracking-tight mb-4 ${
                   isDarkMode ? 'text-white' : 'text-slate-900'
                 }`}
               >
-                Privacy Policy
+                {heroTitle}
               </h1>
               <p
                 className={`text-base md:text-lg max-w-lg leading-relaxed ${
                   isDarkMode ? 'text-slate-300' : 'text-slate-600'
                 }`}
               >
-                We believe in complete transparency. Understand how we safeguard your data, respect camera permissions, and ensure on-device privacy across all {companyName} mobile games and applications.
+                {heroDescription}
               </p>
             </div>
 
@@ -321,10 +415,89 @@ export function PrivacyPolicyContent() {
             </div>
           </div>
 
+          {/* App-Specific Policies Quick Switcher on Universal Page */}
+          {!isAppSpecific && (
+            <div
+              className={`mb-8 p-5 sm:p-6 rounded-2xl border transition-colors ${
+                isDarkMode
+                  ? 'border-slate-800 bg-[#161a23]/90 shadow-md'
+                  : 'border-slate-200 bg-white shadow-sm'
+              }`}
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div className="flex items-center gap-2">
+                  <ShieldIcon className="w-4 h-4 text-cyan-400" />
+                  <h2
+                    className={`font-bold text-base sm:text-lg ${
+                      isDarkMode ? 'text-white' : 'text-slate-900'
+                    }`}
+                  >
+                    Dedicated App Privacy Policies
+                  </h2>
+                </div>
+                <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 self-start sm:self-auto">
+                  5 App-Specific Policies Available
+                </span>
+              </div>
+              <p
+                className={`text-xs sm:text-sm mb-4 leading-relaxed ${
+                  isDarkMode ? 'text-slate-400' : 'text-slate-600'
+                }`}
+              >
+                Need verified details on device permissions, local storage, or third-party integrations for a specific application? Select an app below to view its dedicated policy:
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {getAllAppPrivacyPolicies().map((app) => (
+                  <Link
+                    key={app.slug}
+                    href={`/privacy-policy/${app.slug}`}
+                    className={`p-3.5 rounded-xl border text-left transition-all duration-200 group flex flex-col justify-between ${
+                      isDarkMode
+                        ? 'border-slate-800 bg-[#12151c] hover:border-cyan-500/40 hover:bg-[#1a1f2b]'
+                        : 'border-slate-200 bg-slate-50/80 hover:border-blue-400 hover:bg-blue-50/50'
+                    }`}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-1">
+                        <span
+                          className={`font-bold text-xs sm:text-sm group-hover:text-cyan-400 transition-colors ${
+                            isDarkMode ? 'text-white' : 'text-slate-900'
+                          }`}
+                        >
+                          {app.shortName}
+                        </span>
+                        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-500/10 text-slate-400">
+                          {app.category.split('&')[0].trim()}
+                        </span>
+                      </div>
+                      <p
+                        className={`text-[11px] line-clamp-2 leading-relaxed ${
+                          isDarkMode ? 'text-slate-400' : 'text-slate-500'
+                        }`}
+                      >
+                        {app.tagline}
+                      </p>
+                    </div>
+                    <div className="mt-3 pt-2 border-t border-slate-200/60 dark:border-slate-800/60 flex items-center justify-between text-[11px] font-medium text-cyan-400">
+                      <span>View Dedicated Policy</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Accordion list */}
           <div className="space-y-3.5">
             {sections.map((section, idx) => {
               const isExpanded = expandedSection === idx;
+              const previewText = (section.content[0] || '')
+                .replace(/\*\*/g, '')
+                .replace(/\[(.*?)\]\(.*?\)/g, '$1')
+                .substring(0, 85);
+
               return (
                 <div
                   key={idx}
@@ -368,7 +541,7 @@ export function PrivacyPolicyContent() {
                             isDarkMode ? 'text-slate-400' : 'text-slate-500'
                           }`}
                         >
-                          {section.content[0].replace(/\*\*/g, '').replace(/\[(.*?)\]\(.*?\)/g, '$1').substring(0, 85)}...
+                          {previewText}...
                         </p>
                       </div>
                     </div>
@@ -425,7 +598,7 @@ export function PrivacyPolicyContent() {
             </div>
 
             <a
-              href={`mailto:${contactEmail}?subject=%5BPrivacy%20Inquiry%5D%20Coreplay%20Technologies`}
+              href={`mailto:${contactEmail}?subject=%5BPrivacy%20Inquiry%5D%20${encodeURIComponent(data?.appName || companyName)}`}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors shrink-0"
             >
               <MailIcon className="w-3.5 h-3.5" />
@@ -444,14 +617,14 @@ const getIconForTitle = (title: string, className: string) => {
   if (t.includes('permission') || t.includes('camera') || t.includes('hardware')) return <CameraIcon className={className} />;
   if (t.includes('collection') || t.includes('collect')) return <UserIcon className={className} />;
   if (t.includes('scope') || t.includes('overview')) return <ShieldIcon className={className} />;
-  if (t.includes('use') || t.includes('purpose')) return <PieChartIcon className={className} />;
-  if (t.includes('advertis') || t.includes('admob') || t.includes('gaid')) return <EyeIcon className={className} />;
+  if (t.includes('use') || t.includes('purpose') || t.includes('feature')) return <PieChartIcon className={className} />;
+  if (t.includes('advertis') || t.includes('admob') || t.includes('gaid') || t.includes('choice')) return <EyeIcon className={className} />;
   if (t.includes('purchase') || t.includes('financ')) return <CreditCardIcon className={className} />;
-  if (t.includes('security')) return <LockIcon className={className} />;
-  if (t.includes('retention') || t.includes('delet') || t.includes('erasure')) return <DatabaseIcon className={className} />;
+  if (t.includes('security') || t.includes('safeguard')) return <LockIcon className={className} />;
+  if (t.includes('retention') || t.includes('delet') || t.includes('erasure') || t.includes('backup')) return <DatabaseIcon className={className} />;
   if (t.includes('right') || t.includes('gdpr') || t.includes('ccpa') || t.includes('consent')) return <CheckCircleIcon className={className} />;
   if (t.includes('third party') || t.includes('service') || t.includes('sdk')) return <GridIcon className={className} />;
-  if (t.includes('offline')) return <LockIcon className={className} />;
+  if (t.includes('offline') || t.includes('storage') || t.includes('transmission')) return <LockIcon className={className} />;
   if (t.includes('child')) return <UserIcon className={className} />;
   if (t.includes('change')) return <CalendarIcon className={className} />;
   if (t.includes('contact')) return <MailIcon className={className} />;
@@ -459,6 +632,13 @@ const getIconForTitle = (title: string, className: string) => {
 };
 
 // Shared SVG Components
+const ArrowLeftIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <line x1="19" y1="12" x2="5" y2="12" />
+    <polyline points="12 19 5 12 12 5" />
+  </svg>
+);
+
 const ShieldIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />

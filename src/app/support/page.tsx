@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   ArrowUpRight,
   HelpCircle,
@@ -81,7 +82,7 @@ export default function SupportPage() {
             <ArrowUpRight className="w-5 h-5 text-theme-muted group-hover:text-accent-secondary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
 
-          <a
+          <Link
             href="/privacy-policy"
             className="p-5 rounded-2xl border border-theme bg-theme-card hover:border-accent-primary/50 transition-all flex items-center justify-between group"
           >
@@ -94,7 +95,7 @@ export default function SupportPage() {
               </h2>
             </div>
             <ArrowUpRight className="w-5 h-5 text-theme-muted group-hover:text-accent-secondary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
+          </Link>
         </div>
 
         {/* Troubleshooting Steps */}
