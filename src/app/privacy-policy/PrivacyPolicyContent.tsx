@@ -39,11 +39,11 @@ export function PrivacyPolicyContent({ data }: PrivacyPolicyContentProps = {}) {
 
   const heroTitle = isAppSpecific
     ? `${data?.appName} Privacy Policy`
-    : 'Privacy Policy';
+    : 'Universal Privacy Policy';
 
   const heroDescription = isAppSpecific
     ? (data?.heroDescription || `Understand how ${data?.appName} (${data?.packageId || ''}) protects your data with on-device processing and zero invasive tracking.`)
-    : `We believe in complete transparency. Understand how we safeguard your data, respect camera permissions, and ensure on-device privacy across all ${companyName} mobile games and applications.`;
+    : `The official master Privacy Policy governing all mobile games, utility tools, productivity applications, and digital services published by ${companyName}. Understand how we collect, process, protect, and handle data across our entire ecosystem.`;
 
   // Support direct hash navigation on page load
   useEffect(() => {
@@ -337,6 +337,19 @@ export function PrivacyPolicyContent({ data }: PrivacyPolicyContentProps = {}) {
                 >
                   <CalendarIcon className="w-4 h-4 text-cyan-400" /> Last Updated: {lastUpdated}
                 </div>
+
+                {!isAppSpecific && (
+                  <div
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold border ${
+                      isDarkMode
+                        ? 'bg-blue-900/40 text-cyan-300 border-blue-700/50'
+                        : 'bg-blue-50 text-blue-700 border-blue-200'
+                    }`}
+                  >
+                    <ShieldIcon className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>Master Policy • All Games &amp; Apps</span>
+                  </div>
+                )}
 
                 {data?.badgeText && (
                   <div

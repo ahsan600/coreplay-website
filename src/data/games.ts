@@ -91,6 +91,40 @@ export const GAMES: Game[] = [
 
 export const APPS: AppItem[] = [
   {
+    id: "taskflow-daily-schedule-planner",
+    title: "TaskFlow: To-Do List & Planner",
+    packageId: "com.coreplay.todolist",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.todolist",
+    tagline: "Plan with clarity. Focus with purpose. Smart schedule planner & to-do list with total privacy.",
+    description: "TaskFlow: To-Do List & Planner is a high-speed, lightweight daily schedule planner and checklist manager published by Coreplay Technologies. Built with 100% on-device architecture, TaskFlow lets you organize your daily routine, recurring tasks, custom color-tagged categories, and time slots with local reminders and zero cloud sync or tracking.",
+    category: "Productivity & Utilities",
+    iconUrl: "/images/apps/scanpro/icon.png",
+    bannerUrl: "/images/apps/scanpro/screenshot-1.png",
+    featureGraphicUrl: "/images/apps/scanpro/screenshot-1.png",
+    screenshots: [
+      "/images/apps/scanpro/screenshot-1.png",
+      "/images/apps/scanpro/screenshot-2.png",
+      "/images/apps/scanpro/screenshot-3.png",
+      "/images/apps/scanpro/screenshot-4.png",
+    ],
+    features: [
+      "100% On-Device Privacy: Zero cloud databases, zero accounts, zero analytics or tracking",
+      "Smart Daily Planning: Time-slotted tasks, subtask checklists, and priority classification",
+      "Recurring Task Engine: Automated instance creation for daily, weekday, weekly, monthly, and yearly tasks",
+      "Local Deadline Reminders: Device notifications for scheduled alerts without battery drain",
+      "Interactive Calendar & Streak View: Track daily and monthly distributions and celebrate completions",
+      "Offline Data Sovereignty: Instant JSON backup export/restore, trash recovery, and full device wipe",
+    ],
+    highlights: [
+      "100% On-Device Privacy",
+      "Zero Cloud Sync Required",
+      "Offline Backup & Export",
+      "Ad-Free Productivity",
+    ],
+    status: "available",
+    releaseYear: "2026",
+  },
+  {
     id: "scanpro-qr-barcode-scanner",
     title: "ScanPro – QR & Barcode Scanner",
     packageId: "com.example.scanpro",

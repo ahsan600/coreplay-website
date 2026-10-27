@@ -171,12 +171,19 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
 
   "todo-list": {
     slug: "todo-list",
-    aliases: ["taskflow", "schedule-planner", "daily-planner", "task-flow"],
+    aliases: [
+      "taskflow",
+      "schedule-planner",
+      "daily-planner",
+      "task-flow",
+      "todolist",
+      "com.coreplay.todolist",
+    ],
     appName: "TaskFlow: To-Do List & Planner",
     shortName: "TaskFlow",
     packageId: "com.coreplay.todolist",
     category: "Productivity & Schedule Planning",
-    tagline: "Smart daily planning, task scheduling, category organization, and local reminders with zero-cloud privacy.",
+    tagline: "Smart daily planning, recurring task scheduling, category organization, and local reminders with zero-cloud privacy.",
     heroDescription:
       "Official Privacy Policy for TaskFlow: To-Do List & Planner (com.coreplay.todolist) published by Coreplay Technologies. Learn how your tasks, schedules, and reminders remain 100% on-device with zero ads and zero cloud tracking.",
     badgeText: "100% Offline • Local Reminders • Ad-Free",
@@ -196,11 +203,13 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
         title: "Application Features & Intended Use",
         content: [
           "TaskFlow is a comprehensive daily productivity and schedule management utility. Key features include:",
-          "- **Task & Checklist Management:** Create, edit, prioritize, and check off daily tasks, subtasks, and to-do items.",
-          "- **Custom Categories & Color Tagging:** Organize tasks into custom categories (Work, Personal, Fitness, Study, Shopping) with color accents.",
+          "- **Task & Checklist Management:** Create, edit, prioritize (High, Medium, Low), and check off daily tasks, subtasks, and to-do items.",
+          "- **Custom Categories & Color Tagging:** Organize tasks into custom categories (Work, Personal, Fitness, Study, Shopping) with distinctive color accents.",
+          "- **Recurring Tasks & Automated Rescheduling:** Support for daily, weekday, weekly, monthly, and yearly recurring tasks that automatically calculate and schedule the next instance upon task completion.",
           "- **Local Schedule Reminders:** Schedule time-based reminder notifications and focus alerts for critical deadlines.",
           "- **Interactive Calendar View:** Review daily and monthly task distributions and completion streaks.",
-          "- **Trash Bin Recovery:** Safely review, restore, or permanently delete completed and archived tasks.",
+          "- **Theme & Visual Customization:** Full support for Dark, Light, and System display modes with instantaneous one-tap theme switching in the app header.",
+          "- **Trash Bin Recovery:** Safely review, restore, or permanently delete completed and archived tasks with 30-day retention.",
           "- **Offline Backup & Restore:** Export your complete task database to a portable JSON file and restore without cloud intervention.",
         ],
       },
@@ -222,6 +231,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
           "- **Boot Completed (android.permission.RECEIVE_BOOT_COMPLETED):** Enables TaskFlow to restore and reschedule your active user-defined task reminders when your Android device restarts, ensuring your alarms remain preserved without running persistent battery-draining background tracking services.",
           "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile feedback upon task completion celebrations, button taps, and reminder alert vibrations.",
           "- **Network & Internet State (android.permission.INTERNET):** Standard WebView container permission used to open external web links (such as support or this privacy policy) when you explicitly tap an external URL. TaskFlow never transmits your tasks or schedule data over external networks.",
+          "- **No Exact Alarm Permission:** TaskFlow does NOT request or require `android.permission.SCHEDULE_EXACT_ALARM` or `android.permission.USE_EXACT_ALARM`. All notification scheduling is handled cooperatively via Android's power-efficient standard local notification channels, respecting device battery-saver states.",
           "- **Zero Sensitive Permissions:** TaskFlow does not request access to your camera, microphone, photo library, contacts, biometric sensors, or GPS location coordinates.",
         ],
       },
@@ -229,7 +239,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
         title: "Local Storage & Data Transmission",
         content: [
           "TaskFlow operates strictly on a client-side architecture:",
-          "- **On-Device Preferences Storage:** All tasks, categories, settings, and reminders are stored exclusively within local device storage using `@capacitor/preferences`.",
+          "- **On-Device Storage:** All tasks, categories, settings, theme preferences, and reminder schedules are stored exclusively within local device storage using `@capacitor/preferences` (Android SharedPreferences) and local web storage.",
           "- **Zero Cloud Databases:** TaskFlow does not communicate with cloud databases, Firebase Firestore, AWS, or external servers. Your tasks remain solely on your physical device.",
           "- **Complete Data Portability:** TaskFlow provides built-in backup functionality (**Settings > Export Backup**) allowing you to export your entire database to a standard JSON file for manual backup or device transfer without third-party involvement.",
         ],
@@ -263,9 +273,9 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
         title: "Data Retention, Backup & User Deletion Rights",
         content: [
           "You retain complete, unrestricted control over your task data at all times:",
-          "- **Trash Bin Management:** Deleted tasks can be reviewed, restored, or permanently wiped from the Trash Bin.",
+          "- **Trash Bin Management:** Deleted tasks can be reviewed, restored, or permanently wiped from the Trash Bin with 30-day retention.",
           "- **Complete App Reset:** You can permanently wipe all tasks, categories, and settings from device memory instantly via **Settings > Reset App Data**.",
-          "- **System Storage Clear:** You can erase all application data at the operating system level through Android **Settings > Apps > TaskFlow > Storage > Clear Data**.",
+          "- **System Storage Clear:** You can erase all application data at the operating system level through Android **Settings > Apps > TaskFlow: To-Do List & Planner > Storage > Clear Data**.",
           "- **Uninstall Deletion:** Uninstalling TaskFlow completely deletes the application sandbox and all stored tasks from your phone.",
         ],
       },
@@ -752,7 +762,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
 };
 
 /**
- * Resolves an AppPrivacyPolicy by primary slug or recognized alias.
+ * Resolves an AppPrivacyPolicy by primary slug, packageId, or recognized alias.
  */
 export function getAppPrivacyPolicy(slug: string): AppPrivacyPolicy | undefined {
   const normalized = slug.trim().toLowerCase();
@@ -762,9 +772,12 @@ export function getAppPrivacyPolicy(slug: string): AppPrivacyPolicy | undefined 
     return APP_PRIVACY_POLICIES[normalized];
   }
 
-  // Alias match
+  // Alias or PackageId match
   for (const policy of Object.values(APP_PRIVACY_POLICIES)) {
-    if (policy.aliases.includes(normalized)) {
+    if (
+      policy.aliases.includes(normalized) ||
+      policy.packageId.toLowerCase() === normalized
+    ) {
       return policy;
     }
   }
@@ -787,13 +800,14 @@ export function getAllAppSlugs(): string[] {
 }
 
 /**
- * Returns all slugs and aliases for routing.
+ * Returns all slugs, aliases, and packageIds for routing and pre-rendering.
  */
 export function getAllRouteSlugs(): string[] {
   const slugs: string[] = [];
   for (const policy of Object.values(APP_PRIVACY_POLICIES)) {
     slugs.push(policy.slug);
     slugs.push(...policy.aliases);
+    slugs.push(policy.packageId);
   }
   return Array.from(new Set(slugs));
 }

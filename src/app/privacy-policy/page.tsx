@@ -2,13 +2,18 @@ import type { Metadata } from "next";
 import { PrivacyPolicyContent } from "./PrivacyPolicyContent";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Universal Privacy Policy",
   description:
-    "Official Privacy Policy for Coreplay Technologies mobile games and applications on Google Play, detailing device permissions (camera, notifications), on-device processing, data collection, user rights, and children's privacy.",
+    "Official Universal Privacy Policy governing all mobile games, utilities, and productivity applications published by Coreplay Technologies on Google Play and Android marketplaces.",
   openGraph: {
-    title: "Privacy Policy | Coreplay Technologies",
+    title: "Universal Privacy Policy | Coreplay Technologies",
     description:
       "Understand how Coreplay Technologies collects, uses, and safeguards information across all mobile games and applications.",
+    url: "https://coreplay-site.netlify.app/privacy-policy",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://coreplay-site.netlify.app/privacy-policy",
   },
 };
 
