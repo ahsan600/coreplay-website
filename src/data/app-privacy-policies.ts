@@ -897,10 +897,10 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
     packageId: "com.coreplay.crowdrun",
     category: "Action / Casual / 3D Runner",
     tagline: "Multiply your windup crowd, dodge tricky obstacles, collect coins, and defeat giant mechanical bosses in exhilarating 3D runner gameplay.",
-    heroDescription: "Official Privacy Policy for Windup Rush: Crowd Runner 3D (com.coreplay.crowdrun) published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry controls.",
+    heroDescription: "Official Privacy Policy for Windup Rush: Crowd Runner 3D (com.coreplay.crowdrun) published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
     badgeText: "3D Action Runner • General Audience (13+) • Privacy-First",
     lastUpdated: "November 1, 2026",
-    metaDescription: "Official Privacy Policy for Windup Rush: Crowd Runner 3D (com.coreplay.crowdrun) by Coreplay Technologies. Details 3D crowd runner mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics opt-out, UMP consent, and local data storage.",
+    metaDescription: "Official Privacy Policy for Windup Rush: Crowd Runner 3D (com.coreplay.crowdrun) by Coreplay Technologies. Details 3D crowd runner mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.crowdrun",
     sections: [
       {
@@ -1002,10 +1002,10 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       {
         title: "Analytics, Telemetry & User Choices",
         content: [
-          "We empower players with direct, in-game control over their data sharing preferences:",
-          "- **Direct In-Game Analytics Toggle:** Open the in-game **Settings** modal at any time and locate the **Share usage analytics** switch. Turning it off stops analytics collection. Ad consent can be changed separately via Privacy options.",
-          "- **Privacy Options Form:** In jurisdictions requiring consent, players can re-open and modify their advertising consent choices at any time through the in-game Settings menu.",
-          "- **Aggregated Data Only:** Any telemetry collected is strictly anonymous and aggregated across player sessions to balance level difficulty curves and optimize performance."
+          "Windup Rush: Crowd Runner 3D collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:",
+          "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as levels started, completed, or failed, boss encounter outcomes, and virtual bolts earned or spent). No personal identifiers, names, emails, or device-specific sensitive data are collected.",
+          "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
+          "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**)."
         ]
       },
       {
@@ -1048,7 +1048,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
           "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
           "- **Right to Erasure (\"Right to be Forgotten\"):** You can erase all game data instantly via the in-game Settings or Android system settings.",
           "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
-          "- **Right to Restrict Processing:** Turning off the in-game analytics switch stops analytics collection. Ad consent can be changed separately via Privacy options at any time.",
+          "- **Right to Restrict Processing:** Players can manage or revoke advertising personalization choices at any time via the in-game **Privacy options** dialog, or delete their Advertising ID via Android system settings.",
           "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**."
         ]
       },
