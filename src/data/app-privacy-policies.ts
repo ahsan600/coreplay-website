@@ -883,6 +883,184 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       },
     ],
   },
+  "crowd-runner": {
+    slug: "crowd-runner",
+    aliases: [
+      "windup-rush",
+      "windup-rush-crowd-runner-3d",
+      "crowdrun",
+      "crowd-run",
+      "com.coreplay.crowdrun"
+    ],
+    appName: "Windup Rush: Crowd Runner 3D",
+    shortName: "Windup Rush",
+    packageId: "com.coreplay.crowdrun",
+    category: "Action / Casual / 3D Runner",
+    tagline: "Multiply your windup crowd, dodge tricky obstacles, collect coins, and defeat giant mechanical bosses in exhilarating 3D runner gameplay.",
+    heroDescription: "Official Privacy Policy for Windup Rush: Crowd Runner 3D (com.coreplay.crowdrun) published by Coreplay Technologies. Understand our privacy safeguards, local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry controls.",
+    badgeText: "3D Action Runner • Ad-Supported • COPPA Compliant • Privacy-First",
+    lastUpdated: COMMON_LAST_UPDATED,
+    metaDescription: "Official Privacy Policy for Windup Rush: Crowd Runner 3D (com.coreplay.crowdrun) by Coreplay Technologies. Details 3D crowd runner mechanics, Google AdMob monetization, Firebase Analytics opt-out, UMP consent, and local data storage.",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.crowdrun",
+    sections: [
+      {
+        title: "Scope & Overview",
+        content: [
+          "This Privacy Policy applies specifically to **Windup Rush: Crowd Runner 3D** (package name: `com.coreplay.crowdrun`), developed, published, and maintained by **Coreplay Technologies** (\"we\", \"our\", or \"us\") on Google Play and authorized Android marketplaces.",
+          "Inside the application interface and on your device home screen, the game is presented and displayed as **Windup Rush**. Windup Rush: Crowd Runner 3D is a fast-paced 3D arcade runner game where players navigate dynamic obstacle tracks, pass through mathematical multiplier gates to grow their toy windup crowd, collect coins and keys, and engage in epic mechanical boss showdowns.",
+          "We are dedicated to delivering entertaining, responsive, and secure mobile gaming experiences while upholding absolute transparency regarding player privacy, device permissions, and advertising technologies."
+        ]
+      },
+      {
+        title: "Application Features & Intended Use",
+        content: [
+          "Windup Rush: Crowd Runner 3D delivers dynamic crowd-running action engineered with a custom WebGL 3D graphics pipeline. Key gameplay features include:",
+          "- **Crowd Multiplication Mechanics:** Pass through positive addition and multiplication gates (+5, +20, ×2, ×3) to expand your runner army while steering clear of negative red gates.",
+          "- **Dynamic 3D Obstacle Courses:** Dodge spinning gears, stompers, swinging pendulums, spike traps, and collapsing bridges across diverse themed biome tracks.",
+          "- **Boss Confrontations & Finish Lines:** Direct your windup mob in final boss battles at the end of each run, launching runner barrages to break down armor plates and trigger victory celebrations.",
+          "- **Cosmetics & Customization:** Unlock charming toy outfits, hats, color palettes, and runner accessories in the in-game Shop using earned in-game bolts and coins.",
+          "- **Bonus Chest Room:** Unlock secret reward vaults with keys collected during track runs to earn bonus currency and rare cosmetic items.",
+          "- **100% Offline Capable:** Core runner levels, obstacle generation, crowd simulation, and boss battles are fully playable without an active internet connection."
+        ]
+      },
+      {
+        title: "Information Collection & Processing",
+        content: [
+          "Windup Rush: Crowd Runner 3D is engineered around strict data minimization principles:",
+          "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, physical addresses, telephone numbers, or biometric information. No account registration, password creation, or social media login is ever required to play.",
+          "- **Non-PII Gameplay Metrics:** Aggregated, anonymous gameplay events (such as levels completed, levels failed, boss encounter outcomes, and virtual currency earned) may be processed via Firebase Analytics to evaluate track balancing, difficulty curves, and level progression.",
+          "- **Device Diagnostic & Performance Telemetry:** Technical parameters including Android OS version, device model, screen resolution, GPU tier, and average frame rate (FPS) may be sampled to ensure smooth 60 FPS performance and avoid crashes across diverse hardware profiles.",
+          "- **Zero Keystroke or Sensor Snooping:** We do not track user keystrokes, personal communications, ambient microphone audio, or camera streams."
+        ]
+      },
+      {
+        title: "Device Permissions & Hardware Access",
+        content: [
+          "Windup Rush: Crowd Runner 3D requests only standard Android permissions necessary for responsive 3D gameplay, ad delivery, and device ergonomics:",
+          "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Enables the game to verify network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent forms, and open external links (such as support or this Privacy Policy) when tapped. The game functions seamlessly offline when no connection is present.",
+          "- **Keep Awake / Screen Wake Lock (android.permission.WAKE_LOCK):** Prevents your device screen from dimming or going to sleep during active runner stages, ensuring an uninterrupted gameplay experience while steering your crowd.",
+          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile rumble effects when your runners pass through multiplier gates, collect coins and keys, hit hazards, or strike boss targets. Vibration can be toggled on or off at any time in the in-game Settings menu.",
+          "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
+          "- **Android Privacy Sandbox (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS):** Supports modern Android Privacy Sandbox APIs, enabling privacy-preserving ad measurement and attribution without cross-app tracking identifiers.",
+          "- **Google Play Install Referrer (com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE):** Standard Google Play service permission used to measure app installation sources and distribution metrics.",
+          "- **Zero Sensitive Permissions:** The game does NOT request or access your device camera, microphone, GPS location, contact directory, calendar, stored files, photo gallery, or phone call logs."
+        ]
+      },
+      {
+        title: "Local Storage & Data Persistence",
+        content: [
+          "All player progression and customization data is stored 100% locally on your physical device:",
+          "- **On-Device Profile Storage:** Your current level index, total collected bolts/coins, unlocked hats, unlocked outfits, active cosmetic choices, and user preferences (audio volume, music, vibration, steering sensitivity, graphics preset) are saved locally using `@capacitor/preferences` under the key `profile.v1`.",
+          "- **Zero Remote Account Synchronization:** We do not maintain remote cloud user accounts, databases, or central player profile servers. Your save file lives solely inside your device's application sandbox.",
+          "- **Complete Player Control:** You retain full ownership of your game data. You can erase all progress at any time via the in-game Settings (\"Reset progress\"), through Android system settings, or by uninstalling the application."
+        ]
+      },
+      {
+        title: "Third-Party Services & SDK Integrations",
+        content: [
+          "To provide 3D rendering, non-invasive monetization, and crash diagnostic monitoring, Windup Rush: Crowd Runner 3D integrates trusted industry SDKs:",
+          "- **Google Play Services (Google LLC):** Essential for secure application distribution, integrity checking, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
+          "- **Google AdMob (Google LLC):** Serves non-intrusive banner, interstitial, and voluntary rewarded video ads that keep the game free to play for all users. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
+          "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
+          "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to measure level drop-off rates and gameplay performance bottlenecks. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)"
+        ]
+      },
+      {
+        title: "Advertising & Monetization Policy",
+        content: [
+          "Windup Rush: Crowd Runner 3D is a **100% free-to-play** game supported by digital advertising:",
+          "- **Rewarded Video Ads:** Optional, user-initiated video ads that reward players with in-game perks, such as bonus multipliers at the finish line or extra keys to unlock bonus chest vaults. Rewarded ads are never forced and only play when you explicitly choose to watch them.",
+          "- **Interstitial Ads:** Full-screen advertisements displayed periodically between runner levels, governed by strict frequency throttling and cooldown timers to prevent gameplay disruption.",
+          "- **Consent-Gated Personalization:** We respect your privacy preferences. In regions governed by GDPR, UK GDPR, or CCPA, ads are served in accordance with the consent you grant via the Google UMP consent dialogue.",
+          "- **Advertising ID Management:** You have complete control over your advertising identifier via Android operating system settings:",
+          "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to sever historical activity links.",
+          "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent all apps from accessing your GAID.",
+          "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads instead of interest-based ads."
+        ]
+      },
+      {
+        title: "In-App Purchases & Financial Data (Zero IAP)",
+        content: [
+          "Windup Rush: Crowd Runner 3D contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:",
+          "- **Completely Free to Play:** All levels, upgrades, runner hats, outfits, and aesthetic skins are unlockable purely through earned in-game bolts/coins and gameplay progression.",
+          "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
+          "- **No Pay-to-Win Mechanics:** There are no subscription fees, paid loot boxes, or microtransactions."
+        ]
+      },
+      {
+        title: "Analytics, Telemetry & User Choices",
+        content: [
+          "We empower players with direct, in-game control over their data sharing preferences:",
+          "- **Direct In-Game Analytics Toggle:** Open the in-game **Settings** modal at any time and locate the **Share usage analytics** switch. Toggling this setting OFF immediately revokes analytics storage, ad storage, and personalization permissions.",
+          "- **Privacy Options Form:** In jurisdictions requiring consent, players can re-open and modify their advertising consent choices at any time through the in-game Settings menu.",
+          "- **Aggregated Data Only:** Any telemetry collected is strictly anonymous and aggregated across thousands of sessions to balance level difficulty curves and diagnose frame rate drops."
+        ]
+      },
+      {
+        title: "Data Sharing & Disclosure Policy",
+        content: [
+          "Coreplay Technologies **does NOT sell, rent, trade, or lease** your personal data or gameplay records to third-party data brokers or marketing firms.",
+          "We disclose information solely to the trusted infrastructure providers enumerated in this policy (Google LLC) strictly for delivering ads, measuring aggregated app performance, and complying with legal obligations."
+        ]
+      },
+      {
+        title: "Data Retention & User Deletion Rights",
+        content: [
+          "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
+          "- **In-App Progress Reset:** You can reset your coins, unlocked cosmetics, and level progress to factory state by opening the in-game **Settings** and tapping **Reset progress**.",
+          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Windup Rush > Storage > Clear Data**).",
+          "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files."
+        ]
+      },
+      {
+        title: "Data Security Safeguards",
+        content: [
+          "We employ robust technical safeguards to ensure player security:",
+          "- **Local-First Architecture:** By executing all runner physics, collision detection, and save operations locally, your game state is never exposed to external cloud data breaches.",
+          "- **Encrypted Network Transit:** Any network communications with Google Play, AdMob, and Firebase are encrypted end-to-end using industry-standard Transport Layer Security (TLS/HTTPS).",
+          "- **OS Sandbox Protection:** Android's security architecture isolates the application's local storage from unauthorized access by third-party applications."
+        ]
+      },
+      {
+        title: "Children's Privacy & Families Policy",
+        content: [
+          "Windup Rush: Crowd Runner 3D is a family-friendly casual arcade runner designed for general audiences of all ages. Coreplay Technologies strictly complies with the **Children's Online Privacy Protection Act (COPPA)**, GDPR-K, and Google Play Families Policies.",
+          "- **No Personal Data Collection from Minors:** We do not knowingly collect, request, or solicit personal information from children under the age of 13 (or under 16 in the European Economic Area).",
+          "- **Appropriate Content:** The game contains cartoon toy-like windup characters, colorful environments, and fantasy mechanical boss battles with zero realistic violence, gore, or adult themes.",
+          "- **Parental Inquiries:** If a parent or legal guardian believes that non-consented personal information has been inadvertently collected, please contact our Privacy Officer immediately at **{{contactEmail}}** so we can take prompt corrective action."
+        ]
+      },
+      {
+        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
+        content: [
+          "Depending on your country or state of residence, you enjoy fundamental privacy rights under data protection legislation including the European Union / United Kingdom General Data Protection Regulation (GDPR / UK GDPR) and California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA):",
+          "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
+          "- **Right to Erasure (\"Right to be Forgotten\"):** You can erase all game data instantly via the in-game Settings or Android system settings.",
+          "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
+          "- **Right to Restrict Processing:** You can disable analytics telemetry and revoke ad personalization at any time.",
+          "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**."
+        ]
+      },
+      {
+        title: "Changes to this Privacy Policy",
+        content: [
+          "We may periodically revise this Privacy Policy to accommodate new game features, updated SDK guidelines, or evolving regulatory mandates. Any modifications will be posted here with an updated \"Last Updated\" timestamp at the top of this document.",
+          "We encourage players to review this page periodically. Your continued gameplay following posted changes constitutes acceptance of the revised terms."
+        ]
+      },
+      {
+        title: "Contact Us & Privacy Officer",
+        content: [
+          "If you have questions, feedback, or privacy-related inquiries regarding Windup Rush: Crowd Runner 3D, please contact our dedicated team:",
+          "- **Developer & Publisher:** Coreplay Technologies",
+          "- **Privacy Officer Email:** {{contactEmail}}",
+          "- **Google Play Game Listing:** [Windup Rush: Crowd Runner 3D on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.crowdrun)",
+          "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
+          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours."
+        ]
+      }
+    ]
+  },
 };
 
 /**

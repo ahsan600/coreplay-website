@@ -60,6 +60,35 @@ export const STUDIO_INFO: StudioInfo = {
 
 export const GAMES: Game[] = [
   {
+    id: "windup-rush-crowd-runner-3d",
+    title: "Windup Rush: Crowd Runner 3D",
+    packageId: "com.coreplay.crowdrun",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.crowdrun",
+    tagline: "Multiply your windup runner crowd, navigate math gates, and smash giant robotic bosses.",
+    description: "Windup Rush: Crowd Runner 3D is an exhilarating fast-paced 3D runner game developed by Coreplay Technologies. Steer your toy windup runner through dynamic obstacle tracks, pass through positive multiplier gates to grow your army into a massive crowd, collect coins and keys, and defeat colossal mechanical bosses in thrilling finish-line showdowns.",
+    genre: "Action / Casual Runner",
+    category: "Action",
+    iconUrl: "/images/games/crowd-runner/icon.png",
+    bannerUrl: "/images/games/crowd-runner/hero-banner.jpg",
+    featureGraphicUrl: "/images/games/crowd-runner/feature-graphic.jpg",
+    screenshots: [
+      "/images/games/crowd-runner/screenshot-1.jpg",
+      "/images/games/crowd-runner/screenshot-2.jpg",
+      "/images/games/crowd-runner/screenshot-3.jpg",
+      "/images/games/crowd-runner/screenshot-4.jpg",
+    ],
+    features: [
+      "Dynamic math multiplier gates (+, ×) to grow your runner army",
+      "Epic end-level robotic boss battles with destructible armor",
+      "Bonus chest room with keys to unlock rare currency and rewards",
+      "Customizable runner skins, outfits, hats, and vibrant color schemes",
+      "Smooth 60 FPS 3D runner physics with responsive steering controls",
+      "100% free-to-play with offline mode support and zero pay-to-win",
+    ],
+    status: "available",
+    releaseYear: "2026",
+  },
+  {
     id: "dubai-modern-bus-simulator",
     title: "Dubai Modern Bus Simulator",
     packageId: "com.coreplay.dubai.bus",
