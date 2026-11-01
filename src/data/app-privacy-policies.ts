@@ -886,38 +886,42 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
   "crowd-runner": {
     slug: "crowd-runner",
     aliases: [
-      "windup-rush",
-      "windup-rush-crowd-runner-3d",
+      "count-rush",
+      "count-rush-crowd-runner-3d",
+      "count-masters",
+      "count-masters-crowd-runner-3d",
       "crowdrun",
       "crowd-run",
+      "windup-rush",
+      "windup-rush-crowd-runner-3d",
       "com.coreplay.crowdrun"
     ],
-    appName: "Windup Rush: Crowd Runner 3D",
-    shortName: "Windup Rush",
+    appName: "Count Rush: Crowd Runner 3D",
+    shortName: "Count Rush",
     packageId: "com.coreplay.crowdrun",
     category: "Action / Casual / 3D Runner",
-    tagline: "Multiply your windup crowd, dodge tricky obstacles, collect coins, and defeat giant mechanical bosses in exhilarating 3D runner gameplay.",
-    heroDescription: "Official Privacy Policy for Windup Rush: Crowd Runner 3D (com.coreplay.crowdrun) published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
+    tagline: "Multiply your crowd, dodge tricky obstacles, collect coins, and defeat giant mechanical bosses in exhilarating 3D runner gameplay.",
+    heroDescription: "Official Privacy Policy for Count Rush: Crowd Runner 3D (com.coreplay.crowdrun) published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
     badgeText: "3D Action Runner • General Audience (13+) • Privacy-First",
     lastUpdated: "November 1, 2026",
-    metaDescription: "Official Privacy Policy for Windup Rush: Crowd Runner 3D (com.coreplay.crowdrun) by Coreplay Technologies. Details 3D crowd runner mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
+    metaDescription: "Official Privacy Policy for Count Rush: Crowd Runner 3D (com.coreplay.crowdrun) by Coreplay Technologies. Details 3D crowd runner mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.crowdrun",
     sections: [
       {
         title: "Scope & Overview",
         content: [
-          "This Privacy Policy applies specifically to **Windup Rush: Crowd Runner 3D** (package name: `com.coreplay.crowdrun`), developed, published, and maintained by **Coreplay Technologies** (\"we\", \"our\", or \"us\") on Google Play and authorized Android marketplaces.",
-          "Inside the application interface and on your device home screen, the game is presented and displayed as **Windup Rush**. Windup Rush: Crowd Runner 3D is a fast-paced 3D arcade runner game where players navigate dynamic obstacle tracks, pass through mathematical multiplier gates to grow their toy windup crowd, collect coins and keys, and engage in epic mechanical boss showdowns.",
+          "This Privacy Policy applies specifically to **Count Rush: Crowd Runner 3D** (package name: `com.coreplay.crowdrun`), developed, published, and maintained by **Coreplay Technologies** (\"we\", \"our\", or \"us\") on Google Play and authorized Android marketplaces.",
+          "Inside the application interface and on your device home screen, the game is presented and displayed as **Count Rush**. Count Rush: Crowd Runner 3D is a fast-paced 3D arcade runner game where players navigate dynamic obstacle tracks, pass through mathematical multiplier gates to grow their runner crowd, collect coins and keys, and engage in epic mechanical boss showdowns.",
           "We are dedicated to delivering entertaining, responsive, and secure mobile gaming experiences while upholding absolute transparency regarding player privacy, device permissions, and advertising technologies."
         ]
       },
       {
         title: "Application Features & Intended Use",
         content: [
-          "Windup Rush: Crowd Runner 3D delivers dynamic crowd-running action engineered with a custom WebGL 3D graphics pipeline. Key gameplay features include:",
+          "Count Rush: Crowd Runner 3D delivers dynamic crowd-running action engineered with a custom WebGL 3D graphics pipeline. Key gameplay features include:",
           "- **Crowd Multiplication Mechanics:** Pass through positive addition and multiplication gates (+5, +20, ×2, ×3) to expand your runner army while steering clear of negative red gates.",
           "- **Dynamic 3D Obstacle Courses:** Dodge spinning gears, stompers, swinging pendulums, spike traps, and collapsing bridges across diverse themed biome tracks.",
-          "- **Boss Confrontations & Finish Lines:** Direct your windup mob in final boss battles at the end of each run, launching runner barrages to break down armor plates and trigger victory celebrations.",
+          "- **Boss Confrontations & Finish Lines:** Direct your runner mob in final boss battles at the end of each run, launching runner barrages to break down armor plates and trigger victory celebrations.",
           "- **Cosmetics & Customization:** Unlock charming toy outfits, hats, color palettes, and runner accessories in the in-game Shop using earned in-game bolts and coins.",
           "- **Bonus Chest Room:** Unlock secret reward vaults with keys collected during track runs to earn bonus currency and rare cosmetic items.",
           "- **100% Offline Capable:** Core runner levels, obstacle generation, crowd simulation, and boss battles are fully playable without an active internet connection."
@@ -926,7 +930,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       {
         title: "Information Collection & Processing",
         content: [
-          "Windup Rush: Crowd Runner 3D is engineered around strict data minimization principles:",
+          "Count Rush: Crowd Runner 3D is engineered around strict data minimization principles:",
           "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, physical addresses, telephone numbers, or biometric information. No account registration, password creation, or social media login is ever required to play.",
           "- **Non-PII Gameplay Metrics (App Interactions):** Aggregated, anonymous gameplay events (such as levels completed, levels failed, boss encounter outcomes, and virtual currency earned) are processed via Firebase Analytics to evaluate track balancing, difficulty curves, and level progression.",
           "- **Device & Performance Telemetry (Diagnostics):** Technical parameters including Android OS version, device model, screen resolution, GPU tier, and frame rate metrics may be sampled to ensure smooth 60 FPS performance and graphics stability across diverse hardware profiles.",
@@ -936,7 +940,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       {
         title: "Device Permissions & Hardware Access",
         content: [
-          "Windup Rush: Crowd Runner 3D requests only standard Android permissions necessary for responsive 3D gameplay, ad delivery, and device ergonomics:",
+          "Count Rush: Crowd Runner 3D requests only standard Android permissions necessary for responsive 3D gameplay, ad delivery, and device ergonomics:",
           "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Enables the game to verify network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent forms, and open external links (such as support or this Privacy Policy) when tapped. The game functions seamlessly offline when no connection is present.",
           "- **Keep Awake / Screen Wake Lock (android.permission.WAKE_LOCK):** Prevents your device screen from dimming or going to sleep during active runner stages, ensuring an uninterrupted gameplay experience while steering your crowd.",
           "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile rumble effects when your runners pass through multiplier gates, collect coins and keys, hit hazards, or strike boss targets. Vibration can be toggled on or off at any time in the in-game Settings menu.",
@@ -958,7 +962,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       {
         title: "Third-Party Services & SDK Integrations",
         content: [
-          "To deliver 3D graphics rendering, gameplay analytics, and free-to-play ad monetization, Windup Rush: Crowd Runner 3D integrates trusted industry SDKs:",
+          "To deliver 3D graphics rendering, gameplay analytics, and free-to-play ad monetization, Count Rush: Crowd Runner 3D integrates trusted industry SDKs:",
           "- **Google Play Services (Google LLC):** Essential for secure application distribution, licensing, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
           "- **Google AdMob (Google LLC):** Serves interstitial, rewarded video, and app open ads to keep the game free to play for all players without banner ads. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
           "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
@@ -968,7 +972,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       {
         title: "Advertising & Monetization Policy",
         content: [
-          "Windup Rush: Crowd Runner 3D is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes interstitial, rewarded video, and app open ads:",
+          "Count Rush: Crowd Runner 3D is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes interstitial, rewarded video, and app open ads:",
           "- **App Open Ads:** Full-screen advertisements displayed occasionally when the game is launched or resumed from the background, governed by frequency capping and session cooldowns.",
           "- **Interstitial Ads:** Full-screen advertisements displayed periodically between runner levels, governed by strict frequency throttling and cooldown timers to prevent gameplay disruption.",
           "- **Rewarded Video Ads:** Optional, user-initiated video ads that reward players with in-game perks, such as bonus multipliers at the finish line or extra keys to unlock bonus chest vaults. Rewarded ads are never forced and only play when you explicitly choose to watch them.",
@@ -993,7 +997,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       {
         title: "In-App Purchases & Financial Data (Zero IAP)",
         content: [
-          "Windup Rush: Crowd Runner 3D contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:",
+          "Count Rush: Crowd Runner 3D contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:",
           "- **Completely Free to Play:** All levels, upgrades, runner hats, outfits, and aesthetic skins are unlockable purely through earned in-game bolts/coins and gameplay progression.",
           "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
           "- **No Pay-to-Win Mechanics:** There are no subscription fees, paid loot boxes, or microtransactions."
@@ -1002,7 +1006,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       {
         title: "Analytics, Telemetry & User Choices",
         content: [
-          "Windup Rush: Crowd Runner 3D collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:",
+          "Count Rush: Crowd Runner 3D collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:",
           "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as levels started, completed, or failed, boss encounter outcomes, and virtual bolts earned or spent). No personal identifiers, names, emails, or device-specific sensitive data are collected.",
           "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
           "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**)."
@@ -1020,7 +1024,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
         content: [
           "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
           "- **In-App Progress Reset:** You can reset your coins, unlocked cosmetics, and level progress to factory state by opening the in-game **Settings** and tapping **Reset progress**.",
-          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Windup Rush > Storage > Clear Data**).",
+          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Count Rush > Storage > Clear Data**).",
           "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files."
         ]
       },
@@ -1037,7 +1041,7 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
         title: "Children's Privacy & Age Policy (General Audience 13+)",
         content: [
           "This game is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
-          "In accordance with our general audience classification, advertisements served within the game may be personalized (subject to user consent) and are not designated as child-directed. In the Google Play Console, the target audience for Windup Rush: Crowd Runner 3D is set to ages 13 and above.",
+          "In accordance with our general audience classification, advertisements served within the game may be personalized (subject to user consent) and are not designated as child-directed. In the Google Play Console, the target audience for Count Rush: Crowd Runner 3D is set to ages 13 and above.",
           "If you believe a child has provided data to us, please contact us at **{{contactEmail}}**, and we will delete it promptly."
         ]
       },
@@ -1062,10 +1066,10 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       {
         title: "Contact Us & Privacy Officer",
         content: [
-          "If you have questions, feedback, or privacy-related inquiries regarding Windup Rush: Crowd Runner 3D, please contact our dedicated team:",
+          "If you have questions, feedback, or privacy-related inquiries regarding Count Rush: Crowd Runner 3D, please contact our dedicated team:",
           "- **Developer & Publisher:** Coreplay Technologies",
           "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Game Listing:** [Windup Rush: Crowd Runner 3D on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.crowdrun)",
+          "- **Google Play Game Listing:** [Count Rush: Crowd Runner 3D on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.crowdrun)",
           "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
           "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours."
         ]

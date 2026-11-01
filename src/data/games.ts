@@ -60,12 +60,12 @@ export const STUDIO_INFO: StudioInfo = {
 
 export const GAMES: Game[] = [
   {
-    id: "windup-rush-crowd-runner-3d",
-    title: "Windup Rush: Crowd Runner 3D",
+    id: "count-rush-crowd-runner-3d",
+    title: "Count Rush: Crowd Runner 3D",
     packageId: "com.coreplay.crowdrun",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.crowdrun",
-    tagline: "Multiply your windup runner crowd, navigate math gates, and smash giant robotic bosses.",
-    description: "Windup Rush: Crowd Runner 3D is an exhilarating fast-paced 3D runner game developed by Coreplay Technologies. Steer your toy windup runner through dynamic obstacle tracks, pass through positive multiplier gates to grow your army into a massive crowd, collect coins and keys, and defeat colossal mechanical bosses in thrilling finish-line showdowns.",
+    tagline: "Multiply your runner crowd, navigate math gates, and smash giant robotic bosses.",
+    description: "Count Rush: Crowd Runner 3D is an exhilarating fast-paced 3D runner game developed by Coreplay Technologies. Steer your runner through dynamic obstacle tracks, pass through positive multiplier gates to grow your army into a massive crowd, collect coins and keys, and defeat colossal mechanical bosses in thrilling finish-line showdowns.",
     genre: "Action / Casual Runner",
     category: "Action",
     iconUrl: "/images/games/crowd-runner/icon.png",
