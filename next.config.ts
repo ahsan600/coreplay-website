@@ -24,13 +24,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/arrow-escape",
+        destination: "/privacy-policy/arrow-escape",
+        permanent: true,
+      },
+      {
         source: "/arrow-maze",
-        destination: "/arrow-escape",
+        destination: "/privacy-policy/arrow-escape",
         permanent: false,
       },
       {
         source: "/arrowly",
-        destination: "/arrow-escape",
+        destination: "/privacy-policy/arrow-escape",
         permanent: false,
       },
     ];

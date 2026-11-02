@@ -467,7 +467,7 @@ export function PrivacyPolicyContent({ data }: PrivacyPolicyContentProps = {}) {
                 {getAllAppPrivacyPolicies().map((app) => (
                   <Link
                     key={app.slug}
-                    href={app.slug === 'arrow-escape' ? '/arrow-escape' : `/privacy-policy/${app.slug}`}
+                    href={`/privacy-policy/${app.slug}`}
                     className={`p-3.5 rounded-xl border text-left transition-all duration-200 group flex flex-col justify-between ${
                       isDarkMode
                         ? 'border-slate-800 bg-[#12151c] hover:border-cyan-500/40 hover:bg-[#1a1f2b]'
