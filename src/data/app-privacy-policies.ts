@@ -1076,6 +1076,205 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       }
     ]
   },
+  "bridge-race": {
+    slug: "bridge-race",
+    aliases: [
+      "bridge-race-3d",
+      "bridge-race-3d-stair-builder",
+      "brick-isles",
+      "brickisles",
+      "bridgerace",
+      "stair-builder",
+      "stair-race",
+      "bridge-builder",
+      "com.coreplay.bridge.race"
+    ],
+    appName: "Bridge Race 3D: Stair Builder",
+    shortName: "Bridge Race 3D",
+    packageId: "com.coreplay.bridge.race",
+    category: "Games / Casual / Racing & 3D Stacking",
+    tagline: "Stack bricks of your colour, construct bridges of stairs, and race rivals to the podium across 8 unique island worlds.",
+    heroDescription:
+      "Official Privacy Policy for Bridge Race 3D: Stair Builder (com.coreplay.bridge.race), also known in-game as Brick Isles, published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
+    badgeText: "3D Casual Stacking Race • General Audience (13+) • Privacy-First",
+    lastUpdated: "November 2, 2026",
+    metaDescription:
+      "Official Privacy Policy for Bridge Race 3D: Stair Builder (com.coreplay.bridge.race) by Coreplay Technologies. Details 3D stair building race mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.bridge.race",
+    sections: [
+      {
+        title: "Scope & Overview",
+        content: [
+          "This Privacy Policy applies specifically to **Bridge Race 3D: Stair Builder** (package name: `com.coreplay.bridge.race`), developed, published, and maintained by **Coreplay Technologies** (\"we\", \"our\", or \"us\") on Google Play and authorized Android marketplaces.",
+          "Inside the application interface and on your device home screen, the game is presented and displayed as **Brick Isles** (Store title: **Bridge Race 3D: Stair Builder**). Bridge Race 3D is a fast-paced 3D casual stacking race where players collect bricks in their designated color, carry stacks on their back, construct stair bridges to reach higher floors, and compete against three AI rivals to claim the gold on the podium.",
+          "We are committed to delivering entertaining, high-performance, and secure mobile gaming experiences while maintaining absolute transparency regarding player privacy, device permissions, and advertising technologies."
+        ]
+      },
+      {
+        title: "Application Features & Procedural Architecture",
+        content: [
+          "Bridge Race 3D: Stair Builder delivers responsive 3D bridge-building and racing action powered by Capacitor 8 and a custom Three.js WebGL graphics pipeline with client-side procedural generation. Key gameplay features include:",
+          "- **Stacking & Stair-Building Mechanics:** Collect own-color bricks across arena floors, carry them in tall stacks, and spend one brick per step to construct staircases leading to subsequent floors.",
+          "- **Rival Interaction & Bumping:** Compete against three intelligent AI racers on identical platforms. Players carrying a larger brick stack can bump into opponents to scatter their bricks across the floor, or repaint and take over rival staircases with their own color.",
+          "- **Eight Diverse Island Worlds:** Experience unlimited procedural levels cycling across 8 distinct thematic worlds: Tropical Lagoon, Frosty Peaks, Sky City, Candy Land, Desert Dunes, Lava Island, Jungle Temple, and Star Station. Each world introduces custom deck patterns, landmark props, weather particles, and procedural audio synth music.",
+          "- **Interactive Obstacles & Hazards:** Maneuver around dynamic rotating spinner arms and rolling hazard balls that knock off stacks upon contact.",
+          "- **Special Bonus Modes:** Compete in high-energy bonus stages including **Treasure Dash** (collect gold bars against a ticking clock) and **Build Rush** (transport bricks to assemble castles, igloos, giant cakes, and space rockets).",
+          "- **Power-Ups & Meta Upgrades:** Snag in-race power-ups like the Brick Magnet and Speed Boost, and invest earned coins into persistent upgrades for Start Bricks, Movement Speed, and Income (more coins per race).",
+          "- **Cosmetics & Collectibles:** Unlock 21 unique racer outfits/paint jobs (such as Sky Blue, Candy Stripe, Ninja Acrobat, Sumo, Paladin, Space Ranger, Mage, and Reaper) and 8 fun hats (Party Cone, Propeller Cap, Chef Hat, Crown, Beanie, Top Hat, Traffic Cone, Flower Pot) through gameplay rewards and bonus chests opened with gold keys.",
+          "- **100% Offline Capable:** The entire physics simulation, level generation, 3D graphics rendering, and audio synthesis run locally in code at runtime. No internet connection or Wi-Fi is needed to play the complete game."
+        ]
+      },
+      {
+        title: "Information Collection & Data Minimization",
+        content: [
+          "Bridge Race 3D: Stair Builder is engineered with a strict privacy-by-design and data minimization architecture:",
+          "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, physical addresses, phone numbers, government IDs, or biometric data. No account registration, password creation, or social login is ever required.",
+          "- **Non-PII Gameplay Metrics (App Interactions):** Aggregated, anonymous gameplay events (such as levels started, levels cleared, levels failed, virtual coins earned/spent, upgrades unlocked, and cosmetic customizations selected) are processed via Firebase Analytics to evaluate difficulty balancing, level pacing, and gameplay stability.",
+          "- **Device & Performance Telemetry (Diagnostics):** Technical parameters including the graphics quality tier, average and low frame rates, loading time and screen pixel density, plus the device model and Android version that Firebase records automatically.",
+          "- **Zero Sensitive Surveillance:** We never monitor keystrokes, personal communications, clipboard data, ambient microphone audio, or camera feeds."
+        ]
+      },
+      {
+        title: "Device Permissions & Hardware Access",
+        content: [
+          "Bridge Race 3D requests only standard Android permissions strictly necessary for responsive 3D gameplay, ad delivery, and device ergonomics:",
+          "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Allows the game to check network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent forms, and open external links (such as Google Play or this Privacy Policy) in your default web browser upon voluntary tap. The game remains completely playable offline when disconnected.",
+          "- **Wake Lock (android.permission.WAKE_LOCK):** Added by the Firebase Analytics SDK so analytics can be sent reliably. Keeping the screen on during races needs no permission.",
+          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Provides tactile feedback upon brick collection, rival collisions, step placements, and podium celebrations. Vibration can be toggled on or off at any time in the in-game Settings menu.",
+          "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
+          "- **Android Privacy Sandbox (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS):** Supports modern Android Privacy Sandbox APIs for privacy-preserving ad measurement and attribution without cross-app tracking identifiers.",
+          "- **Google Play Install Referrer (com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE):** Standard Google Play service permission used to measure app installation sources and distribution metrics.",
+          "- **Zero Invasive Permissions:** The game does NOT request or access your device camera, microphone, GPS location, contact list, calendar, device storage files, photo library, or phone call logs."
+        ]
+      },
+      {
+        title: "Local Storage & On-Device Data Persistence",
+        content: [
+          "All player progression, virtual currency, and customization settings are saved 100% locally on your physical device:",
+          "- **On-Device Profile Storage:** Your current level number, total earned coins, unlocked hats, unlocked outfits, active cosmetic choices, and upgrade tiers are persisted locally via `@capacitor/preferences` under the key `profile.v1` with a debounced autosave engine.",
+          "- **Local Settings Storage:** Your settings (sound on/off, music on/off, vibration on/off, reduced motion, control sensitivity and graphics quality) are saved in the same on-device save file, profile.v1, with a backup copy under profile.bak.",
+          "- **Zero Cloud Profile Synchronization:** We do not maintain remote cloud user accounts, databases, or central player profile servers. Your save file lives solely within your physical device's application sandbox.",
+          "- **Complete Player Ownership:** You retain full ownership and control over your game data. You can erase all progress at any time via the in-game Settings (\"Reset progress\"), through Android system settings, or by uninstalling the application."
+        ]
+      },
+      {
+        title: "Third-Party Services & SDK Integrations",
+        content: [
+          "To provide 3D graphics rendering, gameplay analytics, and free-to-play ad monetization, Bridge Race 3D: Stair Builder integrates trusted industry SDKs:",
+          "- **Google Play Services (Google LLC):** Essential for secure application distribution, licensing, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
+          "- **Google AdMob (Google LLC):** Serves interstitial, rewarded video, and app open ads to keep the game free to play for all players without banner ads (App ID: `ca-app-pub-1502330259134866~2886024844`). [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
+          "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
+          "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to evaluate level difficulty balancing and gameplay performance bottlenecks. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)"
+        ]
+      },
+      {
+        title: "Advertising & Monetization Policy",
+        content: [
+          "Bridge Race 3D: Stair Builder is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes interstitial, rewarded video, and app open ads:",
+          "- **No Banner Ads:** The game features zero banner ads, ensuring an uncluttered, distraction-free screen while racing and stacking.",
+          "- **Optional Rewarded Video Ads:** High-value in-game perks are completely optional and only play when you explicitly choose to watch them by tapping a button (such as 'Retry with +10 bricks' on defeat, 'x3 coins' on victory, '+34% Prize Box' progression, one free upgrade each time you return to the menu, '+3 bonus chest keys', or shop coin bonuses). Rewarded ads are never forced.",
+          "- **Capped Interstitial Ads:** Shown when you tap 'Play next level', or 'Try again'/'Home' after losing. Never on levels 1–2, and at least 10 seconds after the previous full-screen ad closes.",
+          "- **App Open Ads:** Full-screen advertisements displayed occasionally when returning to the game after being in the background for more than 30 seconds (enabled only after level 2, with a 60-second cooldown).",
+          "- **Consent-Gated Personalization:** In regions governed by GDPR, UK GDPR, or CCPA, ads are served in accordance with the consent you grant via the Google UMP consent dialogue.",
+          "- **Advertising ID Management:** You have complete control over your advertising identifier via Android operating system settings:",
+          "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to sever historical activity links.",
+          "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent all apps from accessing your GAID.",
+          "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads instead of interest-based ads."
+        ]
+      },
+      {
+        title: "Google Play Console Data Safety Alignment",
+        content: [
+          "To ensure complete transparency matching our Google Play Console Data Safety declarations, the following data types may be collected and shared with Google services (AdMob and Firebase) strictly for advertising, analytics, and fraud prevention:",
+          "- **Device or other IDs (Google Advertising ID, Firebase App-Instance ID):** Collected and shared with Google AdMob for ad delivery, attribution, and frequency capping, alongside a random Firebase app-instance ID assigned to your installation for analytics telemetry.",
+          "- **App Interactions (Gameplay Events):** Aggregated metrics on levels started, completed, or failed, and in-game currency earned or spent, collected and shared with Google Firebase for product analytics.",
+          "- **Diagnostics (Performance Data):** Graphics quality tier, frame rates, loading time, screen pixel density, device model, and OS version collected and shared with Google for performance evaluation.",
+          "- **Security Practices:** All collected data is encrypted in transit using industry-standard HTTPS/TLS protocols.",
+          "- **Data Deletion:** Players can reset or erase all local game data at any time via in-game Settings (\"Reset progress\") or Android system settings."
+        ]
+      },
+      {
+        title: "In-App Purchases & Financial Data (Zero IAP)",
+        content: [
+          "Bridge Race 3D: Stair Builder contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:",
+          "- **Completely Free to Play:** All levels, upgrades, racer outfits, hats, worlds, and bonus modes are unlockable purely through earned in-game coins, bonus chests, and optional rewarded ads.",
+          "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
+          "- **No Pay-to-Win Mechanics:** There are no subscription fees, paid loot boxes, or microtransactions."
+        ]
+      },
+      {
+        title: "Analytics, Telemetry & User Choices",
+        content: [
+          "Bridge Race 3D collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:",
+          "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as levels started, completed, or failed, virtual currency earned or spent, upgrade purchases, and cosmetics unlocked). We collect no names, emails or contact details. Firebase Analytics assigns a random app-instance ID to your installation and, where ad consent allows, may also use your Advertising ID.",
+          "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
+          "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**)."
+        ]
+      },
+      {
+        title: "Data Sharing & Disclosure Policy",
+        content: [
+          "Coreplay Technologies **does NOT sell, rent, trade, or lease** your personal data or gameplay records to third-party data brokers or marketing firms.",
+          "We disclose information solely to the trusted infrastructure providers enumerated in this policy (Google LLC) strictly for delivering ads, measuring aggregated app performance, and complying with legal obligations."
+        ]
+      },
+      {
+        title: "Data Retention & User Deletion Rights",
+        content: [
+          "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
+          "- **In-App Progress Reset:** You can reset your coins, unlocked cosmetics, upgrade tiers, and level progress to factory state by opening the in-game **Settings** and tapping **Reset progress**.",
+          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Brick Isles > Storage > Clear Data**).",
+          "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files."
+        ]
+      },
+      {
+        title: "Data Security Safeguards",
+        content: [
+          "We employ robust technical safeguards to ensure player security:",
+          "- **Local-First Architecture:** By executing all stacking physics, collision detection, and save operations locally, your game state is never exposed to external cloud data breaches.",
+          "- **Encrypted Network Transit:** Any network communications with Google Play, AdMob, and Firebase are encrypted end-to-end using industry-standard Transport Layer Security (TLS/HTTPS).",
+          "- **OS Sandbox Protection:** Android's security architecture isolates the application's local storage from unauthorized access by third-party applications."
+        ]
+      },
+      {
+        title: "Children's Privacy & Age Policy (General Audience 13+)",
+        content: [
+          "This game is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
+          "In accordance with our general audience classification, advertisements served within the game may be personalized (subject to user consent) and are not designated as child-directed. In the Google Play Console, the target audience for Bridge Race 3D: Stair Builder is set to ages 13 and above.",
+          "If you believe a child has provided data to us, please contact us at **{{contactEmail}}**, and we will delete it promptly."
+        ]
+      },
+      {
+        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
+        content: [
+          "Depending on your country or state of residence, you enjoy fundamental privacy rights under data protection legislation including the European Union / United Kingdom General Data Protection Regulation (GDPR / UK GDPR) and California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA):",
+          "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
+          "- **Right to Erasure (\"Right to be Forgotten\"):** You can erase all game data instantly via the in-game Settings or Android system settings.",
+          "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
+          "- **Right to Restrict Processing:** Players can manage or revoke advertising personalization choices at any time via the in-game **Privacy options** dialog, or delete their Advertising ID via Android system settings.",
+          "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**."
+        ]
+      },
+      {
+        title: "Changes to this Privacy Policy",
+        content: [
+          "We may periodically revise this Privacy Policy to accommodate new game features, updated SDK guidelines, or evolving regulatory mandates. Any modifications will be posted here with an updated \"Last Updated\" timestamp at the top of this document.",
+          "We encourage players to review this page periodically. Your continued gameplay following posted changes constitutes acceptance of the revised terms."
+        ]
+      },
+      {
+        title: "Contact Us & Privacy Officer",
+        content: [
+          "If you have questions, feedback, or privacy-related inquiries regarding Bridge Race 3D: Stair Builder, please contact our dedicated team:",
+          "- **Developer & Publisher:** Coreplay Technologies",
+          "- **Privacy Officer Email:** {{contactEmail}}",
+          "- **Google Play Game Listing:** [Bridge Race 3D: Stair Builder on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.bridge.race)",
+          "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
+          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours."
+        ]
+      }
+    ]
+  },
 };
 
 /**

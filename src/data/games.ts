@@ -60,6 +60,35 @@ export const STUDIO_INFO: StudioInfo = {
 
 export const GAMES: Game[] = [
   {
+    id: "bridge-race-3d-stair-builder",
+    title: "Bridge Race 3D: Stair Builder",
+    packageId: "com.coreplay.bridge.race",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.bridge.race",
+    tagline: "Stack bricks, build stair bridges, and beat rivals to the top across 8 unique worlds.",
+    description: "Grab bricks, stack them high, and build your own bridge of stairs to the top before your rivals do! Bridge Race 3D: Stair Builder (Brick Isles) is an exhilarating 3D bridge race across eight island worlds, with intuitive one-finger controls, diverse power-ups, collectible cosmetics, and full offline play.",
+    genre: "Casual / Racing / 3D Stacking",
+    category: "Casual",
+    iconUrl: "/images/games/bridge-race/icon.png",
+    bannerUrl: "/images/games/bridge-race/hero-banner.jpg",
+    featureGraphicUrl: "/images/games/bridge-race/feature-graphic.jpg",
+    screenshots: [
+      "/images/games/bridge-race/screenshot-1.jpg",
+      "/images/games/bridge-race/screenshot-2.jpg",
+      "/images/games/bridge-race/screenshot-3.jpg",
+      "/images/games/bridge-race/screenshot-4.jpg",
+    ],
+    features: [
+      "Dynamic brick-stacking and staircase construction race mechanics",
+      "Eight diverse island worlds with unique procedural scenery and music",
+      "Exciting bonus game modes: Treasure Dash and Build Rush",
+      "Power-ups including Brick Magnet and Speed Boost",
+      "21 collectible racer outfits and 8 whimsical hats",
+      "100% free-to-play with offline support and zero in-app purchases",
+    ],
+    status: "available",
+    releaseYear: "2026",
+  },
+  {
     id: "count-rush-crowd-runner-3d",
     title: "Count Rush: Crowd Runner 3D",
     packageId: "com.coreplay.crowdrun",
