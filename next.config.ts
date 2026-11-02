@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
         destination: "/privacy-policy",
         permanent: true,
       },
+      {
+        source: "/arrow-maze",
+        destination: "/arrow-escape",
+        permanent: false,
+      },
+      {
+        source: "/arrowly",
+        destination: "/arrow-escape",
+        permanent: false,
+      },
     ];
   },
   turbopack: {

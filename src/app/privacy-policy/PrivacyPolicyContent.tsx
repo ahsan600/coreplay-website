@@ -452,7 +452,7 @@ export function PrivacyPolicyContent({ data }: PrivacyPolicyContentProps = {}) {
                   </h2>
                 </div>
                 <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 self-start sm:self-auto">
-                  5 App-Specific Policies Available
+                  {getAllAppPrivacyPolicies().length} App-Specific Policies Available
                 </span>
               </div>
               <p
@@ -467,7 +467,7 @@ export function PrivacyPolicyContent({ data }: PrivacyPolicyContentProps = {}) {
                 {getAllAppPrivacyPolicies().map((app) => (
                   <Link
                     key={app.slug}
-                    href={`/privacy-policy/${app.slug}`}
+                    href={app.slug === 'arrow-escape' ? '/arrow-escape' : `/privacy-policy/${app.slug}`}
                     className={`p-3.5 rounded-xl border text-left transition-all duration-200 group flex flex-col justify-between ${
                       isDarkMode
                         ? 'border-slate-800 bg-[#12151c] hover:border-cyan-500/40 hover:bg-[#1a1f2b]'

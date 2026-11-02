@@ -60,6 +60,35 @@ export const STUDIO_INFO: StudioInfo = {
 
 export const GAMES: Game[] = [
   {
+    id: "arrowly-arrow-escape-puzzle",
+    title: "Arrowly: Arrow Escape Puzzle",
+    packageId: "com.coreplay.arrow.escape",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.arrow.escape",
+    tagline: "Tap bent arrows out of the maze in the right order across unlimited procedural puzzle stages.",
+    description: "Arrowly: Arrow Escape Puzzle is a relaxing, minimalist 2D arrow-maze puzzle game where players tap bent arrows on a dotted grid to slide them head-first along their body and off the board. Features unlimited procedural stages, 25 recognizable picture shapes, 11 unlockable themes, and soothing programmatic music.",
+    genre: "Puzzle / Logic / Brain Games",
+    category: "Puzzle",
+    iconUrl: "/images/games/arrow-escape/icon.png",
+    bannerUrl: "/images/games/arrow-escape/hero-banner.jpg",
+    featureGraphicUrl: "/images/games/arrow-escape/feature-graphic.jpg",
+    screenshots: [
+      "/images/games/arrow-escape/screenshot-1.jpg",
+      "/images/games/arrow-escape/screenshot-2.jpg",
+      "/images/games/arrow-escape/screenshot-3.jpg",
+      "/images/games/arrow-escape/screenshot-4.jpg",
+    ],
+    features: [
+      "Satisfying arrow escape mechanics with autofire chain reactions",
+      "Unlimited procedural stages with guaranteed cycle-breaking solver",
+      "25 picture board shapes (heart, star, cat, lock, crown, and more)",
+      "11 unlockable aesthetic themes with dark mode glow effects",
+      "Daily arrow puzzles with streak tracking and completion calendar",
+      "100% offline capable with real-time procedural Web Audio synthesizer",
+    ],
+    status: "available",
+    releaseYear: "2026",
+  },
+  {
     id: "bridge-race-3d-stair-builder",
     title: "Bridge Race 3D: Stair Builder",
     packageId: "com.coreplay.bridge.race",
