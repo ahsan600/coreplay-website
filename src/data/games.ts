@@ -60,6 +60,36 @@ export const STUDIO_INFO: StudioInfo = {
 
 export const GAMES: Game[] = [
   {
+    id: "dash-race-3d-parkour-run",
+    title: "Dash Race 3D: Parkour Run",
+    packageId: "com.coreplay.race.parkour",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.race.parkour",
+    tagline: "Hold to run, dodge crazy mechanical traps, and beat rivals across 8 unique worlds.",
+    description: "Dash Race 3D: Parkour Run is an exciting 3D hyper-casual obstacle-course racing game developed by Coreplay Technologies. Hold to run, let go to stop and dodge crazy traps past spinning sweepers, wrecking ball pendulums, hydraulic stompers, cannons, and windmills. Scale climbing walls, swing across monkey bars, ride ziplines and tube slides, and bounce over wide gaps across 8 vibrant worlds cycling through Day, Sunset, Night, and Dawn.",
+    genre: "Casual / Racing / 3D Parkour Obstacle Course",
+    category: "Casual",
+    iconUrl: "/images/games/dash-run/icon.png",
+    bannerUrl: "/images/games/dash-run/hero-banner.jpg",
+    featureGraphicUrl: "/images/games/dash-run/feature-graphic.jpg",
+    screenshots: [
+      "/images/games/dash-run/screenshot-1.jpg",
+      "/images/games/dash-run/screenshot-2.jpg",
+      "/images/games/dash-run/screenshot-3.jpg",
+      "/images/games/dash-run/screenshot-4.jpg",
+    ],
+    features: [
+      "Intuitive one-thumb hold-to-run and release-to-brake racing mechanics",
+      "16 dynamic mechanical obstacle modules with mathematical fairness verification",
+      "Fluid 3D parkour traversal: climbing walls, monkey bars, ziplines, and bounce pads",
+      "Eight unique worlds rotating across 4 times of day (32 environment variations)",
+      "Smart sim-aligned AI rivals with human-like reaction times and adaptive difficulty",
+      "21 customizable outfits (Ninja, Paladin, Space Ranger, Reaper) and 8 fun hats",
+      "100% free-to-play with offline support and zero in-app purchases",
+    ],
+    status: "available",
+    releaseYear: "2026",
+  },
+  {
     id: "arrowly-arrow-escape-puzzle",
     title: "Arrowly: Arrow Escape Puzzle",
     packageId: "com.coreplay.arrow.escape",

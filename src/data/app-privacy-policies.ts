@@ -1505,6 +1505,211 @@ export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
       },
     ],
   },
+  "dash-run": {
+    slug: "dash-run",
+    aliases: [
+      "dash-race-3d",
+      "dash-race",
+      "dashrace",
+      "dashrun",
+      "dash-race-3d-parkour-run",
+      "parkour-run",
+      "dash-isles",
+      "com.coreplay.race.parkour",
+      "com.coreplay.race.parkour",
+    ],
+    appName: "Dash Race 3D: Parkour Run",
+    shortName: "Dash Race 3D",
+    packageId: "com.coreplay.race.parkour",
+    category: "Games / Casual / 3D Parkour Obstacle Course Racing",
+    tagline:
+      "Hold to run, dodge crazy mechanical traps, and race three rivals across 8 vibrant worlds in endless 3D obstacle courses.",
+    heroDescription:
+      "Official Privacy Policy for Dash Race 3D: Parkour Run (com.coreplay.race.parkour), also presented in-game as Dash Race 3D (internal project dash-isles), published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
+    badgeText:
+      "3D Parkour Obstacle Course • General Audience (13+) • Privacy-First",
+    lastUpdated: "November 4, 2026",
+    metaDescription:
+      "Official Privacy Policy for Dash Race 3D: Parkour Run (com.coreplay.race.parkour) by Coreplay Technologies. Details one-thumb hold-to-run mechanics, 16 mechanical obstacles, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=com.coreplay.race.parkour",
+    sections: [
+      {
+        title: "Scope & Overview",
+        content: [
+          'This Privacy Policy applies specifically to **Dash Race 3D: Parkour Run** (package name: `com.coreplay.race.parkour`, formerly developed under internal project code `dash-isles` / `brick-isles`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
+          "Inside the application interface and on your device home screen, the game is presented and displayed as **Dash Race 3D** (Store title: **Dash Race 3D: Parkour Run**). Dash Race 3D is a fast-paced 3D hyper-casual obstacle-course race where players hold anywhere on the screen to run, let go to stop/dodge, time their dash past crazy traps, scale climbing walls, swing across monkey bars, ride ziplines and tube slides, bounce over wide chasms, and compete against three simulated AI rivals to cross the finish line on the podium.",
+          "We are committed to delivering entertaining, high-performance, and secure mobile gaming experiences while maintaining absolute transparency regarding player privacy, device permissions, and advertising technologies.",
+        ],
+      },
+      {
+        title: "Application Features & Procedural Architecture",
+        content: [
+          "Dash Race 3D: Parkour Run delivers responsive 3D parkour racing action powered by Capacitor 8, React 19, and a custom Three.js WebGL graphics pipeline with client-side procedural generation and Web Audio synthesis. Key gameplay features include:",
+          "- **One-Thumb Racing Controls:** Hold anywhere on the touch screen (or spacebar/keys on desktop) to sprint forward; release to instantly brake and wait for hazardous obstacles to swing clear.",
+          "- **16 Dynamic Mechanical Modules:** Master diverse traps and traversals unlocked across levels: spinning sweepers, swinging wrecking ball pendulums, sliding blocks, pop-up pillars with steel warning hatches, hydraulic stompers, cannons firing across the track, 4-blade spinning windmills, wall pistons, rolling logs with rack release, chomper gates with snapping steel teeth, and giant wind turbine fans.",
+          "- **Dynamic 3D Parkour Traversal:** Fluid vertical wall climbing with sliding wall blocks, overhead monkey bars, high ziplines with visible orange trolley handles, high-speed winding tube slides, and spring bounce pads with tucked aerial front flips and landing camera shake.",
+          "- **Knock-Off & Checkpoint Respawn:** Getting hit by an obstacle launches the runner into the sea (or lava/clouds) with ragdoll-like flailing and a water splash, followed by quick respawn at the previous checkpoint with temporary guard invulnerability.",
+          "- **Mathematical Fairness Solver:** During course generation, every obstacle cluster is mathematically solved and re-timed (passWindow/tune) so that every lane has guaranteed physical gaps at both player and rival paces, preventing impossible courses.",
+          "- **Sim-Aligned AI Rivals:** Compete against three intelligent computer rivals that navigate using the exact same obstacle hit-test math as the simulation, featuring human-like reaction times, caution, blunders, and adaptive pacing that eases after failed attempts.",
+          "- **Eight Unique Worlds & 4 Times of Day:** Experience unlimited procedural levels cycling across 8 distinct thematic worlds: Tropical Lagoon, Frosty Peaks, Sky City, Candy Land, Desert Dunes, Lava Island, Jungle Temple, and Star Station. Each world rotates through Day, Sunset, Night (with moon, stars, and fireflies), and Dawn, providing 32 unique visual variations before repeating, accompanied by GPU-animated bird flocks (seagulls, parrots, owls) and procedural audio music.",
+          "- **Endless Levels & Chapter Twists:** Levels are organized into chapters of 4 (3 races + 1 Coin Rush bonus level). Races feature 7 varied level twists: Classic Run, Spin Cycle, Heavy Hitters, Sky Trail, Rush Hour, Gauntlet (fewer checkpoints), and high-stakes Champion Races every 8 levels (sharper rivals, double coins).",
+          "- **Boosters & Meta Upgrades:** Deploy in-race boosters including Dash (+60% speed burst), Bubble Shield (absorbs one obstacle hit with a stagger), and Ghost (phase through obstacles unharmed). Reinvest earned coins into permanent upgrades for Speed, Income, and Bounce Back (reduced knock-off recovery delay).",
+          "- **Locker & Customization:** Unlock 21 unique runner paint jobs/outfits (including Ninja Acrobat, Sumo, Paladin, Space Ranger, Berserker, Mage, and Reaper) and 8 fun hats (Party Cone, Propeller Cap, Chef Hat, Crown, Beanie, Top Hat, Traffic Cone, Flower Pot) through race rewards, prize boxes, and bonus chests opened with golden keys.",
+          "- **100% Procedural & Offline Capable:** The entire physics simulation, level generation, 3D character geometries, procedural textures, and runtime audio synthesis (16-bar loops in 10 musical styles) run locally in code at runtime with zero external downloaded media files. No internet connection or Wi-Fi is needed to play the complete game.",
+        ],
+      },
+      {
+        title: "Information Collection & Data Minimization",
+        content: [
+          "Dash Race 3D: Parkour Run is engineered with a strict privacy-by-design and data minimization architecture:",
+          "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, physical addresses, phone numbers, government IDs, or biometric data. No account registration, password creation, or social login is ever required.",
+          "- **Non-PII Gameplay Metrics (App Interactions):** Aggregated, anonymous gameplay events (such as levels started, levels cleared, levels failed, virtual coins earned/spent, upgrade purchases, and cosmetic customizations selected) are processed via Firebase Analytics to evaluate difficulty balancing, level pacing, and gameplay stability.",
+          "- **Device & Performance Telemetry (Diagnostics):** Technical parameters including graphics quality tier (auto/high/med/low), frame rates, loading time, screen pixel density, device model, and Android OS version that Firebase records automatically.",
+          "- **Zero Sensitive Surveillance:** We never monitor keystrokes, personal communications, clipboard data, ambient microphone audio, or camera feeds.",
+        ],
+      },
+      {
+        title: "Device Permissions & Hardware Access",
+        content: [
+          "Dash Race 3D requests only standard Android permissions strictly necessary for responsive 3D gameplay, ad delivery, and device ergonomics:",
+          "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Allows the game to check network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent forms, and open external links (such as Google Play or this Privacy Policy) in your default web browser upon voluntary tap. The game remains completely playable offline when disconnected.",
+          "- **Wake Lock (android.permission.WAKE_LOCK):** Used during active races via keep-awake plugins to prevent the phone screen from dimming or sleeping while holding to run, and for Firebase Analytics background transmission.",
+          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Provides tactile feedback upon running steps, obstacle impacts, checkpoint crosses, and booster activations. Vibration can be toggled on or off at any time in the in-game Settings menu.",
+          "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
+          "- **Android Privacy Sandbox (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS):** Supports modern Android Privacy Sandbox APIs for privacy-preserving ad measurement and attribution without cross-app tracking identifiers.",
+          "- **Zero Invasive Permissions:** The game does NOT request or access your device camera, microphone, GPS location, contact list, calendar, device storage files, photo library, or phone call logs.",
+        ],
+      },
+      {
+        title: "Local Storage & On-Device Data Persistence",
+        content: [
+          "All player progression, virtual currency, and customization settings are saved 100% locally on your physical device:",
+          "- **On-Device Profile Storage:** Your current level number, total earned coins, unlocked hats, unlocked outfits, active cosmetic choices, booster counts, and upgrade tiers are persisted locally via `@capacitor/preferences` under the key `profile.v1` with an automatic backup under `profile.bak`.",
+          "- **Local Settings Storage:** Your preferences (sound on/off, music on/off, vibration on/off, reduced motion, and graphics quality tier) are saved in the same on-device save document.",
+          "- **Zero Cloud Profile Synchronization:** We do not maintain remote cloud user accounts, databases, or central player profile servers. Your save file lives solely within your physical device's application sandbox.",
+          '- **Complete Player Ownership:** You retain full ownership and control over your game data. You can erase all progress at any time via the in-game Settings ("Reset progress"), through Android system settings, or by uninstalling the application.',
+        ],
+      },
+      {
+        title: "Third-Party Services & SDK Integrations",
+        content: [
+          "To provide 3D graphics rendering, gameplay analytics, and free-to-play ad monetization, Dash Race 3D: Parkour Run integrates trusted industry SDKs:",
+          "- **Google Play Services (Google LLC):** Essential for secure application distribution, licensing verification, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
+          "- **Google AdMob (Google LLC):** Serves interstitial, rewarded video, and app open ads to keep the game free to play for all players without banner ads (App ID: `ca-app-pub-1502330259134866~2886024844`). [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
+          "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
+          "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to evaluate level difficulty balancing, drop-off rates, and performance bottlenecks. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)",
+        ],
+      },
+      {
+        title: "Advertising & Monetization Policy",
+        content: [
+          "Dash Race 3D: Parkour Run is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes interstitial, rewarded video, and app open ads:",
+          "- **No Banner Ads:** The game features zero banner ads, ensuring an uncluttered, distraction-free screen while running and timing obstacle jumps.",
+          "- **Optional Rewarded Video Ads:** High-value in-game perks are completely optional and only play when you explicitly choose to watch them by tapping a button (such as 'x3 coins' on victory, 'Retry with bubble shield' on defeat, '+34% Prize Box' progression, one free upgrade in the menu, '+3 bonus chest keys', or shop coin bonuses). Rewarded ads are never forced.",
+          "- **Capped Interstitial Ads:** Shown occasionally when transitioning between levels or after losing. Interstitials never appear on levels 1–2, and enforce strict cooldown timers (at least 10 seconds after any full-screen ad closes).",
+          "- **App Open Ads:** Full-screen advertisements displayed occasionally when returning to the game after being in the background for more than 30 seconds (enabled only after level 2, with a 60-second cooldown).",
+          "- **Consent-Gated Personalization:** In regions governed by GDPR, UK GDPR, or CCPA, ads are served in accordance with the consent you grant via the Google UMP consent dialogue.",
+          "- **Advertising ID Management:** You have complete control over your advertising identifier via Android operating system settings:",
+          "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to sever historical activity links.",
+          "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent all apps from accessing your GAID.",
+          "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads instead of interest-based ads.",
+        ],
+      },
+      {
+        title: "Google Play Console Data Safety Alignment",
+        content: [
+          "To ensure complete transparency matching our Google Play Console Data Safety declarations, the following data types may be collected and shared with Google services (AdMob and Firebase) strictly for advertising, analytics, and fraud prevention:",
+          "- **Device or other IDs (Google Advertising ID, Firebase App-Instance ID):** Collected and shared with Google AdMob for ad delivery, attribution, and frequency capping, alongside a random Firebase app-instance ID assigned to your installation for analytics telemetry.",
+          "- **App Interactions (Gameplay Events):** Aggregated metrics on levels started, completed, or failed, and in-game currency earned or spent, collected and shared with Google Firebase for product analytics.",
+          "- **Diagnostics (Performance Data):** Graphics quality tier, frame rates, loading time, screen pixel density, device model, and OS version collected and shared with Google for performance evaluation.",
+          "- **Security Practices:** All collected data is encrypted in transit using industry-standard HTTPS/TLS protocols.",
+          '- **Data Deletion:** Players can reset or erase all local game data at any time via in-game Settings ("Reset progress") or Android system settings.',
+        ],
+      },
+      {
+        title: "In-App Purchases & Financial Data (Zero IAP)",
+        content: [
+          "Dash Race 3D: Parkour Run contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:",
+          "- **Completely Free to Play:** All levels, upgrades, racer outfits, hats, worlds, and bonus modes are unlockable purely through earned in-game coins, bonus chests, and optional rewarded ads.",
+          "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
+          "- **No Pay-to-Win Mechanics:** There are no subscription fees, paid loot boxes, or microtransactions.",
+        ],
+      },
+      {
+        title: "Analytics, Telemetry & User Choices",
+        content: [
+          "Dash Race 3D collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:",
+          "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as levels started, completed, or failed, virtual currency earned or spent, upgrade purchases, and cosmetics unlocked). We collect no names, emails, or personal contacts. Firebase Analytics assigns a random app-instance ID to your installation and, where ad consent allows, may also use your Advertising ID.",
+          "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
+          "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**).",
+        ],
+      },
+      {
+        title: "Data Sharing & Disclosure Policy",
+        content: [
+          "Coreplay Technologies **does NOT sell, rent, trade, or lease** your personal data or gameplay records to third-party data brokers or marketing firms.",
+          "We disclose information solely to the trusted infrastructure providers enumerated in this policy (Google LLC) strictly for delivering ads, measuring aggregated app performance, and complying with legal obligations.",
+        ],
+      },
+      {
+        title: "Data Retention & User Deletion Rights",
+        content: [
+          "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
+          '- **In-App Progress Reset:** You can reset your coins, unlocked cosmetics, upgrade tiers, and level progress to factory state by opening the in-game **Settings** and tapping **Reset progress**.',
+          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Dash Race 3D > Storage > Clear Data**).",
+          "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files.",
+        ],
+      },
+      {
+        title: "Data Security Safeguards",
+        content: [
+          "We employ robust technical safeguards to ensure player security:",
+          "- **Local-First Architecture:** By executing all parkour simulation, obstacle timing, collision detection, and save operations locally, your game state is never exposed to external cloud data breaches.",
+          "- **Encrypted Network Transit:** Any network communications with Google Play, AdMob, and Firebase are encrypted end-to-end using industry-standard Transport Layer Security (TLS/HTTPS).",
+          "- **OS Sandbox Protection:** Android's security architecture isolates the application's local storage from unauthorized access by third-party applications.",
+        ],
+      },
+      {
+        title: "Children's Privacy & Age Policy (General Audience 13+)",
+        content: [
+          "This game is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
+          "In accordance with our general audience classification, advertisements served within the game may be personalized (subject to user consent) and are not designated as child-directed. In the Google Play Console, the target audience for Dash Race 3D: Parkour Run is set to ages 13 and above.",
+          "If you believe a child has provided data to us, please contact us at **{{contactEmail}}**, and we will delete it promptly.",
+        ],
+      },
+      {
+        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
+        content: [
+          "Depending on your country or state of residence, you enjoy fundamental privacy rights under data protection legislation including the European Union / United Kingdom General Data Protection Regulation (GDPR / UK GDPR) and California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA):",
+          "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
+          '- **Right to Erasure ("Right to be Forgotten"):** You can erase all game data instantly via the in-game Settings or Android system settings.',
+          "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
+          "- **Right to Restrict Processing:** Players can manage or revoke advertising personalization choices at any time via the in-game **Privacy options** dialog, or delete their Advertising ID via Android system settings.",
+          "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**.",
+        ],
+      },
+      {
+        title: "Changes to this Privacy Policy",
+        content: [
+          'We may periodically revise this Privacy Policy to accommodate new game features, updated SDK guidelines, or evolving regulatory mandates. Any modifications will be posted here with an updated "Last Updated" timestamp at the top of this document.',
+          "We encourage players to review this page periodically. Your continued gameplay following posted changes constitutes acceptance of the revised terms.",
+        ],
+      },
+      {
+        title: "Contact Us & Publisher Verification",
+        content: [
+          "If you have questions, feedback, or privacy-related inquiries regarding Dash Race 3D: Parkour Run, please contact our dedicated team:",
+          "- **Developer & Publisher:** Coreplay Technologies",
+          "- **Privacy Officer Email:** {{contactEmail}}",
+          "- **Google Play Game Listing:** [Dash Race 3D: Parkour Run on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.race.parkour)",
+          "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
+          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
+        ],
+      },
+    ],
+  },
+
 };
 
 /**
