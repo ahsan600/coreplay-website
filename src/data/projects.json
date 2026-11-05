@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Count Rush: Crowd Runner 3D",
+    "url": "count-master",
+    "packageName": "com.coreplay.crowdrun",
+    "aliases": ["count-rush", "countrush", "crowd-runner", "crowdrun", "com.coreplay.crowdrun"]
+  },
+  {
+    "name": "Dock Rush: Boat Jam Puzzle",
+    "url": "boat-jam-game",
+    "packageName": "com.coreplay.boat.jam",
+    "aliases": ["dock-rush", "dockrush", "boat-jam", "dock-rush-boat-jam", "com.coreplay.boat.jam"]
+  },
+  {
+    "name": "Bridge Race 3D: Stair Builder",
+    "url": "bridge-race",
+    "packageName": "com.coreplay.bridge.race",
+    "aliases": ["bridge-race-3d", "bridgerace", "brick-isles", "stair-builder", "stair-race", "bridge-builder", "com.coreplay.bridge.race"]
+  },
+  {
+    "name": "Busy Stop: Bus Jam Escape",
+    "url": "bus-jam-game",
+    "packageName": "com.coreplay.bus.jam.escape",
+    "aliases": ["busy-stop", "busystop", "bus-jam", "bus-jam-escape", "com.coreplay.bus.jam.escape"]
+  },
+  {
+    "name": "Honk Out: Car Parking Jam",
+    "url": "car-jam-game",
+    "packageName": "com.coreplay.car.jam",
+    "aliases": ["honk-out", "honkout", "car-jam", "car-parking-jam", "com.coreplay.car.jam"]
+  },
+  {
+    "name": "Arrowly: Arrow Escape Puzzle",
+    "url": "tap-arrow-away",
+    "packageName": "com.coreplay.arrow.escape",
+    "aliases": ["arrow-escape", "arrowly", "tapaway", "tap-arrow-away", "arrowescape", "com.coreplay.arrow.escape"]
+  },
+  {
+    "name": "Dash Race 3D: Fun Parkour Game",
+    "url": "parkour-game",
+    "packageName": "com.coreplay.race.parkour",
+    "aliases": ["dash-run", "dash-race", "dash-race-3d", "parkour-run", "com.coreplay.race.parkour"]
+  },
+  {
+    "name": "NickCraft: Nickname Generator",
+    "url": "nickname-generator",
+    "packageName": "com.coreplay.nickname",
+    "aliases": ["nickname-app", "nickcraft", "nickname", "nameforge", "com.coreplay.nicknamegenerator", "com.coreplay.nickname"]
+  },
+  {
+    "name": "ScanCraft: QR & Barcode Scanner",
+    "url": "qrscanner",
+    "packageName": "com.coreplay.qrscanner",
+    "aliases": ["qr-banner-scanner", "qr-scanner", "scanpro", "com.coreplay.qrscanner"]
+  },
+  {
+    "name": "RepeatIt: Text Repeater",
+    "url": "text-repeater",
+    "packageName": "com.coreplay.textrepeater",
+    "aliases": ["repeatit", "repeat-it", "com.coreplay.textrepeater"]
+  },
+  {
+    "name": "Tic Tac Toe XO: Strategy Games",
+    "url": "tic-tac-toe",
+    "packageName": "com.coreplay.tictactoe",
+    "aliases": ["tictactoe", "glow-tic-tac-toe", "tic-tac-toe-glow", "com.coreplay.tictactoe"]
+  },
+  {
+    "name": "TaskFlow: To-Do List & Planner",
+    "url": "todo-list",
+    "packageName": "com.coreplay.todolist",
+    "aliases": ["focusdo", "todolist", "taskflow", "com.coreplay.todolist"]
+  }
+]
+

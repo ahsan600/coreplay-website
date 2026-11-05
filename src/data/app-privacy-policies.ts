@@ -1,3 +1,5 @@
+import projectsData from "./projects.json";
+
 export interface PolicySection {
   title: string;
   content: string[];
@@ -19,1744 +21,334 @@ export interface AppPrivacyPolicy {
   sections: PolicySection[];
 }
 
+export interface ProjectEntry {
+  name: string;
+  url: string;
+  packageName: string;
+  aliases?: string[];
+}
+
 export const COMMON_CONTACT_EMAIL = "muhammadameen188d@gmail.com";
 export const COMMON_DEVELOPER_NAME = "Coreplay Technologies";
 export const COMMON_DEV_PROFILE =
   "https://play.google.com/store/apps/dev?id=6807992577867877190";
-export const COMMON_LAST_UPDATED = "October 2026";
+export const COMMON_LAST_UPDATED = "November 2026";
 
-export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {
-  "text-repeater": {
-    slug: "text-repeater",
-    aliases: ["repeatit", "repeat-it", "textrepeater"],
-    appName: "RepeatIt – Text Repeater",
-    shortName: "RepeatIt",
-    packageId: "com.coreplay.textrepeater",
-    category: "Utility & Text Styling",
-    tagline:
-      "Multiply text up to 10,000 times with custom separators, stylish Unicode fonts, and 100% on-device privacy.",
-    heroDescription:
-      "Official Privacy Policy for RepeatIt – Text Repeater (com.coreplay.textrepeater) published by Coreplay Technologies. Understand how RepeatIt operates with 100% on-device processing, zero ad networks, and zero personal data collection.",
-    badgeText: "100% Offline • Ad-Free • Local Processing",
-    lastUpdated: COMMON_LAST_UPDATED,
-    metaDescription:
-      "Official Privacy Policy for RepeatIt – Text Repeater by Coreplay Technologies. Details 100% on-device processing, zero personal data collection, clipboard usage, and ad-free architecture.",
-    playStoreUrl: COMMON_DEV_PROFILE,
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **RepeatIt – Text Repeater** (package name: `com.coreplay.textrepeater`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "RepeatIt is engineered around a strict privacy-by-design architecture: all text repetition, Unicode font stylings, and custom separator configurations execute exclusively on your local device. We never harvest, log, transmit, or monetize your generated text, clipboard contents, or device information.",
-        ],
-      },
-      {
-        title: "Application Features & Intended Use",
-        content: [
-          "RepeatIt is a lightweight utility designed for personal messaging, creative text styling, and productivity. Key features include:",
-          "- **High-Speed Text Repetition:** Multiply any word, phrase, emoji, or sentence up to 10,000 times in milliseconds.",
-          "- **Custom Separators & Formatting:** Configure newlines, spaces, custom characters, line numbering, and prefix/suffix formatting.",
-          "- **Unicode Font Stylization:** Transform plain text into stylish fonts including Bold, Italic, Cursive, Monospace, and decorative artistic styles.",
-          "- **Emoticon Art & Templates:** Quick-insert pre-designed text faces, ASCII art, and status templates.",
-          "- **One-Tap Clipboard Copy & Share:** Seamlessly copy your generated text or share directly to your favorite messaging and social applications.",
-        ],
-      },
-      {
-        title: "Information Collection & Processing",
-        content: [
-          "We believe in absolute data minimization. When you use RepeatIt:",
-          "- **Zero Personal Information Collected:** We do not collect names, email addresses, phone numbers, postal addresses, or government identifiers.",
-          "- **No Account Registration or Sign-In:** RepeatIt requires no account creation, passwords, social logins, or cloud synchronization. You use the app entirely anonymously.",
-          "- **No Content Telemetry:** The text, phrases, emojis, and symbols you type or repeat are processed strictly in your device's volatile memory and local state. We have no access to your text content.",
-          "- **No Diagnostic Profiling:** We do not track keystrokes, typing frequency, or behavioral patterns.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "RepeatIt requests minimal permissions strictly necessary for user-initiated utility functions:",
-          "- **Network & Internet State (android.permission.INTERNET):** Declared by the standard Android application container to allow opening external web links (such as this official Privacy Policy or support correspondence) when you voluntarily tap an external link in your preferred browser. RepeatIt does not make background network calls, transfer text over the internet, or contact remote tracking servers.",
-          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers brief tactile feedback upon button clicks, style selections, and text generation confirmations to provide an ergonomic user experience.",
-          "- **System Clipboard Access:** Enables you to paste text into RepeatIt for repetition or copy generated text to your device clipboard with a single tap. Clipboard reading and writing are initiated solely by your explicit tap and are handled strictly on-device.",
-          "- **Native Android Share Sheet:** Allows you to forward repeated text to external applications (such as WhatsApp, Telegram, or SMS) using Android's native sharing dialog. Data is passed directly to the app you select without passing through any external servers.",
-          "- **Zero Invasive Permissions:** RepeatIt requests zero sensitive device permissions. The app does not access your camera, microphone, device storage files, contact list, biometric hardware, or GPS location.",
-        ],
-      },
-      {
-        title: "Local Storage & Data Transmission",
-        content: [
-          "RepeatIt operates on a 100% local-first model:",
-          "- **Local Persistence:** Repetition history logs and app preferences (such as dark/light theme and custom separator selections) are stored strictly locally on your device using `@capacitor/preferences` and device storage.",
-          "- **Zero Cloud Transmission:** No text records, history logs, or configuration settings are ever synchronized with external cloud databases or transferred across network connections.",
-          "- **Complete User Sovereignty:** Your generated text and history logs exist solely within your physical phone's application sandbox.",
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "RepeatIt does not integrate third-party data-gathering SDKs:",
-          "- **No Analytics Tracking:** RepeatIt does not integrate Google Analytics, Firebase Analytics, Crashlytics, or behavioral tracking SDKs.",
-          "- **No Remote Databases:** The application does not communicate with cloud storage engines, Firebase Firestore, AWS, or external APIs.",
-          "- **Google Play Services:** Standard Google Play distribution and licensing verification apply through Google Play Store infrastructure in accordance with the [Google Privacy Policy](https://policies.google.com/privacy).",
-        ],
-      },
-      {
-        title: "Advertising, Analytics & Tracking Choices",
-        content: [
-          "RepeatIt is a **100% ad-free** application:",
-          "- **No Ad Networks:** RepeatIt does not integrate Google AdMob, Unity Ads, AppLovin, or any commercial advertising networks.",
-          "- **No Advertising Identifiers (GAID):** The app does not request, read, or process your Android Google Advertising ID.",
-          "- **No Cross-App Tracking:** RepeatIt does not monitor your activity across other applications or websites.",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does not sell, rent, trade, or share** your personal information or generated content with third parties, advertisers, or data brokers under any circumstances.",
-          "Because RepeatIt collects no personal data and transmits no information to external servers, there is no personal data available to disclose, monetize, or transfer.",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "You have direct, immediate control over all data stored on your device:",
-          "- **In-App History Erasure:** You can clear your repetition history at any time from within the app by opening the History screen and tapping Clear.",
-          "- **Complete Data Wipe:** You can permanently wipe all locally stored preferences and history at any time through your Android system settings (**Settings > Apps > RepeatIt > Storage > Clear Data**).",
-          "- **Uninstall Deletion:** Uninstalling RepeatIt permanently deletes the application sandbox and all associated local data from your device.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "We prioritize data security by eliminating unnecessary risk surfaces:",
-          "- **Local Processing:** By keeping all text operations local to your phone's processor, your content is never exposed to network interception, transit vulnerabilities, or cloud breaches.",
-          "- **Sandbox Isolation:** Android's operating system sandbox protects RepeatIt's local storage from unauthorized access by other installed applications.",
-          "- **Secure External Connections:** If you tap a link to visit our website or contact support, all communications utilize industry-standard Transport Layer Security (TLS/HTTPS).",
-        ],
-      },
-      {
-        title: "Children's Privacy & Families Policy",
-        content: [
-          "RepeatIt is a safe, general-audience text utility designed for users of all ages. Coreplay Technologies strictly complies with the **Children's Online Privacy Protection Act (COPPA)**, GDPR-K, and Google Play Families Policies.",
-          "We do not knowingly collect, request, or retain personal information from children under 13 years of age (or under 16 in the European Economic Area). Because the application collects no personal data from any user, children can safely use RepeatIt without privacy risks.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Regardless of your geographical location, you hold legal rights regarding your personal information under the General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA/CPRA):",
-          "- **Right to Access & Portability:** You have full access to your local history directly inside the app.",
-          '- **Right to Erasure ("Right to be Forgotten"):** You can erase all data instantly via the app or Android settings.',
-          '- **"Do Not Sell My Personal Information":** Coreplay Technologies **does not sell or share** personal information.',
-          "If you have inquiries regarding your privacy rights, contact our Privacy Officer directly at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may periodically revise this Privacy Policy to reflect application updates, platform requirements, or statutory changes. Any modifications will be indicated by updating the "Last Updated" date at the top of this document.',
-          "We encourage you to review this policy periodically. Continued use of RepeatIt following policy updates signifies your agreement to the updated terms.",
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, feedback, or privacy inquiries regarding RepeatIt – Text Repeater, please contact our team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Developer Page:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-
-  "todo-list": {
-    slug: "todo-list",
-    aliases: ["taskflow", "schedule-planner", "daily-planner", "task-flow"],
-    appName: "TaskFlow: To-Do List & Planner",
-    shortName: "TaskFlow",
-    packageId: "com.coreplay.todolist",
-    category: "Productivity & Schedule Planning",
-    tagline:
-      "Smart daily planning, task scheduling, category organization, and local reminders with zero-cloud privacy.",
-    heroDescription:
-      "Official Privacy Policy for TaskFlow: To-Do List & Planner (com.coreplay.todolist) published by Coreplay Technologies. Learn how your tasks, schedules, and reminders remain 100% on-device with zero ads and zero cloud tracking.",
-    badgeText: "100% Offline • Local Reminders • Ad-Free",
-    lastUpdated: COMMON_LAST_UPDATED,
-    metaDescription:
-      "Official Privacy Policy for TaskFlow: To-Do List & Planner by Coreplay Technologies. Explains local notification scheduling, on-device data storage, zero ad tracking, and backup options.",
-    playStoreUrl:
-      "https://play.google.com/store/apps/details?id=com.coreplay.todolist",
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **TaskFlow: To-Do List & Planner** (package name: `com.coreplay.todolist`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "TaskFlow is built on the core principle of personal data sovereignty. We believe your schedules, daily to-do lists, private notes, and deadline reminders belong exclusively to you. All task planning, category organization, reminder calculations, and data persistence execute strictly on your device without cloud synchronization.",
-        ],
-      },
-      {
-        title: "Application Features & Intended Use",
-        content: [
-          "TaskFlow is a comprehensive daily productivity and schedule management utility. Key features include:",
-          "- **Task & Checklist Management:** Create, edit, prioritize, and check off daily tasks, subtasks, and to-do items.",
-          "- **Custom Categories & Color Tagging:** Organize tasks into custom categories (Work, Personal, Fitness, Study, Shopping) with color accents.",
-          "- **Local Schedule Reminders:** Schedule time-based reminder notifications and focus alerts for critical deadlines.",
-          "- **Interactive Calendar View:** Review daily and monthly task distributions and completion streaks.",
-          "- **Trash Bin Recovery:** Safely review, restore, or permanently delete completed and archived tasks.",
-          "- **Offline Backup & Restore:** Export your complete task database to a portable JSON file and restore without cloud intervention.",
-        ],
-      },
-      {
-        title: "Information Collection & Processing",
-        content: [
-          "TaskFlow is built with complete privacy and anonymity:",
-          "- **Zero Personal Data Collected:** We do not collect names, email addresses, phone numbers, or account credentials.",
-          "- **No Account Registration or Sign-In:** TaskFlow requires no signup, user profiles, passwords, or cloud sync. You remain completely anonymous.",
-          "- **On-Device Content Processing:** Your task titles, notes, subtask checklists, deadlines, and category tags are stored strictly in your device's local memory. We never access, read, transmit, or monetize your schedule data.",
-          "- **No Behavioral Tracking:** We do not track when you complete tasks, what categories you create, or how often you open the application.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "To provide reliable schedule reminders and productivity tools, TaskFlow requests specific Android system permissions:",
-          "- **Post Notifications (android.permission.POST_NOTIFICATIONS):** Requested on Android 13+ to deliver user-scheduled task reminder alerts, deadline notices, and focus prompts. Notifications are generated strictly by local on-device alarm managers. Users can configure reminder preferences or toggle notifications off at any time within **Settings > Task Reminders**.",
-          "- **Boot Completed (android.permission.RECEIVE_BOOT_COMPLETED):** Enables TaskFlow to restore and reschedule your active user-defined task reminders when your Android device restarts, ensuring your alarms remain preserved without running persistent battery-draining background tracking services.",
-          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile feedback upon task completion celebrations, button taps, and reminder alert vibrations.",
-          "- **Network & Internet State (android.permission.INTERNET):** Standard WebView container permission used to open external web links (such as support or this privacy policy) when you explicitly tap an external URL. TaskFlow never transmits your tasks or schedule data over external networks.",
-          "- **Zero Sensitive Permissions:** TaskFlow does not request access to your camera, microphone, photo library, contacts, biometric sensors, or GPS location coordinates.",
-        ],
-      },
-      {
-        title: "Local Storage & Data Transmission",
-        content: [
-          "TaskFlow operates strictly on a client-side architecture:",
-          "- **On-Device Preferences Storage:** All tasks, categories, settings, and reminders are stored exclusively within local device storage using `@capacitor/preferences`.",
-          "- **Zero Cloud Databases:** TaskFlow does not communicate with cloud databases, Firebase Firestore, AWS, or external servers. Your tasks remain solely on your physical device.",
-          "- **Complete Data Portability:** TaskFlow provides built-in backup functionality (**Settings > Export Backup**) allowing you to export your entire database to a standard JSON file for manual backup or device transfer without third-party involvement.",
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "TaskFlow operates as an independent, self-contained productivity tool:",
-          "- **Zero Analytics SDKs:** TaskFlow does not integrate Firebase Analytics, Google Analytics, Mixpanel, Crashlytics, or user-tracking SDKs.",
-          "- **Zero Third-Party Cloud Integrations:** The app does not integrate third-party login providers, remote sync engines, or data brokers.",
-          "- **Google Play Services:** Standard Google Play distribution and operating system integration apply under [Google Privacy Policy](https://policies.google.com/privacy).",
-        ],
-      },
-      {
-        title: "Advertising, Analytics & Tracking Choices",
-        content: [
-          "TaskFlow is a **100% ad-free** application:",
-          "- **No Advertising Networks:** TaskFlow contains no banner ads, interstitials, rewarded videos, or popups.",
-          "- **No Advertising Identifiers (GAID):** The app does not access, read, or process Google Advertising IDs.",
-          "- **No Tracking or Profiling:** TaskFlow does not profile your productivity habits or share diagnostic data with marketing networks.",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does not sell, rent, trade, or share** your schedule data, task entries, or personal information with any third parties or commercial entities.",
-          "Because your task database never leaves your physical phone, no external party has access to your private schedules.",
-        ],
-      },
-      {
-        title: "Data Retention, Backup & User Deletion Rights",
-        content: [
-          "You retain complete, unrestricted control over your task data at all times:",
-          "- **Trash Bin Management:** Deleted tasks can be reviewed, restored, or permanently wiped from the Trash Bin.",
-          "- **Complete App Reset:** You can permanently wipe all tasks, categories, and settings from device memory instantly via **Settings > Reset App Data**.",
-          "- **System Storage Clear:** You can erase all application data at the operating system level through Android **Settings > Apps > TaskFlow > Storage > Clear Data**.",
-          "- **Uninstall Deletion:** Uninstalling TaskFlow completely deletes the application sandbox and all stored tasks from your phone.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "We protect your schedule and task data through defense-in-depth security principles:",
-          "- **Local Isolation:** Your data is protected by the Android sandbox environment, preventing unauthorized access by other applications.",
-          "- **No Remote Exposure:** Because TaskFlow transmits no data to external servers, your personal schedule is protected against cloud database breaches, credential stuffing, and man-in-the-middle attacks.",
-          "- **Device Lock Recommended:** We encourage users to maintain an active device screen lock (PIN, password, or biometrics) to secure their device against physical access.",
-        ],
-      },
-      {
-        title: "Children's Privacy & Families Policy",
-        content: [
-          "TaskFlow is a safe, general-audience productivity utility suitable for all age groups, including students, professionals, and families. We comply fully with the **Children's Online Privacy Protection Act (COPPA)**, GDPR-K, and Google Play Families Policies.",
-          "TaskFlow does not collect, solicit, or store personal information from children under 13 years of age. All schedule data stays on the child's device without cloud transmission.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Under international data protection regulations (including GDPR, UK GDPR, and CCPA/CPRA), users hold specific statutory rights regarding their personal data:",
-          "- **Right of Access & Data Portability:** Export your entire task database to a readable JSON backup file at any time (**Settings > Export Backup**).",
-          '- **Right to Erasure ("Right to be Forgotten"):** Instantly delete all tasks and reset application state with one tap (**Settings > Reset App Data**).',
-          '- **"Do Not Sell My Personal Information":** Coreplay Technologies **does not sell or share** user data.',
-          "For privacy inquiries, contact our Privacy Officer at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may update this Privacy Policy from time to time to reflect application improvements or regulatory updates. Any changes will be indicated with an updated "Last Updated" timestamp at the top of this page.',
-          "Continued use of TaskFlow following revisions signifies your acceptance of the updated policy terms.",
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, suggestions, or data requests regarding TaskFlow: To-Do List & Planner, please contact our team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Listing:** [TaskFlow on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.todolist)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-
-  "tic-tac-toe": {
-    slug: "tic-tac-toe",
-    aliases: [
-      "tactix",
-      "tac-tix",
-      "tictactoe",
-      "connect-four",
-      "tic-tac-toe-xo",
-      "drop-four",
-    ],
-    appName: "Tic Tac Toe XO: Strategy Games",
-    shortName: "Tic Tac Toe",
-    packageId: "com.coreplay.tictactoe",
-    category: "Board & Strategy Games",
-    tagline:
-      "Classical Tic Tac Toe and Drop Four strategy games featuring on-device minimax AI, configurable grids, move replays, and 100% offline privacy.",
-    heroDescription:
-      "Official Privacy Policy for Tic Tac Toe XO: Strategy Games (com.coreplay.tictactoe) published by Coreplay Technologies. Learn how Tic Tac Toe provides offline strategic board gameplay with on-device minimax AI, zero ads, zero telemetry, and complete local privacy.",
-    badgeText: "100% Offline • On-Device AI • Ad-Free",
-    lastUpdated: COMMON_LAST_UPDATED,
-    metaDescription:
-      "Official Privacy Policy for Tic Tac Toe XO: Strategy Games by Coreplay Technologies. Explains on-device minimax AI calculations, zero ad networks, local replay storage, and complete offline gaming privacy.",
-    playStoreUrl:
-      "https://play.google.com/store/apps/details?id=com.coreplay.tictactoe",
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **Tic Tac Toe XO: Strategy Games** (package name: `com.coreplay.tictactoe`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "Inside the application interface, the game is presented and displayed as **Tic Tac Toe**. Tic Tac Toe XO: Strategy Games is built for offline strategic entertainment with complete respect for user privacy. The game operates under a strict privacy-first model: all game calculations, heuristic AI decision-making, and match history replays execute entirely on your device with zero cloud tracking, zero advertising networks, and zero personal data collection.",
-        ],
-      },
-      {
-        title: "Application Features & Intended Use",
-        content: [
-          "Tic Tac Toe XO: Strategy Games delivers classical and expanded tactical board games engineered for solo practice and two-player competition. Key features include:",
-          "- **Scalable Tic Tac Toe:** Play classical 3×3 (3 to win), 4×4 (4 to win), 5×5 (4 to win), 6×6 (4 to win), and 8×8 (5 to win Gomoku style) expanded grids.",
-          "- **Drop Four (Connect Four):** Classical 7×6 gravity-fed board game with tactical vertical, horizontal, and diagonal 4-in-a-row alignments.",
-          "- **On-Device Minimax AI Engine:** Intelligent heuristic AI opponents across 4 balanced difficulty tiers (**Novice**, **Tactician**, **Master**, and **Grandmaster**) executing 100% locally on your phone processor.",
-          "- **Pass & Play Multiplayer:** Local two-player mode on a single device with custom player names and symbol selectors (X and O / Disc colors).",
-          "- **Move-by-Move Match Replays:** Interactive move history playback with forward, backward, and jump-to-end controls.",
-          "- **Player Statistics & Win Streaks:** Detailed local tracking of matches played, wins, losses, draws, and current win streaks per board size and game mode.",
-          "- **Modern Dark Neon & Ergonomic Design:** High-contrast neon aesthetics, blitz countdown timers, double-tap move confirmation safeguards, and sound and haptic toggles.",
-        ],
-      },
-      {
-        title: "Information Collection & Processing",
-        content: [
-          "Tic Tac Toe XO: Strategy Games collects zero personal data from players:",
-          "- **Zero Personal Identifiers:** We do not collect names, email addresses, phone numbers, IP addresses, or device serial numbers.",
-          "- **No User Accounts:** The game requires no account creation, social media logins, or cloud gaming profiles. You play completely anonymously.",
-          '- **Local Player Names:** Custom player aliases (e.g. "Player 1", "Player 2") entered for pass-and-play matches are stored strictly in local device storage and are never transmitted to external servers.',
-          "- **No Behavioral Profiling:** We do not track player strategies, move speeds, or gameplay habits.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "Tic Tac Toe XO: Strategy Games is designed to require virtually zero device permissions:",
-          "- **Network & Internet State (android.permission.INTERNET):** Declared by the standard Android container runtime for webview display and opening external links (such as support or this privacy policy) when you explicitly tap a link. The game does not transmit gameplay or analytics data over the network.",
-          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers subtle tactile confirmation upon board taps, piece drops, turn alerts, and victory fanfares.",
-          "- **Audio Synthesis:** Uses local device sound synthesis for crisp, tactile move and game sounds.",
-          "- **Zero Invasive Permissions:** The game requests no access to your camera, microphone, photo storage, contact list, biometric hardware, phone state, background notifications, or GPS location.",
-        ],
-      },
-      {
-        title: "Local Storage & On-Device AI Processing",
-        content: [
-          "Tic Tac Toe XO: Strategy Games operates entirely locally on your device hardware:",
-          "- **On-Device Minimax AI:** All artificial intelligence calculations, minimax tree searches, alpha-beta pruning, and board evaluations run directly on your phone's processor in real time without sending board positions to cloud servers.",
-          "- **Local Persistence:** Match statistics, win streaks, match replay logs (up to 50 games), and player preferences are stored strictly in local storage using `@capacitor/preferences`.",
-          "- **100% Offline Capability:** The entire game—including all board sizes, Drop Four, AI levels, and match replays—functions completely without an active internet connection.",
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "Tic Tac Toe XO: Strategy Games is built without third-party surveillance libraries:",
-          "- **No Analytics SDKs:** The game does not integrate Google Analytics, Firebase, Crashlytics, or telemetry SDKs.",
-          "- **No Cloud Matchmaking:** The game contains no multiplayer cloud servers or remote matchmaking databases.",
-          "- **Google Play Services:** Standard Google Play distribution and security verification apply under [Google Privacy Policy](https://policies.google.com/privacy).",
-        ],
-      },
-      {
-        title: "Advertising, Analytics & Tracking Choices",
-        content: [
-          "Tic Tac Toe XO: Strategy Games is a **100% ad-free** board game:",
-          "- **No Commercial Ads:** The game contains no banner ads, full-screen interstitials, rewarded ads, or video promotions.",
-          "- **No Advertising Identifiers (GAID):** The game does not access, read, or process your Android Google Advertising ID.",
-          "- **No Tracking or Retargeting:** The game does not track your activity across apps or websites.",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does not sell, rent, trade, or share** player data or statistics with third parties, advertisers, or data brokers under any circumstances.",
-          "Because all match statistics and replays exist only on your physical device, no external entity has access to your gameplay records.",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "Players retain full control over all stored statistics and match replays:",
-          "- **In-App Data Reset:** You can permanently erase all match history, win streaks, and saved replays at any time directly in the app (**Settings > Reset All Statistics & Match History**).",
-          "- **Operating System Clear:** You can wipe all game data at the system level via Android **Settings > Apps > Tic Tac Toe XO: Strategy Games > Storage > Clear Data**.",
-          "- **Uninstall Deletion:** Uninstalling the game permanently removes the application sandbox and all local match records from your device.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "Because Tic Tac Toe XO: Strategy Games operates locally on your device without cloud transmission, your gameplay records are protected against external network interception, unauthorized server access, and data breaches.",
-          "Local data is isolated within Android's protected application sandbox environment.",
-        ],
-      },
-      {
-        title: "Children's Privacy & Families Policy",
-        content: [
-          "Tic Tac Toe XO: Strategy Games is family-friendly and designed for players of all ages, providing safe, intellectual strategy gameplay without inappropriate content, advertisements, or in-app purchases. Coreplay Technologies complies with **COPPA**, GDPR-K, and Google Play Families Policies.",
-          "We do not knowingly collect, solicit, or store personal information from children under 13 years of age. The game is completely safe for children and families.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Under GDPR, UK GDPR, and CCPA/CPRA, players have the right to access, rectify, and erase their data. Because all game data is stored locally on your device, you have immediate, unilateral authority over your records.",
-          "For privacy inquiries, contact our Privacy Officer at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may periodically revise this Privacy Policy to reflect game enhancements or regulatory requirements. Any updates will be indicated with an updated "Last Updated" timestamp at the top of this page.',
-          "Continued use of Tic Tac Toe XO: Strategy Games following policy updates signifies your agreement to the updated terms.",
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, feedback, or privacy inquiries regarding Tic Tac Toe XO: Strategy Games, please contact our team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Game Listing:** [Tic Tac Toe XO: Strategy Games on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.tictactoe)",
-          "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-
-  "nickname-app": {
-    slug: "nickname-app",
-    aliases: ["nickcraft", "nickname-generator", "nick-craft"],
-    appName: "NickCraft: Nickname Generator",
-    shortName: "NickCraft",
-    packageId: "com.coreplay.nickname",
-    category: "Utility & Personalization",
-    tagline:
-      "Create unique gamer tags, stylish Unicode fonts, fancy nicknames, and custom symbols with 100% on-device privacy.",
-    heroDescription:
-      "Official Privacy Policy for NickCraft: Nickname Generator (com.coreplay.nickname) published by Coreplay Technologies. Learn how NickCraft provides offline gamer tag generation, stylish Unicode fonts, and symbol decorator tools with zero tracking and zero personal data collection.",
-    badgeText: "100% Offline • Ad-Free • Local Favorites",
-    lastUpdated: COMMON_LAST_UPDATED,
-    metaDescription:
-      "Official Privacy Policy for NickCraft: Nickname Generator by Coreplay Technologies. Explains on-device Unicode font styling, zero personal data harvesting, clipboard access, and local favorites storage.",
-    playStoreUrl: COMMON_DEV_PROFILE,
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **NickCraft: Nickname Generator** (package name: `com.coreplay.nickname`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "NickCraft is engineered as a 100% offline-first gamer tag and text styling utility. We respect your creative privacy: all nickname generation algorithms, Unicode glyph conversions, decorator compositions, and saved favorites reside exclusively on your local device. We never harvest, log, transmit, or monetize your generated nicknames, clipboard contents, or device information.",
-        ],
-      },
-      {
-        title: "Application Features & Intended Use",
-        content: [
-          "NickCraft empowers gamers, creators, and social media users to generate distinctive, stylish handles. Key features include:",
-          "- **Categorized Nickname Discovery:** Explore thousands of curated nickname ideas across gaming genres (Gamer, Aesthetic, Anime, Dark, Cute, Funny, Rare, Top).",
-          "- **Unicode Font Stylization:** Convert plain text into stylish fonts including Small Caps, Bubble, Gothic, Script, Monospace, and decorative variants.",
-          "- **Symbol & Glyph Decorator:** Combine special symbols (stars, wings, crowns, swords, brackets, aesthetic glyphs) into custom handle designs.",
-          "- **Custom Tag Builder:** Compose custom gamer tags with real-time preview and glyph compatibility testing.",
-          "- **Local Favorites Library:** Save your favorite gamer tags and customized designs for instant access.",
-          "- **One-Tap Copy & Share:** Instantly copy formatted names to your device clipboard or share to gaming and messaging apps.",
-        ],
-      },
-      {
-        title: "Information Collection & Processing",
-        content: [
-          "NickCraft operates on strict zero-data principles:",
-          "- **Zero Personal Information Collected:** We do not collect names, email addresses, phone numbers, or account credentials.",
-          "- **No Account Registration or Sign-In:** NickCraft requires no signup, passwords, social logins, or profiles. You use the app entirely anonymously.",
-          "- **No Text or Search Query Telemetry:** The gamer tags you browse, search, generate, or save are processed strictly in device memory. We have no access to your custom nicknames.",
-          "- **No Behavioral Tracking:** We do not monitor how many tags you copy, what categories you view, or how long you use the app.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "NickCraft requires minimal device permissions strictly needed for core utility features:",
-          "- **Network & Internet State (android.permission.INTERNET, ACCESS_NETWORK_STATE):** Declared by the standard Android container runtime to allow opening external web resources (such as support or this privacy policy) when you voluntarily tap an external link in your preferred browser. NickCraft does not transmit your created tags or personal data over the internet.",
-          "- **System Clipboard Access:** Allows you to copy generated nicknames, stylish fonts, and symbol combinations to your device clipboard with a single tap. Clipboard reading and writing are initiated strictly by your explicit tap and are handled locally on-device.",
-          "- **Native Android Share Sheet:** Allows you to share formatted nicknames directly to external gaming and messaging apps via Android's native share dialog.",
-          "- **Haptic Feedback (android.permission.VIBRATE):** Provides subtle tactile vibration confirmation upon button clicks, category switches, and copy actions.",
-          "- **Zero Sensitive Permissions:** NickCraft requests zero sensitive device permissions. The app does not access your camera, microphone, photo files, contact list, biometric hardware, background notifications, or GPS location coordinates.",
-        ],
-      },
-      {
-        title: "Local Storage & Data Transmission",
-        content: [
-          "NickCraft operates strictly on a local-first architecture:",
-          "- **On-Device Storage:** Saved favorite gamer tags, custom symbol templates, and user theme preferences are stored exclusively on your device using `@capacitor/preferences`.",
-          "- **Zero Cloud Databases:** NickCraft does not connect to cloud storage engines, Firebase Firestore, AWS, or external servers. Your favorites remain exclusively on your physical device.",
-          "- **Zero External Telemetry:** All Unicode styling rules, symbol definitions, and name databases are bundled locally within the app installation package, requiring zero server downloads.",
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "NickCraft is built without third-party tracking libraries:",
-          "- **No Analytics Tracking:** NickCraft does not integrate Google Analytics, Firebase Analytics, Crashlytics, or user-profiling SDKs.",
-          "- **No Cloud Services:** The app does not connect to external APIs or remote databases.",
-          "- **Google Play Services:** Standard Google Play distribution and security verification apply under [Google Privacy Policy](https://policies.google.com/privacy).",
-        ],
-      },
-      {
-        title: "Advertising, Analytics & Tracking Choices",
-        content: [
-          "NickCraft is a **100% ad-free** application:",
-          "- **No Commercial Ads:** NickCraft contains no banner ads, interstitials, rewarded videos, or promotional popups.",
-          "- **No Advertising Identifiers (GAID):** The app does not request, read, or process Google Advertising IDs.",
-          "- **No Cross-App Tracking:** NickCraft does not track your online activity across other apps or websites.",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does not sell, rent, trade, or share** your personal information or created gamer tags with third parties, advertisers, or data brokers under any circumstances.",
-          "Because NickCraft collects no personal data and transmits no information to external servers, there is no personal data available to disclose or monetize.",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "You have direct, immediate control over all data stored on your device:",
-          "- **In-App Favorites Removal:** You can remove individual tags or clear all saved favorites at any time from within the Saved screen.",
-          "- **System Storage Wipe:** You can permanently erase all stored favorites and preferences at any time through Android system settings (**Settings > Apps > NickCraft > Storage > Clear Data**).",
-          "- **Uninstall Deletion:** Uninstalling NickCraft permanently deletes the application sandbox and all saved favorites from your device.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "Because all name generation and styling algorithms operate locally on your phone's processor, your creative content is protected from network interception and cloud data breaches.",
-          "Local data is isolated within Android's protected application sandbox environment.",
-        ],
-      },
-      {
-        title: "Children's Privacy & Families Policy",
-        content: [
-          "NickCraft is a creative utility suitable for users of all ages, including young gamers and students. Coreplay Technologies complies with the **Children's Online Privacy Protection Act (COPPA)**, GDPR-K, and Google Play Families Policies.",
-          "We do not knowingly collect, solicit, or store personal information from children under 13 years of age. Because the application collects no personal data from any user, children can safely use NickCraft without privacy risks.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Under GDPR, UK GDPR, and CCPA/CPRA, users hold specific statutory rights regarding their personal data:",
-          "- **Right of Access & Control:** You have direct access to and control over your saved nicknames inside the app.",
-          '- **Right to Erasure ("Right to be Forgotten"):** You can erase all data instantly via the app or Android settings.',
-          '- **"Do Not Sell My Personal Information":** Coreplay Technologies **does not sell or share** user data.',
-          "For privacy inquiries, contact our Privacy Officer at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may periodically update this Privacy Policy to reflect application updates or regulatory requirements. Any updates will be indicated by updating the "Last Updated" date at the top of this document.',
-          "Continued use of NickCraft following policy updates signifies your agreement to the updated terms.",
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, feedback, or privacy inquiries regarding NickCraft: Nickname Generator, please contact our team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Developer Page:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-
-  "qr-banner-scanner": {
-    slug: "qr-banner-scanner",
-    aliases: ["scanpro", "qr-scanner", "barcode-scanner", "scan-pro"],
-    appName: "QR Scanner & Barcode Scanner",
-    shortName: "QR Scanner (ScanPro)",
-    packageId: "com.coreplay.qrscanner",
-    category: "Productivity & Utilities",
-    tagline:
-      "Sub-second on-device QR & barcode scanning powered by Google ML Kit, with local history storage, custom QR generator, and privacy controls.",
-    heroDescription:
-      "Official Privacy Policy for QR Scanner & Barcode Scanner (com.coreplay.qrscanner, also known as ScanPro) published by Coreplay Technologies. Understand our camera permissions, on-device Google ML Kit computer vision, local scan history storage, optional location QR generator, and advertising privacy options.",
-    badgeText: "Google ML Kit • Zero Cloud Video • Local Storage",
-    lastUpdated: COMMON_LAST_UPDATED,
-    metaDescription:
-      "Official Privacy Policy for QR Scanner & Barcode Scanner by Coreplay Technologies. Details on-device camera ML Kit processing, zero cloud video uploads, local history storage, and AdMob privacy controls.",
-    playStoreUrl: COMMON_DEV_PROFILE,
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **QR Scanner & Barcode Scanner** (package name: `com.coreplay.qrscanner`, also known as ScanPro), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "QR Scanner & Barcode Scanner is built on a strict privacy-first foundation: optical barcode scanning and machine learning inference are performed 100% locally on your phone's processor using Google ML Kit. We never record, store, or transmit your camera video stream or captured photos to any external cloud server.",
-        ],
-      },
-      {
-        title: "Application Features & Intended Use",
-        content: [
-          "QR Scanner & Barcode Scanner is a high-speed utility engineered for scanning, decoding, and generating optical codes. Key features include:",
-          "- **Universal 1D & 2D Format Support:** QR Code, Data Matrix, Aztec, PDF417, UPC-A, UPC-E, EAN-8, EAN-13, Code 39, Code 93, Code 128, Codabar, and ITF.",
-          "- **Instant On-Device ML Kit Scanning:** Real-time barcode decoding in under 100 milliseconds directly in device memory.",
-          "- **Smart Payload Categorization:** Automatic client-side parsing for URLs, Wi-Fi networks (WPA/WEP), vCard contacts, SMS, phone calls, geo-coordinates, and calendar events.",
-          "- **Integrated QR Code Generator:** Create custom QR codes for Wi-Fi networks, text, URLs, contacts, email, phone numbers, and optional geolocation.",
-          "- **Local Scan History & CSV Export:** Search, filter, and export scan history logs to CSV or text files.",
-          "- **Gallery Image Scanning:** Scan and decode QR codes and barcodes directly from saved images in your device photo gallery.",
-          "- **Flashlight Assist & Cooldown:** Low-light flashlight assist and duplicate scan cooldown controls.",
-          "- **Optional Product Lookup:** Opt-in retail barcode lookup querying the open-source Open Food Facts database.",
-        ],
-      },
-      {
-        title: "Information Collection & On-Device Processing",
-        content: [
-          "We practice strict data minimization across all scanning and generation workflows:",
-          "- **Zero Cloud Camera Uploads:** Camera video frames are analyzed strictly in real time in volatile device memory by Google ML Kit. We do not record, store, photograph, or transmit your camera stream to any external server.",
-          "- **Local Scan History Logs:** Decoded barcode payloads, scan timestamps, and custom generated QR codes are stored locally on your device within IndexedDB (`scanpro_history`). They are never uploaded or synced to external cloud databases.",
-          '- **Optional Geolocation for QR Generation:** If you voluntarily tap "Use Current Location" in the QR Generator, your device\'s GPS coordinates are acquired solely to populate the latitude and longitude fields of the QR code you are creating. Your location is processed locally and is never transmitted to us or used for tracking.',
-          "- **No User Accounts:** You use the application without registering an account, providing an email address, or creating a cloud profile.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "QR Scanner & Barcode Scanner requests specific device hardware permissions to provide core scanning and utility functions. These permissions are requested at runtime only when strictly needed:",
-          "- **Camera Access (android.permission.CAMERA):** Used exclusively to provide a real-time optical viewfinder for scanning QR codes and barcodes using Google ML Kit. **Zero Cloud Transmission:** Video frames are analyzed in temporary device memory and immediately discarded. No camera footage or photos are saved or uploaded.",
-          "- **Flashlight (android.permission.FLASHLIGHT):** Used optionally to toggle your device flashlight so you can scan barcodes in dark or low-light conditions.",
-          "- **Photos, Media & File Storage (File Picker / Filesystem):** Used only when you voluntarily choose to scan an existing QR code or barcode from your saved device photo gallery, or when you explicitly export scan history logs (CSV/text) or save generated QR codes to your local storage.",
-          '- **Optional Location Access (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):** Requested only if you explicitly choose "Use Current Location" inside the Location QR generator to populate coordinates into a custom QR code. Location data is never used for tracking, profiling, or background tracking.',
-          "- **System Clipboard Access:** Enables you to copy decoded barcode data, Wi-Fi credentials, or URLs to your clipboard with a single tap, or paste text into the QR generator.",
-          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile vibration confirmation upon successful barcode detection.",
-          "- **Network & Internet State (INTERNET, ACCESS_NETWORK_STATE):** Used to load advertisements via Google AdMob, query optional Open Food Facts product information when enabled, and open external links in your browser.",
-          "You can manage, grant, or revoke any of these permissions at any time through your Android device settings (**Settings > Apps > QR Scanner > Permissions**).",
-        ],
-      },
-      {
-        title: "Local Storage & Data Transmission",
-        content: [
-          "QR Scanner & Barcode Scanner operates primarily on a local-first architecture:",
-          "- **Local History Storage:** All scanned codes and creation logs are stored locally on your device in IndexedDB (`scanpro_history`).",
-          "- **Preferences Storage:** User preferences (such as duplicate cooldowns, flashlight defaults, and theme selections) are stored on-device via `@capacitor/preferences` (`scanpro_settings`).",
-          "- **Offline Functionality:** Optical barcode scanning, QR code generation, history browsing, and CSV exports work 100% offline without requiring an active internet connection.",
-          "- **Optional Product Lookup:** When enabled by the user, retail barcode numbers (EAN/UPC) query the open-source Open Food Facts database (`openfoodfacts.org`) over HTTPS to fetch product brand names and packaging photos. This lookup does not transmit user identifiers and can be disabled anytime in Settings.",
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "The application integrates trusted third-party SDKs to deliver core capabilities and sustainable operations:",
-          "- **Google ML Kit (Google LLC):** Powers high-speed on-device computer vision for optical barcode detection. Machine learning inference occurs 100% locally on your phone's processor without sending image frames to Google servers. [Google ML Kit Terms](https://developers.google.com/ml-kit/terms)",
-          "- **Google AdMob & Mobile Ads SDK (Google LLC):** Delivers banner, interstitial, app-open, and optional rewarded video advertisements. AdMob may process non-permanent device advertising IDs (GAID), IP address for coarse regional compliance, and interaction data to serve relevant ads and prevent fraud. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
-          "- **Open Food Facts API:** Optional open-source product database queried only for commercial retail barcodes when product lookup is enabled by the user. [Open Food Facts Privacy Policy](https://world.openfoodfacts.org/terms-of-use)",
-          "- **Google Play Services (Google LLC):** Essential for app distribution, updates, and platform security verification under [Google Privacy Policy](https://policies.google.com/privacy).",
-        ],
-      },
-      {
-        title: "Advertising, Analytics & Tracking Choices",
-        content: [
-          "Our free-to-download scanner application displays advertisements powered by Google AdMob. You have full control over advertising choices:",
-          "- **Reset Advertising ID:** Open Android **Settings > Google > Ads** and tap **Reset advertising ID** to disassociate past activity from your device identifier.",
-          "- **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent apps from accessing your advertising identifier entirely.",
-          "- **Opt-Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads rather than interest-based ads.",
-          "- **24-Hour Ad-Free Rewarded Access:** Users can watch an optional rewarded video ad within the application to enjoy 24 hours of completely ad-free scanning without making financial purchases.",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does not sell, rent, or trade** your personal information, camera feeds, scan logs, or location data with third parties or data brokers.",
-          "Advertising data is processed by Google AdMob in accordance with Google's verified developer policies. No scan history, decoded content, or private QR records are ever shared with advertisers.",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "You retain complete, unrestricted control over your scan history at all times:",
-          "- **Clear Scan History:** You can delete individual scans or permanently wipe your entire scan history at any time from within the application (**Settings > Clear History**).",
-          "- **Export Scan Logs:** You can export your scan history to a CSV or text file before deletion for your personal records (**Settings > Export CSV**).",
-          "- **Operating System Storage Wipe:** You can clear all stored history and preferences at the operating system level through Android system settings (**Settings > Apps > QR Scanner > Storage > Clear Data**).",
-          "- **Uninstall Deletion:** Uninstalling the application permanently wipes all local scan logs and preferences from device storage.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "We implement industry-standard safeguards to protect your information:",
-          "- **Volatile Memory Camera Processing:** Camera frames exist only in transient system memory during real-time ML Kit analysis and are discarded immediately.",
-          "- **Encrypted Network Communications:** All network interactions (including AdMob requests and Open Food Facts lookups) are strictly encrypted in transit using Transport Layer Security (TLS/HTTPS).",
-          "- **Local Sandbox Protection:** Scanned records and preferences are protected by Android's application sandbox security.",
-        ],
-      },
-      {
-        title: "Children's Privacy & Families Policy",
-        content: [
-          "QR Scanner & Barcode Scanner is a utility designed for general audiences and is not directed to children under the age of 13 (or under 16 in the European Economic Area). Coreplay Technologies complies with **COPPA**, GDPR-K, and Google Play Families Policies.",
-          "We do not knowingly solicit, collect, or store personal information from children under 13 years of age. If you believe a child has provided personal information, please contact our team at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Under international privacy regulations (including GDPR, UK GDPR, and CCPA/CPRA), you hold specific rights regarding your personal data:",
-          "- **Right to Access & Portability:** Access and export your entire scan history log directly within the app.",
-          '- **Right to Erasure ("Right to be Forgotten"):** Wipe your scan history instantly via the app or Android settings.',
-          '- **"Do Not Sell My Personal Information":** Coreplay Technologies **does not sell or share** personal information for monetary or valuable consideration.',
-          "To exercise statutory rights, please contact our Privacy Officer at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may update our Privacy Policy periodically to reflect enhancements in scanner utilities, newly supported barcode formats, or regulatory requirements. Any modifications will be indicated by updating the "Last Updated" date at the top of this page.',
-          "Continued use of QR Scanner & Barcode Scanner following updates constitutes acceptance of the revised policy.",
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, feedback, or data requests regarding QR Scanner & Barcode Scanner, please contact our team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Developer Page:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-
-  "dubai-modern-bus-simulator": {
-    slug: "dubai-modern-bus-simulator",
-    aliases: ["dubai-bus", "dubai-bus-simulator", "bus-simulator"],
-    appName: "Dubai Modern Bus Simulator",
-    shortName: "Dubai Bus Simulator",
-    packageId: "com.coreplay.dubai.bus",
-    category: "Simulation / Role-Playing",
-    tagline:
-      "Realistic 3D city coach driving and mountain passenger transport across modern Dubai.",
-    heroDescription:
-      "Official Privacy Policy for Dubai Modern Bus Simulator (com.coreplay.dubai.bus) published by Coreplay Technologies. Understand our ad-supported monetization, device diagnostic data, and player privacy protections.",
-    badgeText: "3D Simulation • Ad-Supported • COPPA Compliant",
-    lastUpdated: COMMON_LAST_UPDATED,
-    metaDescription:
-      "Official Privacy Policy for Dubai Modern Bus Simulator by Coreplay Technologies. Explains 3D simulation gameplay, Google AdMob integrations, crash diagnostics, and advertising privacy controls.",
-    playStoreUrl:
-      "https://play.google.com/store/apps/details?id=com.coreplay.dubai.bus",
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **Dubai Modern Bus Simulator** (package name: `com.coreplay.dubai.bus`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "Dubai Modern Bus Simulator is a 3D mobile driving simulation game. We are dedicated to providing entertaining, realistic gameplay while upholding transparent data standards and protecting player privacy.",
-        ],
-      },
-      {
-        title: "Application Features & Intended Use",
-        content: [
-          "Dubai Modern Bus Simulator delivers realistic coach bus driving simulation. Key features include:",
-          "- **Authentic 3D Environments:** Drive through Dubai-inspired city highways, coastal promenades, and winding mountain passes.",
-          "- **Passenger Transport Missions:** Pick up and transport passengers across dynamic routes and scheduled transit stops.",
-          "- **Realistic Vehicle Physics:** Customizable steering, tilt, and button controls with multiple internal and external camera perspectives.",
-          "- **Offline Gameplay:** Core driving missions and passenger routes can be played without an active internet connection.",
-        ],
-      },
-      {
-        title: "Information Collection & Processing",
-        content: [
-          "When you play Dubai Modern Bus Simulator, limited diagnostic and technical data may be processed:",
-          "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, phone numbers, or passwords. No account creation or registration is required.",
-          "- **Device Diagnostic Metrics:** Android version, device manufacturer, screen resolution, and GPU profile to optimize 3D graphics rendering and frame rates.",
-          "- **Advertising Identifiers:** Non-permanent device identifiers such as the Google Advertising ID (GAID), used by certified advertising partners to deliver ads and prevent fraud.",
-          "- **Approximate Geographic Location:** Coarse, non-precise location derived from IP address used for regional ad compliance and localization.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "Dubai Modern Bus Simulator requests standard gaming permissions:",
-          "- **Network & Internet State (INTERNET, ACCESS_NETWORK_STATE):** Used to load in-game advertisements, verify Google Play licensing, and check for game updates.",
-          "- **Haptic Feedback & Vibration (VIBRATE):** Delivers tactile rumble effects during vehicle acceleration, braking, collisions, and menu taps.",
-          "- **Zero Invasive Permissions:** The game does not request access to your camera, microphone, contact list, files, photos, or GPS coordinates.",
-        ],
-      },
-      {
-        title: "Local Storage & Data Transmission",
-        content: [
-          "Your mission completion status, unlocked bus models, vehicle paint customizations, and accumulated coins are stored strictly locally on your device storage.",
-          "Game progression is saved within your device's local application sandbox.",
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "The game integrates trusted third-party SDKs to support 3D rendering, performance monitoring, and monetization:",
-          "- **Google Play Services (Google LLC):** Essential for game distribution, updates, and licensing verification. [Google Privacy Policy](https://policies.google.com/privacy)",
-          "- **Google AdMob (Google LLC):** Serves banner, interstitial, and rewarded video ads to support free-to-play access. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
-          "- **Unity Technologies:** Delivers 3D graphics rendering, realistic physics, and runtime game engine capabilities. [Unity Privacy Policy](https://unity.com/legal/privacy-policy)",
-          "- **Firebase Crashlytics (Google LLC):** Collects aggregated, non-personally identifiable crash logs to troubleshoot device-specific bugs and performance bottlenecks. [Firebase Privacy Policy](https://firebase.google.com/support/privacy)",
-        ],
-      },
-      {
-        title: "Advertising Choices & Managing Advertising ID",
-        content: [
-          "As a free-to-play game, Dubai Modern Bus Simulator displays advertisements. You have full control over advertising identifiers through your Android operating system settings:",
-          "- **Reset Advertising ID:** Open Android **Settings > Google > Ads** and tap **Reset advertising ID** to disassociate past activity from your device identifier.",
-          "- **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent apps from accessing your advertising identifier entirely.",
-          "- **Opt-Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads rather than interest-based ads.",
-        ],
-      },
-      {
-        title: "In-App Purchases & Financial Data",
-        content: [
-          "If the game offers optional digital items, coin packs, or vehicle unlocks, transactions are handled exclusively through the **Google Play In-App Billing** system.",
-          "Coreplay Technologies does not collect, receive, or store your credit card numbers, bank account information, or billing address. All financial details are processed securely by Google under [Google Payments Privacy Notice](https://payments.google.com/legaldocument?family=0.privacynotice).",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "All mission progress and vehicle unlocks reside locally on your device:",
-          "- **Local Reset:** You can reset all game progress by clearing app storage via Android system settings (**Settings > Apps > Dubai Modern Bus Simulator > Storage > Clear Data**).",
-          "- **Uninstall Deletion:** Uninstalling the game permanently removes all local progress and settings from your device.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "We implement industry-standard safeguards to protect diagnostic information. All communications with Google Play and AdMob are encrypted in transit using Transport Layer Security (TLS/HTTPS).",
-        ],
-      },
-      {
-        title: "Children's Privacy & Families Policy",
-        content: [
-          "Dubai Modern Bus Simulator is designed for general audiences and is not directed to children under 13 years of age. In compliance with **COPPA**, GDPR-K, and Google Play Families Policies, we do not knowingly collect personal information from children under 13.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Players in the EEA, UK, and California hold statutory rights regarding data access and erasure. Coreplay Technologies **does not sell, rent, or trade** personal data to third parties.",
-          "To exercise any statutory rights, please contact **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may update this policy periodically to reflect game updates or platform requirements. Revisions will be posted with an updated "Last Updated" timestamp at the top of this page.',
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, feedback, or privacy inquiries regarding Dubai Modern Bus Simulator, please contact our team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Game Listing:** [Dubai Modern Bus Simulator on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.dubai.bus)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-  "crowd-runner": {
-    slug: "crowd-runner",
-    aliases: [
-      "count-rush",
-      "count-rush-crowd-runner-3d",
-      "count-masters",
-      "count-masters-crowd-runner-3d",
-      "crowdrun",
-      "crowd-run",
-      "windup-rush",
-      "windup-rush-crowd-runner-3d",
-      "com.coreplay.crowdrun",
-    ],
-    appName: "Count Rush: Crowd Runner 3D",
-    shortName: "Count Rush",
-    packageId: "com.coreplay.crowdrun",
-    category: "Action / Casual / 3D Runner",
-    tagline:
-      "Multiply your crowd, dodge tricky obstacles, collect coins, and defeat giant mechanical bosses in exhilarating 3D runner gameplay.",
-    heroDescription:
-      "Official Privacy Policy for Count Rush: Crowd Runner 3D (com.coreplay.crowdrun) published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
-    badgeText: "3D Action Runner • General Audience (13+) • Privacy-First",
-    lastUpdated: "November 1, 2026",
-    metaDescription:
-      "Official Privacy Policy for Count Rush: Crowd Runner 3D (com.coreplay.crowdrun) by Coreplay Technologies. Details 3D crowd runner mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
-    playStoreUrl:
-      "https://play.google.com/store/apps/details?id=com.coreplay.crowdrun",
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **Count Rush: Crowd Runner 3D** (package name: `com.coreplay.crowdrun`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "Inside the application interface and on your device home screen, the game is presented and displayed as **Count Rush**. Count Rush: Crowd Runner 3D is a fast-paced 3D arcade runner game where players navigate dynamic obstacle tracks, pass through mathematical multiplier gates to grow their runner crowd, collect coins and keys, and engage in epic mechanical boss showdowns.",
-          "We are dedicated to delivering entertaining, responsive, and secure mobile gaming experiences while upholding absolute transparency regarding player privacy, device permissions, and advertising technologies.",
-        ],
-      },
-      {
-        title: "Application Features & Intended Use",
-        content: [
-          "Count Rush: Crowd Runner 3D delivers dynamic crowd-running action engineered with a custom WebGL 3D graphics pipeline. Key gameplay features include:",
-          "- **Crowd Multiplication Mechanics:** Pass through positive addition and multiplication gates (+5, +20, ×2, ×3) to expand your runner army while steering clear of negative red gates.",
-          "- **Dynamic 3D Obstacle Courses:** Dodge spinning gears, stompers, swinging pendulums, spike traps, and collapsing bridges across diverse themed biome tracks.",
-          "- **Boss Confrontations & Finish Lines:** Direct your runner mob in final boss battles at the end of each run, launching runner barrages to break down armor plates and trigger victory celebrations.",
-          "- **Cosmetics & Customization:** Unlock charming toy outfits, hats, color palettes, and runner accessories in the in-game Shop using earned in-game bolts and coins.",
-          "- **Bonus Chest Room:** Unlock secret reward vaults with keys collected during track runs to earn bonus currency and rare cosmetic items.",
-          "- **100% Offline Capable:** Core runner levels, obstacle generation, crowd simulation, and boss battles are fully playable without an active internet connection.",
-        ],
-      },
-      {
-        title: "Information Collection & Processing",
-        content: [
-          "Count Rush: Crowd Runner 3D is engineered around strict data minimization principles:",
-          "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, physical addresses, telephone numbers, or biometric information. No account registration, password creation, or social media login is ever required to play.",
-          "- **Non-PII Gameplay Metrics (App Interactions):** Aggregated, anonymous gameplay events (such as levels completed, levels failed, boss encounter outcomes, and virtual currency earned) are processed via Firebase Analytics to evaluate track balancing, difficulty curves, and level progression.",
-          "- **Device & Performance Telemetry (Diagnostics):** Technical parameters including Android OS version, device model, screen resolution, GPU tier, and frame rate metrics may be sampled to ensure smooth 60 FPS performance and graphics stability across diverse hardware profiles.",
-          "- **Zero Keystroke or Sensor Snooping:** We do not track user keystrokes, personal communications, ambient microphone audio, or camera streams.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "Count Rush: Crowd Runner 3D requests only standard Android permissions necessary for responsive 3D gameplay, ad delivery, and device ergonomics:",
-          "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Enables the game to verify network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent forms, and open external links (such as support or this Privacy Policy) when tapped. The game functions seamlessly offline when no connection is present.",
-          "- **Keep Awake / Screen Wake Lock (android.permission.WAKE_LOCK):** Prevents your device screen from dimming or going to sleep during active runner stages, ensuring an uninterrupted gameplay experience while steering your crowd.",
-          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile rumble effects when your runners pass through multiplier gates, collect coins and keys, hit hazards, or strike boss targets. Vibration can be toggled on or off at any time in the in-game Settings menu.",
-          "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
-          "- **Android Privacy Sandbox (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS):** Supports modern Android Privacy Sandbox APIs, enabling privacy-preserving ad measurement and attribution without cross-app tracking identifiers.",
-          "- **Google Play Install Referrer (com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE):** Standard Google Play service permission used to measure app installation sources and distribution metrics.",
-          "- **Zero Sensitive Permissions:** The game does NOT request or access your device camera, microphone, GPS location, contact directory, calendar, stored files, photo gallery, or phone call logs.",
-        ],
-      },
-      {
-        title: "Local Storage & Data Persistence",
-        content: [
-          "All player progression and customization data is stored 100% locally on your physical device:",
-          "- **On-Device Profile Storage:** Your current level index, total collected bolts/coins, unlocked hats, unlocked outfits, active cosmetic choices, and user preferences (audio volume, music, vibration, steering sensitivity, graphics preset) are saved locally using `@capacitor/preferences` under the key `profile.v1`.",
-          "- **Zero Remote Account Synchronization:** We do not maintain remote cloud user accounts, databases, or central player profile servers. Your save file lives solely inside your device's application sandbox.",
-          '- **Complete Player Control:** You retain full ownership of your game data. You can erase all progress at any time via the in-game Settings ("Reset progress"), through Android system settings, or by uninstalling the application.',
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "To deliver 3D graphics rendering, gameplay analytics, and free-to-play ad monetization, Count Rush: Crowd Runner 3D integrates trusted industry SDKs:",
-          "- **Google Play Services (Google LLC):** Essential for secure application distribution, licensing, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
-          "- **Google AdMob (Google LLC):** Serves interstitial, rewarded video, and app open ads to keep the game free to play for all players without banner ads. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
-          "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
-          "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to measure level drop-off rates and gameplay performance bottlenecks. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)",
-        ],
-      },
-      {
-        title: "Advertising & Monetization Policy",
-        content: [
-          "Count Rush: Crowd Runner 3D is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes interstitial, rewarded video, and app open ads:",
-          "- **App Open Ads:** Full-screen advertisements displayed occasionally when the game is launched or resumed from the background, governed by frequency capping and session cooldowns.",
-          "- **Interstitial Ads:** Full-screen advertisements displayed periodically between runner levels, governed by strict frequency throttling and cooldown timers to prevent gameplay disruption.",
-          "- **Rewarded Video Ads:** Optional, user-initiated video ads that reward players with in-game perks, such as bonus multipliers at the finish line or extra keys to unlock bonus chest vaults. Rewarded ads are never forced and only play when you explicitly choose to watch them.",
-          "- **Consent-Gated Personalization:** We respect your privacy preferences. In regions governed by GDPR, UK GDPR, or CCPA, ads are served in accordance with the consent you grant via the Google UMP consent dialogue.",
-          "- **Advertising ID Management:** You have complete control over your advertising identifier via Android operating system settings:",
-          "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to sever historical activity links.",
-          "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent all apps from accessing your GAID.",
-          "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads instead of interest-based ads.",
-        ],
-      },
-      {
-        title: "Google Play Console Data Safety Alignment",
-        content: [
-          "To ensure complete transparency matching our Google Play Console Data Safety declarations, the following data types may be collected and shared with Google services (AdMob and Firebase) strictly for advertising, analytics, and fraud prevention:",
-          "- **Device or other IDs (Google Advertising ID):** Collected and shared with Google AdMob for ad delivery, attribution, and frequency capping.",
-          "- **App Interactions (Gameplay Events):** Aggregated metrics on levels started, completed, or failed, and in-game currency earned, collected and shared with Google Firebase for product analytics.",
-          "- **Diagnostics (Performance Data):** OS version, device model, and frame rate metrics collected and shared with Google for performance evaluation.",
-          "- **Security Practices:** All collected data is encrypted in transit using industry-standard HTTPS/TLS protocols.",
-          '- **Data Deletion:** Players can reset or erase all local game data at any time via in-game Settings ("Reset progress") or Android system settings.',
-        ],
-      },
-      {
-        title: "In-App Purchases & Financial Data (Zero IAP)",
-        content: [
-          "Count Rush: Crowd Runner 3D contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:",
-          "- **Completely Free to Play:** All levels, upgrades, runner hats, outfits, and aesthetic skins are unlockable purely through earned in-game bolts/coins and gameplay progression.",
-          "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
-          "- **No Pay-to-Win Mechanics:** There are no subscription fees, paid loot boxes, or microtransactions.",
-        ],
-      },
-      {
-        title: "Analytics, Telemetry & User Choices",
-        content: [
-          "Count Rush: Crowd Runner 3D collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:",
-          "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as levels started, completed, or failed, boss encounter outcomes, and virtual bolts earned or spent). No personal identifiers, names, emails, or device-specific sensitive data are collected.",
-          "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
-          "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**).",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does NOT sell, rent, trade, or lease** your personal data or gameplay records to third-party data brokers or marketing firms.",
-          "We disclose information solely to the trusted infrastructure providers enumerated in this policy (Google LLC) strictly for delivering ads, measuring aggregated app performance, and complying with legal obligations.",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
-          "- **In-App Progress Reset:** You can reset your coins, unlocked cosmetics, and level progress to factory state by opening the in-game **Settings** and tapping **Reset progress**.",
-          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Count Rush > Storage > Clear Data**).",
-          "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "We employ robust technical safeguards to ensure player security:",
-          "- **Local-First Architecture:** By executing all runner physics, collision detection, and save operations locally, your game state is never exposed to external cloud data breaches.",
-          "- **Encrypted Network Transit:** Any network communications with Google Play, AdMob, and Firebase are encrypted end-to-end using industry-standard Transport Layer Security (TLS/HTTPS).",
-          "- **OS Sandbox Protection:** Android's security architecture isolates the application's local storage from unauthorized access by third-party applications.",
-        ],
-      },
-      {
-        title: "Children's Privacy & Age Policy (General Audience 13+)",
-        content: [
-          "This game is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
-          "In accordance with our general audience classification, advertisements served within the game may be personalized (subject to user consent) and are not designated as child-directed. In the Google Play Console, the target audience for Count Rush: Crowd Runner 3D is set to ages 13 and above.",
-          "If you believe a child has provided data to us, please contact us at **{{contactEmail}}**, and we will delete it promptly.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Depending on your country or state of residence, you enjoy fundamental privacy rights under data protection legislation including the European Union / United Kingdom General Data Protection Regulation (GDPR / UK GDPR) and California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA):",
-          "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
-          '- **Right to Erasure ("Right to be Forgotten"):** You can erase all game data instantly via the in-game Settings or Android system settings.',
-          "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
-          "- **Right to Restrict Processing:** Players can manage or revoke advertising personalization choices at any time via the in-game **Privacy options** dialog, or delete their Advertising ID via Android system settings.",
-          "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may periodically revise this Privacy Policy to accommodate new game features, updated SDK guidelines, or evolving regulatory mandates. Any modifications will be posted here with an updated "Last Updated" timestamp at the top of this document.',
-          "We encourage players to review this page periodically. Your continued gameplay following posted changes constitutes acceptance of the revised terms.",
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, feedback, or privacy-related inquiries regarding Count Rush: Crowd Runner 3D, please contact our dedicated team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Game Listing:** [Count Rush: Crowd Runner 3D on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.crowdrun)",
-          "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-  "arrow-escape": {
-    slug: "arrow-escape",
-    aliases: [
-      "arrow-maze",
-      "arrowly",
-      "arrow-escape-puzzle",
-      "tap-arrow-away",
-      "arrowmaze",
-      "com.coreplay.arrow.escape",
-      "com.coreplay.arrow.maze",
-    ],
-    appName: "Arrowly: Arrow Escape Puzzle",
-    shortName: "Arrowly",
-    packageId: "com.coreplay.arrow.escape",
-    category: "Games / Puzzle / Logic & Brain Games",
-    tagline:
-      "Tap bent arrows out of the maze in the right order across unlimited procedural puzzle stages shaped like hearts, stars, and locks.",
-    heroDescription:
-      "Official Privacy Policy for Arrowly: Arrow Escape Puzzle (com.coreplay.arrow.escape), presented in-game as Arrowly, published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
-    badgeText:
-      "2D Arrow Maze Logic Puzzle • General Audience (13+) • Privacy-First",
-    lastUpdated: "November 2, 2026",
-    metaDescription:
-      "Official Privacy Policy for Arrowly: Arrow Escape Puzzle (com.coreplay.arrow.escape) by Coreplay Technologies. Details arrow escape puzzle mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
-    playStoreUrl:
-      "https://play.google.com/store/apps/details?id=com.coreplay.arrow.escape",
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **Arrowly: Arrow Escape Puzzle** (package name: `com.coreplay.arrow.escape`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "Inside the application interface and on your device home screen, the game is presented and displayed as **Arrowly** (Store title: **Arrowly: Arrow Escape Puzzle**). Arrowly is a relaxing, minimalist 2D arrow-maze puzzle game where players tap bent arrows on a dotted grid to slide them head-first along their body and off the board. If an arrow's flight path is obstructed by another arrow, it bumps, flashes red, bounces back, and costs one of three hearts. Clearing all arrows solves the board.",
-          "We are dedicated to delivering engaging, battery-efficient, and responsive puzzle gaming experiences while maintaining absolute transparency regarding player privacy, on-device data sovereignty, and secure digital advertising.",
-        ],
-      },
-      {
-        title: "Application Features & Procedural Architecture",
-        content: [
-          "Arrowly: Arrow Escape Puzzle delivers smooth, responsive 60 FPS 2D canvas puzzle gameplay powered by Capacitor 8 and a lightweight custom Canvas 2D engine with client-side procedural generation. Key gameplay features include:",
-          "- **Maze & Arrow Escape Mechanics:** Tap any bent arrow on the grid to slide it head-first along its own trajectory and off the board. Arrows require an unobstructed flight path; colliding with another arrow causes a bump, flashes the blocker, shakes the board, and deducts one heart.",
-          "- **Autofire Chain Reactions:** When an arrow bumps into an obstacle, it turns red and remains in place. As soon as the blocking arrow moves away, the blocked red arrow automatically fires along its path without requiring a second tap, triggering satisfying cascading clearing chains.",
-          "- **Hold to Peek (Path Preview):** Press and hold any arrow to preview its entire flight line before moving. A green flight line projects all the way to the screen border when the path is completely clear; a red flight line projects up to a collision cross with the blocker highlighted when blocked. Releasing your finger never launches the arrow or costs a heart.",
-          "- **Unlimited Procedural Levels:** Featuring two introductory tutorial stages, 18 hand-crafted picture and pattern template stages (levels 3–20 alternating between recognizable shapes and geometric patterns), followed by infinitely generated deterministic seeded puzzles. Stages scale in difficulty with a **Hard** challenge every 5th level, a **Super Hard** challenge every 10th level, and recovery stages following spikes.",
-          "- **Diverse Board Shapes & Layouts:** Enjoy 25 recognizable picture shapes (heart, lock, star, cat, house, apple, crown, butterfly, smiley, and more), 15 structured geometric patterns (classic, frame, window, islands, twins, stripes, stairs, zigzag, rooms, spiral, rainbow, target, corner, bowtie, pyramid), and seeded organic layouts with holes and islands where arrows can fly across open gaps.",
-          "- **Always-Solvable Algorithmic Guarantee:** All procedurally generated stages are verified by a cycle-breaking solver that breaks deadlock loops, flips arrow heads, and tests greedy clearing to ensure every board is 100% solvable without guessing.",
-          "- **Hearts, Hints & Revive System:** Each stage grants three hearts, awarding 1 to 3 stars upon completion based on retained hearts. Helpful hints illuminate a free escaping arrow and trace its escape path. Players start with 3 free hints, gain +1 hint every 4 cleared stages, +2 hints per completed daily puzzle, or +2 hints via optional rewarded ads. Running out of hearts offers a revive (+3 hearts) via an optional rewarded video ad or a fresh level restart.",
-          "- **Daily Arrow Puzzle:** Unlocks at level 10, delivering a fresh, intricate daily maze every calendar day with streak tracking, personal best records, and a 7-day completion calendar.",
-          "- **11 Unlockable Color Themes:** Personalize your visual experience with 11 distinct aesthetic themes: Classic (high-contrast black on white), Twilight, Cream, Ocean, Mint, Neon, Sunset, Midnight, Chalkboard, Royal Gold, and Candy. Dark themes feature subtle arrow glows and tailored color palettes.",
-          "- **Pinch-to-Zoom & Pan Navigation:** Seamless multi-touch pinch-to-zoom and drag-to-pan controls allow comfortable navigation across massive arrow boards (up to 30×40 grid cells), complete with a quick-snap fit-to-screen button.",
-          "- **Procedural Real-Time Web Audio Synthesizer:** All audio effects and musical cues are generated 100% programmatically at runtime using a dedicated Web Audio API worker. Sound effects include pentatonic climbing whooshes on quick clearing streaks, wooden knocks, heart crack tones, victory arpeggios, hint sparkles, and a soothing 16-bar music-box background tune that plays continuously across screens without downloading audio assets.",
-          "- **100% Offline Capable:** The entire game logic, puzzle generation, canvas rendering, and audio synthesis execute locally on your physical device. No active internet connection or cellular data is required to play the full game.",
-        ],
-      },
-      {
-        title: "Information Collection & Data Minimization",
-        content: [
-          "Arrowly is engineered with a strict privacy-by-design and data minimization architecture:",
-          "- **Zero Personal Information Collected:** We do not collect, harvest, or request personal identity data such as player names, email addresses, phone numbers, home addresses, government identifiers, or biometric information.",
-          "- **No Account Registration or Sign-In:** Arrowly requires no account creation, passwords, social media logins, or cloud authentication. You play entirely anonymously.",
-          "- **Non-PII Gameplay Telemetry (App Interactions):** Aggregated, non-personally identifiable telemetry is processed via Google Firebase Analytics strictly to evaluate puzzle balance, level difficulty curves, and technical stability. Logged events include stage starts, completions, fails, arrow bump events, hint requests, revive choices, theme selections, daily puzzle participation, and settings toggles.",
-          "- **Diagnostic & Performance Telemetry:** Standard non-identifying technical parameters—such as device model, Android OS version, app version code, display resolution, and system performance metrics—are collected automatically by Firebase Analytics to diagnose crashes and optimize rendering frame rates.",
-          "- **Zero Sensitive Surveillance:** We never access, monitor, or record your device microphone, camera, photo gallery, local document storage, contacts, clipboard contents, or GPS location.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "Arrowly requests only standard, non-sensitive Android permissions strictly required for game operation, audio/haptic ergonomics, and digital ad delivery:",
-          "- **Network & Internet State (android.permission.INTERNET):** Enables the application to check network connectivity, request advertisements from Google AdMob when connected, retrieve Google UMP consent forms, and open external links (such as the Google Play Store or this official Privacy Policy) in your default web browser upon voluntary tap. The game remains completely playable offline when disconnected.",
-          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers brief, ergonomic tactile feedback upon arrow taps, collision bumps, and level completions. Vibration can be toggled on or off at any time in the in-game Settings menu.",
-          "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
-          "- **Android Privacy Sandbox (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS):** Supports modern Android Privacy Sandbox APIs for privacy-preserving ad measurement and attribution without cross-app tracking identifiers.",
-          "- **Zero Invasive Permissions:** Arrowly does NOT request, access, or utilize sensitive permissions such as camera, microphone, GPS fine/coarse location, contact list, calendar, external storage read/write, SMS, or telephony logs.",
-        ],
-      },
-      {
-        title: "Local Storage & On-Device Data Persistence",
-        content: [
-          "All puzzle progression, earned stars, and user preferences are stored 100% locally on your physical device:",
-          "- **On-Device Profile Storage:** Your current level number, remaining hints, active color theme, total levels cleared, perfect stages cleared without losing a heart, total arrows cleared, level attempt counter, tutorial tip flags, earned star count, and daily puzzle streak/completion records are stored locally via `@capacitor/preferences` under the key `tapArrow.v1` with an automated backup under `tapArrow.bak`.",
-          "- **Local Settings Persistence:** Audio effects volume toggle, background music toggle, haptic vibration toggle, and reduced motion accessibility preference are stored in the same local save file.",
-          "- **Zero Cloud Profile Synchronization:** We do not operate remote user databases or centralized game profile servers. Your save file lives solely within your physical device's application sandbox.",
-          '- **Complete Player Ownership & Data Erasure:** You maintain total ownership of your game progress. You can permanently wipe all save data at any time directly within the game by opening **Settings** and tapping **Reset progress**, via your device\'s Android system settings ("Clear Data"), or by uninstalling the application.',
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "To provide reliable distribution, game telemetry, and free-to-play ad monetization, Arrowly integrates trusted industry SDKs:",
-          "- **Google Play Services (Google LLC):** Essential for secure application distribution, installation integrity verification, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
-          "- **Google AdMob (Google LLC):** Serves optional rewarded video ads, capped interstitials, and app-open ads to keep the game completely free to play without banner ads. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
-          "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2) and global privacy regulations. [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
-          "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to evaluate puzzle difficulty balancing, level pacing, and gameplay stability. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)",
-        ],
-      },
-      {
-        title: "Advertising & Monetization Policy",
-        content: [
-          "Arrowly: Arrow Escape Puzzle is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes optional rewarded video, capped interstitial, and app open ads:",
-          "- **No Banner Ads:** The game features zero persistent banner ads, ensuring an uncluttered, distraction-free screen while solving arrow puzzles.",
-          "- **Optional Rewarded Video Ads:** Valuable in-game perks are completely voluntary and only play when you explicitly choose to watch them by tapping a button (such as 'Continue +3 hearts' upon running out of hearts, or '+2 hints' when free hints are depleted). Rewarded ads are never forced.",
-          "- **Capped Interstitial Ads:** Full-screen interstitial ads are shown occasionally when pressing Play after clearing a level or retrying after a failed stage. They are governed by strict anti-fatigue controls: disabled on early levels (levels 1–3 are completely ad-free), enforced with a minimum 45-second cooldown between full-screen ads, and never shown during active puzzle solving.",
-          "- **App Open Ads:** Full-screen advertisements displayed occasionally when returning to Arrowly after being in the background for more than 30 seconds (enabled only after level 3, with a 90-second cooldown between full-screen ads).",
-          "- **Consent-Gated Personalization:** In regions governed by GDPR, UK GDPR, or CCPA, advertising personalization is served strictly in accordance with the consent you grant via the Google UMP consent dialogue. Non-personalized/contextual ads are served if consent is declined.",
-          "- **Advertising ID Management:** You have complete control over your advertising identifier via Android operating system settings:",
-          "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to sever historical activity links.",
-          "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent apps from accessing your GAID.",
-          "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads instead of interest-based ads.",
-        ],
-      },
-      {
-        title: "Google Play Console Data Safety Alignment",
-        content: [
-          "To ensure complete transparency matching our Google Play Console Data Safety declarations, the following data types may be collected and shared with Google services (AdMob and Firebase) strictly for advertising, analytics, and fraud prevention:",
-          "- **Device or other IDs (Google Advertising ID, Firebase App-Instance ID):** Collected and shared with Google AdMob for ad delivery, attribution, and frequency capping, alongside a random Firebase app-instance ID assigned to your installation for analytics telemetry.",
-          "- **App Interactions (Gameplay Events):** Aggregated metrics on levels started, completed, or failed, hint requests, revives, and theme selections, collected and shared with Google Firebase for product analytics and difficulty balancing.",
-          "- **Diagnostics (Performance Data):** Device model, Android OS version, app version code, display density, and crash logs collected and shared with Google for performance evaluation and bug resolution.",
-          "- **Security Practices:** All collected data is encrypted in transit using industry-standard HTTPS/TLS protocols.",
-          '- **Data Deletion:** Players can reset or erase all local game data at any time via in-game Settings ("Reset progress") or Android system settings ("Clear Data").',
-        ],
-      },
-      {
-        title: "In-App Purchases & Financial Data (Zero IAP)",
-        content: [
-          "Arrowly contains **NO In-App Purchases (Zero IAP)** and NO real-money digital storefront:",
-          "- **Completely Free to Play:** All levels, hints, themes, and daily puzzles are unlockable purely through gameplay progression, level milestones, and optional rewarded video ads.",
-          "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, debit card details, banking information, billing addresses, or payment credentials under any circumstances.",
-          "- **No Paywalls or Subscriptions:** There are no subscription fees, paid loot boxes, premium VIP tiers, or microtransactions.",
-        ],
-      },
-      {
-        title: "Analytics, Telemetry & User Choices",
-        content: [
-          "Arrowly collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability and difficulty balancing:",
-          "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as stages started, completed, or failed, arrows cleared, hints used, revives claimed, and themes selected). We collect no names, emails, or personal details. Firebase Analytics assigns a random app-instance ID to your installation and, where ad consent allows, may also use your Advertising ID.",
-          "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
-          "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**).",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does NOT sell, rent, trade, or lease** your personal data or gameplay records to third-party data brokers or marketing firms.",
-          "We disclose information solely to the trusted infrastructure providers enumerated in this policy (Google LLC) strictly for delivering ads, measuring aggregated app performance, and complying with legal obligations.",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
-          "- **In-App Progress Reset:** You can reset your level progress, hints, stars, unlocked themes, and stats to initial state by opening the in-game **Settings** and tapping **Reset progress** (followed by confirmation).",
-          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Arrowly > Storage > Clear Data**).",
-          "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "We employ robust technical safeguards to ensure player security:",
-          "- **Local-First Architecture:** By executing all puzzle generation, validation, and save operations locally, your game state is never exposed to external cloud data breaches.",
-          "- **Encrypted Network Transit:** Any network communications with Google Play, AdMob, and Firebase are encrypted end-to-end using industry-standard Transport Layer Security (TLS/HTTPS).",
-          "- **OS Sandbox Protection:** Android's security architecture isolates the application's local storage from unauthorized access by other third-party applications.",
-        ],
-      },
-      {
-        title: "Children's Privacy & Age Policy (General Audience 13+)",
-        content: [
-          "Arrowly: Arrow Escape Puzzle is designed and intended for a **general audience (ages 13 and older)**:",
-          "- **Not Directed at Children:** The game is not directed toward children under the age of 13 (or under 16 in the European Union), and we do not knowingly solicit or collect personal information from children.",
-          "- **Google Play Families Policy Alignment:** The game does not participate in Google Play's Designed for Families program and is classified for general audience puzzle enthusiasts.",
-          "- **Parental Inquiries:** If a parent or legal guardian discovers that their child has provided personal information or interacted with third-party advertising without parental consent, please contact us at **{{contactEmail}}**, and we will promptly take appropriate steps to delete any associated data.",
-        ],
-      },
-      {
-        title:
-          "International Privacy Rights & Compliance (GDPR, CCPA/CPRA, LGPD)",
-        content: [
-          "Depending on your country or state of residence, you enjoy fundamental privacy rights under data protection legislation including the European Union / United Kingdom General Data Protection Regulation (GDPR / UK GDPR), California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA), and Brazil's Lei Geral de Proteção de Dados (LGPD):",
-          "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
-          '- **Right to Erasure ("Right to be Forgotten"):** You can erase all game data instantly via the in-game Settings ("Reset progress") or Android system settings.',
-          "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
-          "- **Right to Restrict Processing:** Players can manage or revoke advertising personalization choices at any time via the in-game **Privacy options** dialog, or delete their Advertising ID via Android system settings.",
-          "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may periodically revise this Privacy Policy to accommodate new game features, updated SDK guidelines, or evolving regulatory mandates. Any modifications will be posted here with an updated "Last Updated" timestamp at the top of this document.',
-          "We encourage players to review this page periodically. Your continued gameplay following posted changes constitutes acceptance of the revised terms.",
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, feedback, or privacy-related inquiries regarding Arrowly: Arrow Escape Puzzle, please contact our dedicated team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Game Listing:** [Arrowly: Arrow Escape Puzzle on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.arrow.escape)",
-          "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-
-  "bridge-race": {
-    slug: "bridge-race",
-    aliases: [
-      "bridge-race-3d",
-      "bridge-race-3d-stair-builder",
-      "brick-isles",
-      "brickisles",
-      "bridgerace",
-      "stair-builder",
-      "stair-race",
-      "bridge-builder",
-      "com.coreplay.bridge.race",
-    ],
-    appName: "Bridge Race 3D: Stair Builder",
-    shortName: "Bridge Race 3D",
-    packageId: "com.coreplay.bridge.race",
-    category: "Games / Casual / Racing & 3D Stacking",
-    tagline:
-      "Stack bricks of your colour, construct bridges of stairs, and race rivals to the podium across 8 unique island worlds.",
-    heroDescription:
-      "Official Privacy Policy for Bridge Race 3D: Stair Builder (com.coreplay.bridge.race), also known in-game as Brick Isles, published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
-    badgeText:
-      "3D Casual Stacking Race • General Audience (13+) • Privacy-First",
-    lastUpdated: "November 2, 2026",
-    metaDescription:
-      "Official Privacy Policy for Bridge Race 3D: Stair Builder (com.coreplay.bridge.race) by Coreplay Technologies. Details 3D stair building race mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
-    playStoreUrl:
-      "https://play.google.com/store/apps/details?id=com.coreplay.bridge.race",
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **Bridge Race 3D: Stair Builder** (package name: `com.coreplay.bridge.race`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "Inside the application interface and on your device home screen, the game is presented and displayed as **Brick Isles** (Store title: **Bridge Race 3D: Stair Builder**). Bridge Race 3D is a fast-paced 3D casual stacking race where players collect bricks in their designated color, carry stacks on their back, construct stair bridges to reach higher floors, and compete against three AI rivals to claim the gold on the podium.",
-          "We are committed to delivering entertaining, high-performance, and secure mobile gaming experiences while maintaining absolute transparency regarding player privacy, device permissions, and advertising technologies.",
-        ],
-      },
-      {
-        title: "Application Features & Procedural Architecture",
-        content: [
-          "Bridge Race 3D: Stair Builder delivers responsive 3D bridge-building and racing action powered by Capacitor 8 and a custom Three.js WebGL graphics pipeline with client-side procedural generation. Key gameplay features include:",
-          "- **Stacking & Stair-Building Mechanics:** Collect own-color bricks across arena floors, carry them in tall stacks, and spend one brick per step to construct staircases leading to subsequent floors.",
-          "- **Rival Interaction & Bumping:** Compete against three intelligent AI racers on identical platforms. Players carrying a larger brick stack can bump into opponents to scatter their bricks across the floor, or repaint and take over rival staircases with their own color.",
-          "- **Eight Diverse Island Worlds:** Experience unlimited procedural levels cycling across 8 distinct thematic worlds: Tropical Lagoon, Frosty Peaks, Sky City, Candy Land, Desert Dunes, Lava Island, Jungle Temple, and Star Station. Each world introduces custom deck patterns, landmark props, weather particles, and procedural audio synth music.",
-          "- **Interactive Obstacles & Hazards:** Maneuver around dynamic rotating spinner arms and rolling hazard balls that knock off stacks upon contact.",
-          "- **Special Bonus Modes:** Compete in high-energy bonus stages including **Treasure Dash** (collect gold bars against a ticking clock) and **Build Rush** (transport bricks to assemble castles, igloos, giant cakes, and space rockets).",
-          "- **Power-Ups & Meta Upgrades:** Snag in-race power-ups like the Brick Magnet and Speed Boost, and invest earned coins into persistent upgrades for Start Bricks, Movement Speed, and Income (more coins per race).",
-          "- **Cosmetics & Collectibles:** Unlock 21 unique racer outfits/paint jobs (such as Sky Blue, Candy Stripe, Ninja Acrobat, Sumo, Paladin, Space Ranger, Mage, and Reaper) and 8 fun hats (Party Cone, Propeller Cap, Chef Hat, Crown, Beanie, Top Hat, Traffic Cone, Flower Pot) through gameplay rewards and bonus chests opened with gold keys.",
-          "- **100% Offline Capable:** The entire physics simulation, level generation, 3D graphics rendering, and audio synthesis run locally in code at runtime. No internet connection or Wi-Fi is needed to play the complete game.",
-        ],
-      },
-      {
-        title: "Information Collection & Data Minimization",
-        content: [
-          "Bridge Race 3D: Stair Builder is engineered with a strict privacy-by-design and data minimization architecture:",
-          "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, physical addresses, phone numbers, government IDs, or biometric data. No account registration, password creation, or social login is ever required.",
-          "- **Non-PII Gameplay Metrics (App Interactions):** Aggregated, anonymous gameplay events (such as levels started, levels cleared, levels failed, virtual coins earned/spent, upgrades unlocked, and cosmetic customizations selected) are processed via Firebase Analytics to evaluate difficulty balancing, level pacing, and gameplay stability.",
-          "- **Device & Performance Telemetry (Diagnostics):** Technical parameters including the graphics quality tier, average and low frame rates, loading time and screen pixel density, plus the device model and Android version that Firebase records automatically.",
-          "- **Zero Sensitive Surveillance:** We never monitor keystrokes, personal communications, clipboard data, ambient microphone audio, or camera feeds.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "Bridge Race 3D requests only standard Android permissions strictly necessary for responsive 3D gameplay, ad delivery, and device ergonomics:",
-          "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Allows the game to check network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent forms, and open external links (such as Google Play or this Privacy Policy) in your default web browser upon voluntary tap. The game remains completely playable offline when disconnected.",
-          "- **Wake Lock (android.permission.WAKE_LOCK):** Added by the Firebase Analytics SDK so analytics can be sent reliably. Keeping the screen on during races needs no permission.",
-          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Provides tactile feedback upon brick collection, rival collisions, step placements, and podium celebrations. Vibration can be toggled on or off at any time in the in-game Settings menu.",
-          "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
-          "- **Android Privacy Sandbox (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS):** Supports modern Android Privacy Sandbox APIs for privacy-preserving ad measurement and attribution without cross-app tracking identifiers.",
-          "- **Google Play Install Referrer (com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE):** Standard Google Play service permission used to measure app installation sources and distribution metrics.",
-          "- **Zero Invasive Permissions:** The game does NOT request or access your device camera, microphone, GPS location, contact list, calendar, device storage files, photo library, or phone call logs.",
-        ],
-      },
-      {
-        title: "Local Storage & On-Device Data Persistence",
-        content: [
-          "All player progression, virtual currency, and customization settings are saved 100% locally on your physical device:",
-          "- **On-Device Profile Storage:** Your current level number, total earned coins, unlocked hats, unlocked outfits, active cosmetic choices, and upgrade tiers are persisted locally via `@capacitor/preferences` under the key `profile.v1` with a debounced autosave engine.",
-          "- **Local Settings Storage:** Your settings (sound on/off, music on/off, vibration on/off, reduced motion, control sensitivity and graphics quality) are saved in the same on-device save file, profile.v1, with a backup copy under profile.bak.",
-          "- **Zero Cloud Profile Synchronization:** We do not maintain remote cloud user accounts, databases, or central player profile servers. Your save file lives solely within your physical device's application sandbox.",
-          '- **Complete Player Ownership:** You retain full ownership and control over your game data. You can erase all progress at any time via the in-game Settings ("Reset progress"), through Android system settings, or by uninstalling the application.',
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "To provide 3D graphics rendering, gameplay analytics, and free-to-play ad monetization, Bridge Race 3D: Stair Builder integrates trusted industry SDKs:",
-          "- **Google Play Services (Google LLC):** Essential for secure application distribution, licensing, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
-          "- **Google AdMob (Google LLC):** Serves interstitial, rewarded video, and app open ads to keep the game free to play for all players without banner ads (App ID: `ca-app-pub-1502330259134866~2886024844`). [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
-          "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
-          "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to evaluate level difficulty balancing and gameplay performance bottlenecks. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)",
-        ],
-      },
-      {
-        title: "Advertising & Monetization Policy",
-        content: [
-          "Bridge Race 3D: Stair Builder is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes interstitial, rewarded video, and app open ads:",
-          "- **No Banner Ads:** The game features zero banner ads, ensuring an uncluttered, distraction-free screen while racing and stacking.",
-          "- **Optional Rewarded Video Ads:** High-value in-game perks are completely optional and only play when you explicitly choose to watch them by tapping a button (such as 'Retry with +10 bricks' on defeat, 'x3 coins' on victory, '+34% Prize Box' progression, one free upgrade each time you return to the menu, '+3 bonus chest keys', or shop coin bonuses). Rewarded ads are never forced.",
-          "- **Capped Interstitial Ads:** Shown when you tap 'Play next level', or 'Try again'/'Home' after losing. Never on levels 1–2, and at least 10 seconds after the previous full-screen ad closes.",
-          "- **App Open Ads:** Full-screen advertisements displayed occasionally when returning to the game after being in the background for more than 30 seconds (enabled only after level 2, with a 60-second cooldown).",
-          "- **Consent-Gated Personalization:** In regions governed by GDPR, UK GDPR, or CCPA, ads are served in accordance with the consent you grant via the Google UMP consent dialogue.",
-          "- **Advertising ID Management:** You have complete control over your advertising identifier via Android operating system settings:",
-          "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to sever historical activity links.",
-          "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent all apps from accessing your GAID.",
-          "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads instead of interest-based ads.",
-        ],
-      },
-      {
-        title: "Google Play Console Data Safety Alignment",
-        content: [
-          "To ensure complete transparency matching our Google Play Console Data Safety declarations, the following data types may be collected and shared with Google services (AdMob and Firebase) strictly for advertising, analytics, and fraud prevention:",
-          "- **Device or other IDs (Google Advertising ID, Firebase App-Instance ID):** Collected and shared with Google AdMob for ad delivery, attribution, and frequency capping, alongside a random Firebase app-instance ID assigned to your installation for analytics telemetry.",
-          "- **App Interactions (Gameplay Events):** Aggregated metrics on levels started, completed, or failed, and in-game currency earned or spent, collected and shared with Google Firebase for product analytics.",
-          "- **Diagnostics (Performance Data):** Graphics quality tier, frame rates, loading time, screen pixel density, device model, and OS version collected and shared with Google for performance evaluation.",
-          "- **Security Practices:** All collected data is encrypted in transit using industry-standard HTTPS/TLS protocols.",
-          '- **Data Deletion:** Players can reset or erase all local game data at any time via in-game Settings ("Reset progress") or Android system settings.',
-        ],
-      },
-      {
-        title: "In-App Purchases & Financial Data (Zero IAP)",
-        content: [
-          "Bridge Race 3D: Stair Builder contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:",
-          "- **Completely Free to Play:** All levels, upgrades, racer outfits, hats, worlds, and bonus modes are unlockable purely through earned in-game coins, bonus chests, and optional rewarded ads.",
-          "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
-          "- **No Pay-to-Win Mechanics:** There are no subscription fees, paid loot boxes, or microtransactions.",
-        ],
-      },
-      {
-        title: "Analytics, Telemetry & User Choices",
-        content: [
-          "Bridge Race 3D collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:",
-          "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as levels started, completed, or failed, virtual currency earned or spent, upgrade purchases, and cosmetics unlocked). We collect no names, emails or contact details. Firebase Analytics assigns a random app-instance ID to your installation and, where ad consent allows, may also use your Advertising ID.",
-          "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
-          "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**).",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does NOT sell, rent, trade, or lease** your personal data or gameplay records to third-party data brokers or marketing firms.",
-          "We disclose information solely to the trusted infrastructure providers enumerated in this policy (Google LLC) strictly for delivering ads, measuring aggregated app performance, and complying with legal obligations.",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
-          "- **In-App Progress Reset:** You can reset your coins, unlocked cosmetics, upgrade tiers, and level progress to factory state by opening the in-game **Settings** and tapping **Reset progress**.",
-          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Brick Isles > Storage > Clear Data**).",
-          "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "We employ robust technical safeguards to ensure player security:",
-          "- **Local-First Architecture:** By executing all stacking physics, collision detection, and save operations locally, your game state is never exposed to external cloud data breaches.",
-          "- **Encrypted Network Transit:** Any network communications with Google Play, AdMob, and Firebase are encrypted end-to-end using industry-standard Transport Layer Security (TLS/HTTPS).",
-          "- **OS Sandbox Protection:** Android's security architecture isolates the application's local storage from unauthorized access by third-party applications.",
-        ],
-      },
-      {
-        title: "Children's Privacy & Age Policy (General Audience 13+)",
-        content: [
-          "This game is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
-          "In accordance with our general audience classification, advertisements served within the game may be personalized (subject to user consent) and are not designated as child-directed. In the Google Play Console, the target audience for Bridge Race 3D: Stair Builder is set to ages 13 and above.",
-          "If you believe a child has provided data to us, please contact us at **{{contactEmail}}**, and we will delete it promptly.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Depending on your country or state of residence, you enjoy fundamental privacy rights under data protection legislation including the European Union / United Kingdom General Data Protection Regulation (GDPR / UK GDPR) and California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA):",
-          "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
-          '- **Right to Erasure ("Right to be Forgotten"):** You can erase all game data instantly via the in-game Settings or Android system settings.',
-          "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
-          "- **Right to Restrict Processing:** Players can manage or revoke advertising personalization choices at any time via the in-game **Privacy options** dialog, or delete their Advertising ID via Android system settings.",
-          "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may periodically revise this Privacy Policy to accommodate new game features, updated SDK guidelines, or evolving regulatory mandates. Any modifications will be posted here with an updated "Last Updated" timestamp at the top of this document.',
-          "We encourage players to review this page periodically. Your continued gameplay following posted changes constitutes acceptance of the revised terms.",
-        ],
-      },
-      {
-        title: "Contact Us & Privacy Officer",
-        content: [
-          "If you have questions, feedback, or privacy-related inquiries regarding Bridge Race 3D: Stair Builder, please contact our dedicated team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Game Listing:** [Bridge Race 3D: Stair Builder on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.bridge.race)",
-          "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-  "dash-run": {
-    slug: "dash-run",
-    aliases: [
-      "dash-race-3d",
-      "dash-race",
-      "dashrace",
-      "dashrun",
-      "dash-race-3d-parkour-run",
-      "parkour-run",
-      "dash-isles",
-      "com.coreplay.race.parkour",
-      "com.coreplay.race.parkour",
-    ],
-    appName: "Dash Race 3D: Parkour Run",
-    shortName: "Dash Race 3D",
-    packageId: "com.coreplay.race.parkour",
-    category: "Games / Casual / 3D Parkour Obstacle Course Racing",
-    tagline:
-      "Hold to run, dodge crazy mechanical traps, and race three rivals across 8 vibrant worlds in endless 3D obstacle courses.",
-    heroDescription:
-      "Official Privacy Policy for Dash Race 3D: Parkour Run (com.coreplay.race.parkour), also presented in-game as Dash Race 3D (internal project dash-isles), published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.",
-    badgeText:
-      "3D Parkour Obstacle Course • General Audience (13+) • Privacy-First",
-    lastUpdated: "November 4, 2026",
-    metaDescription:
-      "Official Privacy Policy for Dash Race 3D: Parkour Run (com.coreplay.race.parkour) by Coreplay Technologies. Details one-thumb hold-to-run mechanics, 16 mechanical obstacles, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.",
-    playStoreUrl:
-      "https://play.google.com/store/apps/details?id=com.coreplay.race.parkour",
-    sections: [
-      {
-        title: "Scope & Overview",
-        content: [
-          'This Privacy Policy applies specifically to **Dash Race 3D: Parkour Run** (package name: `com.coreplay.race.parkour`, formerly developed under internal project code `dash-isles` / `brick-isles`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.',
-          "Inside the application interface and on your device home screen, the game is presented and displayed as **Dash Race 3D** (Store title: **Dash Race 3D: Parkour Run**). Dash Race 3D is a fast-paced 3D hyper-casual obstacle-course race where players hold anywhere on the screen to run, let go to stop/dodge, time their dash past crazy traps, scale climbing walls, swing across monkey bars, ride ziplines and tube slides, bounce over wide chasms, and compete against three simulated AI rivals to cross the finish line on the podium.",
-          "We are committed to delivering entertaining, high-performance, and secure mobile gaming experiences while maintaining absolute transparency regarding player privacy, device permissions, and advertising technologies.",
-        ],
-      },
-      {
-        title: "Application Features & Procedural Architecture",
-        content: [
-          "Dash Race 3D: Parkour Run delivers responsive 3D parkour racing action powered by Capacitor 8, React 19, and a custom Three.js WebGL graphics pipeline with client-side procedural generation and Web Audio synthesis. Key gameplay features include:",
-          "- **One-Thumb Racing Controls:** Hold anywhere on the touch screen (or spacebar/keys on desktop) to sprint forward; release to instantly brake and wait for hazardous obstacles to swing clear.",
-          "- **16 Dynamic Mechanical Modules:** Master diverse traps and traversals unlocked across levels: spinning sweepers, swinging wrecking ball pendulums, sliding blocks, pop-up pillars with steel warning hatches, hydraulic stompers, cannons firing across the track, 4-blade spinning windmills, wall pistons, rolling logs with rack release, chomper gates with snapping steel teeth, and giant wind turbine fans.",
-          "- **Dynamic 3D Parkour Traversal:** Fluid vertical wall climbing with sliding wall blocks, overhead monkey bars, high ziplines with visible orange trolley handles, high-speed winding tube slides, and spring bounce pads with tucked aerial front flips and landing camera shake.",
-          "- **Knock-Off & Checkpoint Respawn:** Getting hit by an obstacle launches the runner into the sea (or lava/clouds) with ragdoll-like flailing and a water splash, followed by quick respawn at the previous checkpoint with temporary guard invulnerability.",
-          "- **Mathematical Fairness Solver:** During course generation, every obstacle cluster is mathematically solved and re-timed (passWindow/tune) so that every lane has guaranteed physical gaps at both player and rival paces, preventing impossible courses.",
-          "- **Sim-Aligned AI Rivals:** Compete against three intelligent computer rivals that navigate using the exact same obstacle hit-test math as the simulation, featuring human-like reaction times, caution, blunders, and adaptive pacing that eases after failed attempts.",
-          "- **Eight Unique Worlds & 4 Times of Day:** Experience unlimited procedural levels cycling across 8 distinct thematic worlds: Tropical Lagoon, Frosty Peaks, Sky City, Candy Land, Desert Dunes, Lava Island, Jungle Temple, and Star Station. Each world rotates through Day, Sunset, Night (with moon, stars, and fireflies), and Dawn, providing 32 unique visual variations before repeating, accompanied by GPU-animated bird flocks (seagulls, parrots, owls) and procedural audio music.",
-          "- **Endless Levels & Chapter Twists:** Levels are organized into chapters of 4 (3 races + 1 Coin Rush bonus level). Races feature 7 varied level twists: Classic Run, Spin Cycle, Heavy Hitters, Sky Trail, Rush Hour, Gauntlet (fewer checkpoints), and high-stakes Champion Races every 8 levels (sharper rivals, double coins).",
-          "- **Boosters & Meta Upgrades:** Deploy in-race boosters including Dash (+60% speed burst), Bubble Shield (absorbs one obstacle hit with a stagger), and Ghost (phase through obstacles unharmed). Reinvest earned coins into permanent upgrades for Speed, Income, and Bounce Back (reduced knock-off recovery delay).",
-          "- **Locker & Customization:** Unlock 21 unique runner paint jobs/outfits (including Ninja Acrobat, Sumo, Paladin, Space Ranger, Berserker, Mage, and Reaper) and 8 fun hats (Party Cone, Propeller Cap, Chef Hat, Crown, Beanie, Top Hat, Traffic Cone, Flower Pot) through race rewards, prize boxes, and bonus chests opened with golden keys.",
-          "- **100% Procedural & Offline Capable:** The entire physics simulation, level generation, 3D character geometries, procedural textures, and runtime audio synthesis (16-bar loops in 10 musical styles) run locally in code at runtime with zero external downloaded media files. No internet connection or Wi-Fi is needed to play the complete game.",
-        ],
-      },
-      {
-        title: "Information Collection & Data Minimization",
-        content: [
-          "Dash Race 3D: Parkour Run is engineered with a strict privacy-by-design and data minimization architecture:",
-          "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, physical addresses, phone numbers, government IDs, or biometric data. No account registration, password creation, or social login is ever required.",
-          "- **Non-PII Gameplay Metrics (App Interactions):** Aggregated, anonymous gameplay events (such as levels started, levels cleared, levels failed, virtual coins earned/spent, upgrade purchases, and cosmetic customizations selected) are processed via Firebase Analytics to evaluate difficulty balancing, level pacing, and gameplay stability.",
-          "- **Device & Performance Telemetry (Diagnostics):** Technical parameters including graphics quality tier (auto/high/med/low), frame rates, loading time, screen pixel density, device model, and Android OS version that Firebase records automatically.",
-          "- **Zero Sensitive Surveillance:** We never monitor keystrokes, personal communications, clipboard data, ambient microphone audio, or camera feeds.",
-        ],
-      },
-      {
-        title: "Device Permissions & Hardware Access",
-        content: [
-          "Dash Race 3D requests only standard Android permissions strictly necessary for responsive 3D gameplay, ad delivery, and device ergonomics:",
-          "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Allows the game to check network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent forms, and open external links (such as Google Play or this Privacy Policy) in your default web browser upon voluntary tap. The game remains completely playable offline when disconnected.",
-          "- **Wake Lock (android.permission.WAKE_LOCK):** Used during active races via keep-awake plugins to prevent the phone screen from dimming or sleeping while holding to run, and for Firebase Analytics background transmission.",
-          "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Provides tactile feedback upon running steps, obstacle impacts, checkpoint crosses, and booster activations. Vibration can be toggled on or off at any time in the in-game Settings menu.",
-          "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
-          "- **Android Privacy Sandbox (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS):** Supports modern Android Privacy Sandbox APIs for privacy-preserving ad measurement and attribution without cross-app tracking identifiers.",
-          "- **Zero Invasive Permissions:** The game does NOT request or access your device camera, microphone, GPS location, contact list, calendar, device storage files, photo library, or phone call logs.",
-        ],
-      },
-      {
-        title: "Local Storage & On-Device Data Persistence",
-        content: [
-          "All player progression, virtual currency, and customization settings are saved 100% locally on your physical device:",
-          "- **On-Device Profile Storage:** Your current level number, total earned coins, unlocked hats, unlocked outfits, active cosmetic choices, booster counts, and upgrade tiers are persisted locally via `@capacitor/preferences` under the key `profile.v1` with an automatic backup under `profile.bak`.",
-          "- **Local Settings Storage:** Your preferences (sound on/off, music on/off, vibration on/off, reduced motion, and graphics quality tier) are saved in the same on-device save document.",
-          "- **Zero Cloud Profile Synchronization:** We do not maintain remote cloud user accounts, databases, or central player profile servers. Your save file lives solely within your physical device's application sandbox.",
-          '- **Complete Player Ownership:** You retain full ownership and control over your game data. You can erase all progress at any time via the in-game Settings ("Reset progress"), through Android system settings, or by uninstalling the application.',
-        ],
-      },
-      {
-        title: "Third-Party Services & SDK Integrations",
-        content: [
-          "To provide 3D graphics rendering, gameplay analytics, and free-to-play ad monetization, Dash Race 3D: Parkour Run integrates trusted industry SDKs:",
-          "- **Google Play Services (Google LLC):** Essential for secure application distribution, licensing verification, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
-          "- **Google AdMob (Google LLC):** Serves interstitial, rewarded video, and app open ads to keep the game free to play for all players without banner ads (App ID: `ca-app-pub-1502330259134866~2886024844`). [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
-          "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
-          "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to evaluate level difficulty balancing, drop-off rates, and performance bottlenecks. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)",
-        ],
-      },
-      {
-        title: "Advertising & Monetization Policy",
-        content: [
-          "Dash Race 3D: Parkour Run is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes interstitial, rewarded video, and app open ads:",
-          "- **No Banner Ads:** The game features zero banner ads, ensuring an uncluttered, distraction-free screen while running and timing obstacle jumps.",
-          "- **Optional Rewarded Video Ads:** High-value in-game perks are completely optional and only play when you explicitly choose to watch them by tapping a button (such as 'x3 coins' on victory, 'Retry with bubble shield' on defeat, '+34% Prize Box' progression, one free upgrade in the menu, '+3 bonus chest keys', or shop coin bonuses). Rewarded ads are never forced.",
-          "- **Capped Interstitial Ads:** Shown occasionally when transitioning between levels or after losing. Interstitials never appear on levels 1–2, and enforce strict cooldown timers (at least 10 seconds after any full-screen ad closes).",
-          "- **App Open Ads:** Full-screen advertisements displayed occasionally when returning to the game after being in the background for more than 30 seconds (enabled only after level 2, with a 60-second cooldown).",
-          "- **Consent-Gated Personalization:** In regions governed by GDPR, UK GDPR, or CCPA, ads are served in accordance with the consent you grant via the Google UMP consent dialogue.",
-          "- **Advertising ID Management:** You have complete control over your advertising identifier via Android operating system settings:",
-          "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to sever historical activity links.",
-          "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent all apps from accessing your GAID.",
-          "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads instead of interest-based ads.",
-        ],
-      },
-      {
-        title: "Google Play Console Data Safety Alignment",
-        content: [
-          "To ensure complete transparency matching our Google Play Console Data Safety declarations, the following data types may be collected and shared with Google services (AdMob and Firebase) strictly for advertising, analytics, and fraud prevention:",
-          "- **Device or other IDs (Google Advertising ID, Firebase App-Instance ID):** Collected and shared with Google AdMob for ad delivery, attribution, and frequency capping, alongside a random Firebase app-instance ID assigned to your installation for analytics telemetry.",
-          "- **App Interactions (Gameplay Events):** Aggregated metrics on levels started, completed, or failed, and in-game currency earned or spent, collected and shared with Google Firebase for product analytics.",
-          "- **Diagnostics (Performance Data):** Graphics quality tier, frame rates, loading time, screen pixel density, device model, and OS version collected and shared with Google for performance evaluation.",
-          "- **Security Practices:** All collected data is encrypted in transit using industry-standard HTTPS/TLS protocols.",
-          '- **Data Deletion:** Players can reset or erase all local game data at any time via in-game Settings ("Reset progress") or Android system settings.',
-        ],
-      },
-      {
-        title: "In-App Purchases & Financial Data (Zero IAP)",
-        content: [
-          "Dash Race 3D: Parkour Run contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:",
-          "- **Completely Free to Play:** All levels, upgrades, racer outfits, hats, worlds, and bonus modes are unlockable purely through earned in-game coins, bonus chests, and optional rewarded ads.",
-          "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
-          "- **No Pay-to-Win Mechanics:** There are no subscription fees, paid loot boxes, or microtransactions.",
-        ],
-      },
-      {
-        title: "Analytics, Telemetry & User Choices",
-        content: [
-          "Dash Race 3D collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:",
-          "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as levels started, completed, or failed, virtual currency earned or spent, upgrade purchases, and cosmetics unlocked). We collect no names, emails, or personal contacts. Firebase Analytics assigns a random app-instance ID to your installation and, where ad consent allows, may also use your Advertising ID.",
-          "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
-          "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**).",
-        ],
-      },
-      {
-        title: "Data Sharing & Disclosure Policy",
-        content: [
-          "Coreplay Technologies **does NOT sell, rent, trade, or lease** your personal data or gameplay records to third-party data brokers or marketing firms.",
-          "We disclose information solely to the trusted infrastructure providers enumerated in this policy (Google LLC) strictly for delivering ads, measuring aggregated app performance, and complying with legal obligations.",
-        ],
-      },
-      {
-        title: "Data Retention & User Deletion Rights",
-        content: [
-          "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
-          '- **In-App Progress Reset:** You can reset your coins, unlocked cosmetics, upgrade tiers, and level progress to factory state by opening the in-game **Settings** and tapping **Reset progress**.',
-          "- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > Dash Race 3D > Storage > Clear Data**).",
-          "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files.",
-        ],
-      },
-      {
-        title: "Data Security Safeguards",
-        content: [
-          "We employ robust technical safeguards to ensure player security:",
-          "- **Local-First Architecture:** By executing all parkour simulation, obstacle timing, collision detection, and save operations locally, your game state is never exposed to external cloud data breaches.",
-          "- **Encrypted Network Transit:** Any network communications with Google Play, AdMob, and Firebase are encrypted end-to-end using industry-standard Transport Layer Security (TLS/HTTPS).",
-          "- **OS Sandbox Protection:** Android's security architecture isolates the application's local storage from unauthorized access by third-party applications.",
-        ],
-      },
-      {
-        title: "Children's Privacy & Age Policy (General Audience 13+)",
-        content: [
-          "This game is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
-          "In accordance with our general audience classification, advertisements served within the game may be personalized (subject to user consent) and are not designated as child-directed. In the Google Play Console, the target audience for Dash Race 3D: Parkour Run is set to ages 13 and above.",
-          "If you believe a child has provided data to us, please contact us at **{{contactEmail}}**, and we will delete it promptly.",
-        ],
-      },
-      {
-        title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
-        content: [
-          "Depending on your country or state of residence, you enjoy fundamental privacy rights under data protection legislation including the European Union / United Kingdom General Data Protection Regulation (GDPR / UK GDPR) and California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA):",
-          "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
-          '- **Right to Erasure ("Right to be Forgotten"):** You can erase all game data instantly via the in-game Settings or Android system settings.',
-          "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
-          "- **Right to Restrict Processing:** Players can manage or revoke advertising personalization choices at any time via the in-game **Privacy options** dialog, or delete their Advertising ID via Android system settings.",
-          "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**.",
-        ],
-      },
-      {
-        title: "Changes to this Privacy Policy",
-        content: [
-          'We may periodically revise this Privacy Policy to accommodate new game features, updated SDK guidelines, or evolving regulatory mandates. Any modifications will be posted here with an updated "Last Updated" timestamp at the top of this document.',
-          "We encourage players to review this page periodically. Your continued gameplay following posted changes constitutes acceptance of the revised terms.",
-        ],
-      },
-      {
-        title: "Contact Us & Publisher Verification",
-        content: [
-          "If you have questions, feedback, or privacy-related inquiries regarding Dash Race 3D: Parkour Run, please contact our dedicated team:",
-          "- **Developer & Publisher:** Coreplay Technologies",
-          "- **Privacy Officer Email:** {{contactEmail}}",
-          "- **Google Play Game Listing:** [Dash Race 3D: Parkour Run on Google Play](https://play.google.com/store/apps/details?id=com.coreplay.race.parkour)",
-          "- **Developer Profile:** [Coreplay Technologies on Google Play](https://play.google.com/store/apps/dev?id=6807992577867877190)",
-          "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
-        ],
-      },
-    ],
-  },
-
-};
+export const PROJECTS: ProjectEntry[] = projectsData as ProjectEntry[];
 
 /**
- * Resolves an AppPrivacyPolicy by primary slug or recognized alias.
+ * Converts a URL slug or package ID into a clean display title.
+ * E.g. "count-master" -> "Count Master", "rgm" -> "RGM"
  */
-export function getAppPrivacyPolicy(
-  slug: string,
-): AppPrivacyPolicy | undefined {
+export function slugToTitle(slug: string): string {
+  let cleaned = slug.trim();
+  if (cleaned.startsWith("com.")) {
+    const parts = cleaned.split(".");
+    cleaned = parts.slice(2).join(" ") || parts[parts.length - 1];
+  }
+  if (cleaned.length <= 4 && !cleaned.includes("-") && !cleaned.includes("_")) {
+    return cleaned.toUpperCase();
+  }
+  return cleaned
+    .replace(/[-_.]+/g, " ")
+    .replace(/\b[a-z]/g, (char) => char.toUpperCase())
+    .trim();
+}
+
+/**
+ * Formats a slug into an Android package identifier if not already provided.
+ * E.g. "count-master" -> "com.coreplay.count.master"
+ */
+export function slugToPackageId(slug: string): string {
+  const trimmed = slug.trim().toLowerCase();
+  if (trimmed.startsWith("com.")) {
+    return trimmed;
+  }
+  const clean = trimmed
+    .replace(/[^a-z0-9]/g, ".")
+    .replace(/\.+/g, ".")
+    .replace(/^\.|\.$/g, "");
+  return `com.coreplay.${clean || "app"}`;
+}
+
+/**
+ * Master Privacy Policy Generator modelled directly after the Count-Master (Count Rush) standard.
+ * Used uniformly across all Coreplay applications and games.
+ */
+export function generateCountMasterSections(
+  name: string,
+  packageName: string
+): PolicySection[] {
+  const playStoreLink = `[${name} on Google Play](https://play.google.com/store/apps/details?id=${packageName})`;
+
+  return [
+    {
+      title: "Scope & Overview",
+      content: [
+        `This Privacy Policy applies specifically to **${name}** (package name: \`${packageName}\`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.`,
+        `Inside the application interface and on your device home screen, the application is presented and displayed as **${name}**. We are dedicated to delivering entertaining, responsive, and secure mobile gaming experiences while upholding absolute transparency regarding player privacy, device permissions, and advertising technologies.`,
+      ],
+    },
+    {
+      title: "Application Features & Intended Use",
+      content: [
+        `**${name}** delivers responsive interactive experiences engineered with client-side performance and privacy-first architecture:`,
+        "- **100% Offline Capable:** Core gameplay, mechanics, procedural generation, sound effects, and user interactions are fully playable without an active internet connection.",
+        "- **Zero Account Registration:** We do not mandate registration, account creation, email sign-ups, or social media logins. You use the application completely anonymously.",
+        "- **Optimized Mobile Performance:** Engineered for low battery consumption, rapid startup, and stable frame rates across both entry-level and flagship devices.",
+      ],
+    },
+    {
+      title: "Information Collection & Processing",
+      content: [
+        `**${name}** is engineered around strict data minimization principles:`,
+        "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, physical addresses, telephone numbers, or biometric information. No account registration, password creation, or social media login is ever required to play.",
+        "- **Non-PII Gameplay Metrics (App Interactions):** Aggregated, anonymous gameplay events (such as levels completed, levels failed, session durations, and virtual in-game currency earned) are processed via Firebase Analytics to evaluate track balancing, difficulty curves, and progression.",
+        "- **Device & Performance Telemetry (Diagnostics):** Technical parameters including Android OS version, device model, screen resolution, GPU tier, and frame rate metrics may be sampled to ensure smooth performance and graphics stability across diverse hardware profiles.",
+        "- **Zero Keystroke or Sensor Snooping:** We do not track user keystrokes, personal communications, ambient microphone audio, or camera streams.",
+      ],
+    },
+    {
+      title: "Device Permissions & Hardware Access",
+      content: [
+        `**${name}** requests only standard Android permissions necessary for responsive gameplay, ad delivery, and device ergonomics:`,
+        "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Enables the application to verify network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent forms, and open external links (such as support or this Privacy Policy) when tapped. The game functions seamlessly offline when no connection is present.",
+        "- **Keep Awake / Screen Wake Lock (android.permission.WAKE_LOCK):** Prevents your device screen from dimming or going to sleep during active gameplay stages, ensuring an uninterrupted player experience.",
+        "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile rumble effects during in-game interactions, milestones, and feedback. Vibration can be toggled on or off at any time in the in-game Settings menu.",
+        "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
+        "- **Android Privacy Sandbox (ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS):** Supports modern Android Privacy Sandbox APIs, enabling privacy-preserving ad measurement and attribution without cross-app tracking identifiers.",
+        "- **Google Play Install Referrer (com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE):** Standard Google Play service permission used to measure app installation sources and distribution metrics.",
+        "- **Zero Sensitive Permissions:** The game does NOT request or access your device camera, microphone, GPS location, contact directory, calendar, stored files, photo gallery, or phone call logs.",
+      ],
+    },
+    {
+      title: "Local Storage & Data Persistence",
+      content: [
+        "All player progression and customization data is stored 100% locally on your physical device:",
+        "- **On-Device Profile Storage:** Your level index, total collected in-game currency, unlocked items, cosmetics, and user preferences (audio volume, music, vibration, graphics preset) are saved locally using device application storage (such as `@capacitor/preferences` under `profile.v1`).",
+        "- **Zero Remote Account Synchronization:** We do not maintain remote cloud user accounts, databases, or central player profile servers. Your save file lives solely inside your device's application sandbox.",
+        '- **Complete Player Control:** You retain full ownership of your game data. You can erase all progress at any time via in-game Settings ("Reset progress"), through Android system settings, or by uninstalling the application.',
+      ],
+    },
+    {
+      title: "Third-Party Services & SDK Integrations",
+      content: [
+        `To deliver graphics rendering, gameplay analytics, and free-to-play ad monetization, **${name}** integrates trusted industry SDKs:`,
+        "- **Google Play Services (Google LLC):** Essential for secure application distribution, licensing, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
+        "- **Google AdMob (Google LLC):** Serves interstitial, rewarded video, and app open ads to keep the game free to play for all players without intrusive banner ads. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
+        "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
+        "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to measure level drop-off rates and gameplay performance bottlenecks. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)",
+      ],
+    },
+    {
+      title: "Advertising & Monetization Policy",
+      content: [
+        `**${name}** is a **100% free-to-play** game supported by digital advertising. The game contains **no banner ads**, and utilizes interstitial, rewarded video, and app open ads:`,
+        "- **App Open Ads:** Full-screen advertisements displayed occasionally when the game is launched or resumed from the background, governed by frequency capping and session cooldowns.",
+        "- **Interstitial Ads:** Full-screen advertisements displayed periodically between levels, governed by strict frequency throttling and cooldown timers to prevent gameplay disruption.",
+        "- **Rewarded Video Ads:** Optional, user-initiated video ads that reward players with in-game perks, such as bonus multipliers at the finish line or extra unlock keys. Rewarded ads are never forced and only play when you explicitly choose to watch them.",
+        "- **Consent-Gated Personalization:** We respect your privacy preferences. In regions governed by GDPR, UK GDPR, or CCPA, ads are served in accordance with the consent you grant via the Google UMP consent dialogue.",
+        "- **Advertising ID Management:** You have complete control over your advertising identifier via Android operating system settings:",
+        "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to sever historical activity links.",
+        "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent all apps from accessing your GAID.",
+        "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual ads instead of interest-based ads.",
+      ],
+    },
+    {
+      title: "Google Play Console Data Safety Alignment",
+      content: [
+        "To ensure complete transparency matching our Google Play Console Data Safety declarations, the following data types may be collected and shared with Google services (AdMob and Firebase) strictly for advertising, analytics, and fraud prevention:",
+        "- **Device or other IDs (Google Advertising ID):** Collected and shared with Google AdMob for ad delivery, attribution, and frequency capping.",
+        "- **App Interactions (Gameplay Events):** Aggregated metrics on levels started, completed, or failed, and in-game currency earned, collected and shared with Google Firebase for product analytics.",
+        "- **Diagnostics (Performance Data):** OS version, device model, and frame rate metrics collected and shared with Google for performance evaluation.",
+        "- **Security Practices:** All collected data is encrypted in transit using industry-standard HTTPS/TLS protocols.",
+        '- **Data Deletion:** Players can reset or erase all local game data at any time via in-game Settings ("Reset progress") or Android system settings.',
+      ],
+    },
+    {
+      title: "In-App Purchases & Financial Data (Zero IAP)",
+      content: [
+        `**${name}** contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:`,
+        "- **Completely Free to Play:** All levels, upgrades, cosmetics, and skins are unlockable purely through earned in-game currency and gameplay progression.",
+        "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
+        "- **No Pay-to-Win Mechanics:** There are no subscription fees, paid loot boxes, or microtransactions.",
+      ],
+    },
+    {
+      title: "Analytics, Telemetry & User Choices",
+      content: [
+        `**${name}** collects anonymous, non-personally identifiable telemetry through Google Firebase Analytics to evaluate game stability, difficulty balancing, and level progression:`,
+        "- **Anonymous Gameplay Events:** Telemetry is strictly limited to aggregate game progression events (such as levels started, completed, or failed, and virtual currency earned or spent). No personal identifiers, names, emails, or device-specific sensitive data are collected.",
+        "- **Ad Consent & Privacy Options:** In jurisdictions requiring privacy consent (such as the EEA and UK under GDPR), advertising signals and personalization are managed through Google's User Messaging Platform (UMP). Players can review, modify, or revoke their consent choices at any time by tapping **Privacy options** directly in the in-game **Settings** menu.",
+        "- **System-Level Ad Tracking Controls:** Players who wish to restrict advertising measurement or personalized ads can reset or delete their Google Advertising ID (GAID) at any time through Android system settings (**Settings > Google > Ads**).",
+      ],
+    },
+    {
+      title: "Data Sharing & Disclosure Policy",
+      content: [
+        "Coreplay Technologies **does NOT sell, rent, trade, or lease** your personal data or gameplay records to third-party data brokers or marketing firms.",
+        "We disclose information solely to the trusted infrastructure providers enumerated in this policy (Google LLC) strictly for delivering ads, measuring aggregated app performance, and complying with legal obligations.",
+      ],
+    },
+    {
+      title: "Data Retention & User Deletion Rights",
+      content: [
+        "Because your game progress is stored locally on your device, you possess total autonomy over data deletion:",
+        "- **In-App Progress Reset:** You can reset your currency, unlocked cosmetics, and level progress to factory state by opening the in-game **Settings** and tapping **Reset progress**.",
+        `- **Device System Storage Wipe:** You can clear all local app data through your Android system settings (**Settings > Apps > ${name} > Storage > Clear Data**).`,
+        "- **Application Uninstall:** Removing or uninstalling the game from your Android device permanently eradicates the local sandbox and all associated game save files.",
+      ],
+    },
+    {
+      title: "Data Security Safeguards",
+      content: [
+        "We employ robust technical safeguards to ensure player security:",
+        "- **Local-First Architecture:** By executing all game physics, collision detection, and save operations locally, your game state is never exposed to external cloud data breaches.",
+        "- **Encrypted Network Transit:** Any network communications with Google Play, AdMob, and Firebase are encrypted end-to-end using industry-standard Transport Layer Security (TLS/HTTPS).",
+        "- **OS Sandbox Protection:** Android's security architecture isolates the application's local storage from unauthorized access by third-party applications.",
+      ],
+    },
+    {
+      title: "Children's Privacy & Age Policy (General Audience 13+)",
+      content: [
+        "This game is intended for a general audience and is not directed at children under 13. We do not knowingly collect personal information from children.",
+        `In accordance with our general audience classification, advertisements served within the game may be personalized (subject to user consent) and are not designated as child-directed. In the Google Play Console, the target audience for **${name}** is set to ages 13 and above.`,
+        "If you believe a child has provided data to us, please contact us at **{{contactEmail}}**, and we will delete it promptly.",
+      ],
+    },
+    {
+      title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
+      content: [
+        "Depending on your country or state of residence, you enjoy fundamental privacy rights under data protection legislation including the European Union / United Kingdom General Data Protection Regulation (GDPR / UK GDPR) and California Consumer Privacy Act / California Privacy Rights Act (CCPA / CPRA):",
+        "- **Right to Access & Information:** You have the right to know what data is collected and how it is processed.",
+        '- **Right to Erasure ("Right to be Forgotten"):** You can erase all game data instantly via the in-game Settings or Android system settings.',
+        "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined by the CCPA/CPRA.",
+        "- **Right to Restrict Processing:** Players can manage or revoke advertising personalization choices at any time via the in-game **Privacy options** dialog, or delete their Advertising ID via Android system settings.",
+        "To submit a formal privacy inquiry or exercise statutory rights, contact our Data Protection Officer at **{{contactEmail}}**.",
+      ],
+    },
+    {
+      title: "Changes to this Privacy Policy",
+      content: [
+        'We may periodically revise this Privacy Policy to accommodate new game features, updated SDK guidelines, or evolving regulatory mandates. Any modifications will be posted here with an updated "Last Updated" timestamp at the top of this document.',
+        "We encourage players to review this page periodically. Your continued gameplay following posted changes constitutes acceptance of the revised terms.",
+      ],
+    },
+    {
+      title: "Contact Us & Privacy Officer",
+      content: [
+        `If you have questions, feedback, or privacy-related inquiries regarding **${name}**, please contact our dedicated team:`,
+        "- **Developer & Publisher:** Coreplay Technologies",
+        "- **Privacy Officer Email:** {{contactEmail}}",
+        `- **Google Play Game Listing:** ${playStoreLink}`,
+        `- **Developer Profile:** [Coreplay Technologies on Google Play](${COMMON_DEV_PROFILE})`,
+        "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
+      ],
+    },
+  ];
+}
+
+/**
+ * Creates an AppPrivacyPolicy object from a project entry using the count-master policy.
+ */
+export function buildPolicyFromProject(project: ProjectEntry): AppPrivacyPolicy {
+  const shortName = project.name.split(":")[0].trim();
+  const playStoreUrl = `https://play.google.com/store/apps/details?id=${project.packageName}`;
+
+  return {
+    slug: project.url,
+    aliases: project.aliases || [],
+    appName: project.name,
+    shortName,
+    packageId: project.packageName,
+    category: "Mobile Game / Application",
+    tagline: `Official privacy policy for ${project.name} published by Coreplay Technologies.`,
+    heroDescription: `Official Privacy Policy for ${project.name} (${project.packageName}) published by Coreplay Technologies. Understand our privacy safeguards, general audience classification (13+), local-first on-device data persistence, Google AdMob monetization, Google UMP consent framework, and Firebase Analytics telemetry.`,
+    badgeText: "General Audience (13+) • Local-First • Privacy-First",
+    lastUpdated: COMMON_LAST_UPDATED,
+    metaDescription: `Official Privacy Policy for ${project.name} (${project.packageName}) by Coreplay Technologies. Details game mechanics, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.`,
+    playStoreUrl,
+    sections: generateCountMasterSections(project.name, project.packageName),
+  };
+}
+
+/**
+ * Registry built directly from projects.json
+ */
+export const APP_PRIVACY_POLICIES: Record<string, AppPrivacyPolicy> = {};
+
+// Populate from projects.json
+for (const project of PROJECTS) {
+  APP_PRIVACY_POLICIES[project.url.toLowerCase()] = buildPolicyFromProject(project);
+}
+
+/**
+ * Resolves an AppPrivacyPolicy for any given slug.
+ * 1. Checks matching project in projects.json (by url, packageName, or alias)
+ * 2. If not found in JSON, creates a dynamic project entry on the fly
+ * All policies use the unified count-master privacy policy structure!
+ */
+export function getAppPrivacyPolicy(slug: string): AppPrivacyPolicy | undefined {
+  if (!slug || typeof slug !== "string") {
+    return undefined;
+  }
+
   const normalized = slug.trim().toLowerCase();
 
-  // Direct match
+  // 1. Direct URL match from projects.json
   if (APP_PRIVACY_POLICIES[normalized]) {
     return APP_PRIVACY_POLICIES[normalized];
   }
 
-  // Alias or slug match
-  for (const policy of Object.values(APP_PRIVACY_POLICIES)) {
-    if (policy.slug.toLowerCase() === normalized || policy.aliases.includes(normalized)) {
-      return policy;
+  // 2. Alias or PackageName match from projects.json
+  for (const project of PROJECTS) {
+    if (
+      project.url.toLowerCase() === normalized ||
+      project.packageName.toLowerCase() === normalized ||
+      project.aliases?.some((a) => a.toLowerCase() === normalized)
+    ) {
+      return buildPolicyFromProject(project);
     }
   }
 
-  return undefined;
+  // 3. Fallback: Dynamically generate for ANY new project on the fly
+  if (!/^[a-zA-Z0-9_.-]+$/.test(normalized)) {
+    return undefined;
+  }
+
+  const dynamicProject: ProjectEntry = {
+    name: slugToTitle(slug),
+    url: normalized,
+    packageName: slugToPackageId(slug),
+  };
+
+  return buildPolicyFromProject(dynamicProject);
 }
 
 /**
- * Returns all configured app policies.
+ * Returns all configured app policies from projects.json for the directory cards.
  */
 export function getAllAppPrivacyPolicies(): AppPrivacyPolicy[] {
-  return Object.values(APP_PRIVACY_POLICIES);
+  return PROJECTS.map(buildPolicyFromProject);
 }
 
 /**
- * Returns all canonical slugs for static generation.
+ * Returns all canonical slugs from projects.json for static generation & sitemap.
  */
 export function getAllAppSlugs(): string[] {
-  return Object.keys(APP_PRIVACY_POLICIES);
+  return PROJECTS.map((p) => p.url);
 }
 
 /**
- * Returns all slugs and aliases for routing.
+ * Returns all slugs and recognized aliases for pre-rendering static routes.
  */
 export function getAllRouteSlugs(): string[] {
   const slugs: string[] = [];
-  for (const policy of Object.values(APP_PRIVACY_POLICIES)) {
-    slugs.push(policy.slug);
-    slugs.push(...policy.aliases);
+  for (const project of PROJECTS) {
+    slugs.push(project.url);
+    if (project.aliases) {
+      slugs.push(...project.aliases);
+    }
   }
   return Array.from(new Set(slugs));
 }
