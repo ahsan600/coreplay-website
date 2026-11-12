@@ -249,11 +249,180 @@ export function generateCountMasterSections(
 }
 
 /**
+ * Master Privacy Policy Generator for NickCraft: Nickname Generator.
+ * Tailored specifically for utility/personalization apps with on-device text processing,
+ * AdMob monetization (Banner, App Open, Interstitial, Rewarded, Native), and Firebase Analytics.
+ */
+export function generateNickCraftSections(
+  name: string,
+  packageName: string
+): PolicySection[] {
+  const playStoreLink = `[${name} on Google Play](https://play.google.com/store/apps/details?id=${packageName})`;
+
+  return [
+    {
+      title: "Scope & Overview",
+      content: [
+        `This Privacy Policy applies specifically to **${name}** (package name: \`${packageName}\`), developed, published, and maintained by **Coreplay Technologies** ("we", "our", or "us") on Google Play and authorized Android marketplaces.`,
+        `Inside the application interface and on your device home screen, the application is presented as **${name}**. NickCraft is designed as a creative text styling and nickname personalization tool. We are committed to complete transparency regarding user privacy, on-device text operations, device permissions, advertising technologies, and analytics.`,
+      ],
+    },
+    {
+      title: "Application Features & On-Device Processing",
+      content: [
+        `**${name}** provides instant text styling, font transformation, custom gamer tags, and aesthetic symbol composition engineered with a client-side, local-first architecture:`,
+        "- **100% On-Device Font Styling:** Every font conversion, decorator combination, symbol insertion, and random nickname generation is computed entirely on your device's local processor. Your typed names and creative inputs are never transmitted to external cloud servers.",
+        "- **Offline Capable:** The entire font catalog (80+ styles), 120+ decorator frames, and 1,500+ symbols are stored locally within the application bundle, allowing full functionality without an active internet connection.",
+        "- **Zero Account Registration:** We do not mandate registration, account creation, email sign-ups, or social media logins. You use the application completely anonymously.",
+        "- **Client-Side Clipboard Management:** Tapping to copy a generated nickname or symbol interacts strictly with your device's native system clipboard via official platform APIs. We do not inspect, log, or harvest your clipboard contents.",
+      ],
+    },
+    {
+      title: "Information Collection & Processing",
+      content: [
+        `**${name}** is engineered around strict data minimization principles:`,
+        "- **Zero Personal Identity Harvesting:** We do not collect names, email addresses, phone numbers, contacts, or biometric information. No account registration, password creation, or social login is ever required.",
+        "- **Zero Keystroke or Input Logging:** We do not record, store, or monitor what you type into the nickname input fields.",
+        "- **Non-PII Diagnostic & Usage Telemetry:** Aggregated, anonymous operational events (such as app open, screen navigation, and ad lifecycle milestones) are processed via Google Firebase Analytics to evaluate app stability and diagnose crashes.",
+        "- **Device & Technical Telemetry:** Technical parameters including Android OS version, device model, screen resolution, and memory metrics may be collected to ensure performance across diverse Android hardware.",
+      ],
+    },
+    {
+      title: "Device Permissions & Hardware Access",
+      content: [
+        `**${name}** requests only minimal Android permissions necessary for responsive utility operation, haptic feedback, and ad delivery:`,
+        "- **Network & Internet State (android.permission.INTERNET, android.permission.ACCESS_NETWORK_STATE):** Used to check network connectivity, request advertisements from Google AdMob when connected, retrieve privacy consent dialogs, and open external links (such as support or this Privacy Policy) in your browser. All font generator features continue to function seamlessly offline without an active connection.",
+        "- **Haptic Feedback & Vibration (android.permission.VIBRATE):** Delivers tactile click confirmations when copying nicknames, selecting fonts, or tapping buttons. Haptics can be toggled on or off at any time in the in-app Settings menu.",
+        "- **Google Advertising ID (com.google.android.gms.permission.AD_ID):** Required on Android 13+ for Google AdMob to access your device's Google Advertising ID (GAID) for advertising attribution, frequency capping, and ad fraud prevention. You can reset or delete this identifier at any time via Android system settings.",
+        "- **Android Privacy Sandbox (android.adservices.AD_SERVICES_CONFIG):** Supports modern Android Privacy Sandbox APIs, enabling privacy-preserving ad measurement without cross-app tracking identifiers.",
+        "- **Zero Sensitive Permissions:** The application does NOT request or access your device camera, microphone, GPS location, contact list, calendar, external photo gallery, SMS messages, or phone call logs.",
+      ],
+    },
+    {
+      title: "Local Storage & Data Persistence",
+      content: [
+        "All user preferences and created items are stored 100% locally on your physical device:",
+        "- **On-Device Favorites & History:** Your starred favorite nicknames, custom builder drafts, recent symbols, and UI preferences (dark/light theme, length limit, haptic feedback toggle) are saved locally using device application storage (via `@capacitor/preferences` and browser localStorage).",
+        "- **Zero Cloud Synchronization:** We do not maintain remote cloud user accounts, databases, or central profile servers. Your saved favorites live solely inside your device's private application sandbox.",
+        "- **Complete User Control:** You retain full ownership of your data. You can erase all saved nicknames, history, and preferences at any time directly through in-app Settings, via Android system settings ('Clear Data'), or by uninstalling the application.",
+      ],
+    },
+    {
+      title: "Third-Party Services & SDK Integrations",
+      content: [
+        `To deliver modern app framework capabilities, usage diagnostics, and free ad-supported access, **${name}** integrates trusted industry SDKs:`,
+        "- **Google Play Services (Google LLC):** Essential for secure application distribution, licensing, and platform updates. [Google Privacy Policy](https://policies.google.com/privacy)",
+        "- **Google AdMob (Google LLC):** Serves digital advertisements to support ongoing maintenance and feature development. [Google AdMob Privacy Policy](https://support.google.com/admob/answer/6128543)",
+        "- **Google Firebase Analytics (Google LLC):** Collects aggregated, non-personally identifiable telemetry to evaluate application stability and feature usage. [Firebase Privacy and Security](https://firebase.google.com/support/privacy)",
+        "- **Google User Messaging Platform / UMP (Google LLC):** Manages user consent for personalized advertising, fully compliant with GDPR and the IAB Europe Transparency and Consent Framework (TCF v2). [Google UMP Overview](https://developers.google.com/admob/android/privacy)",
+      ],
+    },
+    {
+      title: "Advertising & Monetization Policy",
+      content: [
+        `**${name}** is a **100% free application** supported by digital advertising. The app integrates the following ad formats powered by Google AdMob:`,
+        "- **Banner Ads:** Persistent banner advertisements displayed in a dedicated container at the bottom of the screen without obstructing your font styling workflow.",
+        "- **App Open Ads:** Full-screen advertisements displayed occasionally when the application is launched cold or resumed from the background, governed by frequency capping and session cooldowns.",
+        "- **Interstitial Ads:** Full-screen advertisements shown periodically between major screen transitions (e.g. periodically on activity resume and back navigation), with throttling to prevent disruption.",
+        "- **Rewarded Ads:** User-initiated video advertisements that may offer optional app perks. Rewarded ads are never forced and only trigger when you explicitly choose to watch them.",
+        "- **Native Ads:** Integrated ad units formatted to match the app's visual style for a cohesive user experience.",
+        "- **Consent-Gated Personalization:** In regions governed by GDPR, UK GDPR, or CCPA, advertisements are served in accordance with your preferences selected in the Google UMP consent dialogue.",
+        "- **Advertising ID Management:** You have complete control over your advertising identifier via Android system settings:",
+        "  - **Reset Advertising ID:** Navigate to **Settings > Google > Ads** and tap **Reset advertising ID** to clear historical association.",
+        "  - **Delete Advertising ID:** On Android 12+, navigate to **Settings > Google > Ads** and tap **Delete advertising ID** to prevent apps from accessing your GAID.",
+        "  - **Opt Out of Personalized Ads:** Toggle **Opt out of Ads Personalization** in your Google settings to receive contextual rather than interest-based ads.",
+      ],
+    },
+    {
+      title: "Google Play Console Data Safety Alignment",
+      content: [
+        "To ensure complete transparency matching our Google Play Console Data Safety declarations, the following data types may be collected and shared with Google services (AdMob and Firebase) strictly for advertising, analytics, and fraud prevention:",
+        "- **Device or other IDs (Google Advertising ID):** Collected and shared with Google AdMob for ad delivery, attribution, and frequency capping.",
+        "- **App Interactions (Usage Events):** Aggregated metrics on app opens and feature navigation, collected and shared with Google Firebase for performance diagnostics.",
+        "- **Diagnostics (Performance Data):** OS version, device model, and crash logs collected and shared with Google for app stability.",
+        "- **Security Practices:** All telemetry and network communication with Google services is encrypted in transit using industry-standard HTTPS/TLS protocols.",
+        "- **Data Deletion:** Users can erase all local app data and saved favorites at any time via in-app Settings or Android system settings.",
+      ],
+    },
+    {
+      title: "In-App Purchases & Financial Data (Zero IAP)",
+      content: [
+        `**${name}** contains **NO In-App Purchases (IAP)** and NO real-money digital storefront:`,
+        "- **Completely Free:** All fonts, decorator frames, symbols, and nickname categories are 100% unlocked and available without payment.",
+        "- **Zero Financial Data Collection:** We do not collect, request, process, or store credit card numbers, banking information, billing addresses, or payment credentials under any circumstances.",
+        "- **No Subscription Fees:** There are no recurring fees or microtransactions.",
+      ],
+    },
+    {
+      title: "Children's Privacy & Age Policy (General Audience 13+)",
+      content: [
+        "This application is designed for a general audience and is not directed toward children under 13 years of age. We do not knowingly collect personal information from children.",
+        `In the Google Play Console, the target audience for **${name}** is designated as ages 13 and above. Advertisements served within the app are managed subject to user consent and general audience guidelines.`,
+        "If you believe a child has provided data to us, please contact us at **{{contactEmail}}**, and we will delete it promptly.",
+      ],
+    },
+    {
+      title: "Global Privacy Rights (GDPR & CCPA/CPRA)",
+      content: [
+        "Depending on your location, you have rights under data protection laws such as the European Union / UK General Data Protection Regulation (GDPR / UK GDPR) and the California Consumer Privacy Act (CCPA / CPRA):",
+        "- **Right to Access & Information:** You have the right to understand what data is collected and how it is processed.",
+        '- **Right to Erasure ("Right to be Forgotten"):** You can erase all local data instantly by clearing app storage or uninstalling the app.',
+        "- **Right to Opt-Out of Data Sale & Sharing:** Coreplay Technologies does not sell or share personal data as defined under CCPA/CPRA.",
+        "- **Right to Restrict Processing:** You can adjust advertising personalization at any time or delete your Advertising ID via Android system settings.",
+        "To submit a formal privacy inquiry, contact our Privacy Officer at **{{contactEmail}}**.",
+      ],
+    },
+    {
+      title: "Changes to this Privacy Policy",
+      content: [
+        'We may periodically revise this Privacy Policy to reflect app updates, new SDK standards, or legal requirements. Any modifications will be posted on this page with an updated "Last Updated" timestamp.',
+        "We encourage users to review this page periodically. Continued use of the application constitutes acceptance of the updated terms.",
+      ],
+    },
+    {
+      title: "Contact Us & Privacy Officer",
+      content: [
+        `If you have questions, feedback, or privacy-related inquiries regarding **${name}**, please contact our dedicated team:`,
+        "- **Developer & Publisher:** Coreplay Technologies",
+        "- **Privacy Officer Email:** {{contactEmail}}",
+        `- **Google Play Store Listing:** ${playStoreLink}`,
+        `- **Developer Profile:** [Coreplay Technologies on Google Play](${COMMON_DEV_PROFILE})`,
+        "- **Response Timeframe:** All inquiries are acknowledged and addressed within 48 to 72 business hours.",
+      ],
+    },
+  ];
+}
+
+/**
  * Creates an AppPrivacyPolicy object from a project entry using the count-master policy.
  */
 export function buildPolicyFromProject(project: ProjectEntry): AppPrivacyPolicy {
   const shortName = project.name.split(":")[0].trim();
   const playStoreUrl = `https://play.google.com/store/apps/details?id=${project.packageName}`;
+
+  const isNickCraft =
+    project.url === "nickname-generator" ||
+    project.packageName === "com.coreplay.nickname" ||
+    project.aliases?.includes("nickcraft") ||
+    project.aliases?.includes("nickname-app");
+
+  if (isNickCraft) {
+    return {
+      slug: project.url,
+      aliases: project.aliases || [],
+      appName: project.name,
+      shortName,
+      packageId: project.packageName,
+      category: "Utility / Personalization Application",
+      tagline: `Official privacy policy for ${project.name} published by Coreplay Technologies.`,
+      heroDescription: `Official Privacy Policy for ${project.name} (${project.packageName}) published by Coreplay Technologies. Learn about our local-first on-device text styling architecture, zero account requirements, Google AdMob monetization (Banner, App Open, Interstitial, Rewarded, Native), Google UMP consent framework, and Firebase Analytics telemetry.`,
+      badgeText: "General Audience (13+) • Local-First • Privacy-First",
+      lastUpdated: COMMON_LAST_UPDATED,
+      metaDescription: `Official Privacy Policy for ${project.name} (${project.packageName}) by Coreplay Technologies. Details on-device font styling, general audience age policy, Google AdMob monetization, Firebase Analytics telemetry, Google UMP consent management, and local data storage.`,
+      playStoreUrl,
+      sections: generateNickCraftSections(project.name, project.packageName),
+    };
+  }
 
   return {
     slug: project.url,
