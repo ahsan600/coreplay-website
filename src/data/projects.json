@@ -51,6 +51,21 @@
     ]
   },
   {
+    "name": "Sky Roll 3D: Rolling Ball Game",
+    "url": "rolling-ball",
+    "packageName": "com.coreplay.rolling.ball",
+    "aliases": [
+      "sky-roll-3d",
+      "sky-roll",
+      "skyroll",
+      "rolling-ball-game",
+      "going-balls",
+      "metal-ball",
+      "com.coreplay.rolling.ball",
+      "com.coreplay.metal.ball"
+    ]
+  },
+  {
     "name": "Dash Race 3D: Fun Parkour Game",
     "url": "parkour-game",
     "packageName": "com.coreplay.race.parkour",
