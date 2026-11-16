@@ -146,5 +146,20 @@
       "hill-climb",
       "com.coreplay.mountain.climb"
     ]
+  },
+  {
+    "name": "Two Dots: Connect Loop Puzzle",
+    "url": "two-dots",
+    "packageName": "com.coreplay.two.dots",
+    "aliases": [
+      "two-dots",
+      "lumi-dots",
+      "lumidots",
+      "two-dots-puzzle",
+      "lumi-dots-connect-loop-puzzle",
+      "dots-puzzle",
+      "connect-dots",
+      "com.coreplay.two.dots"
+    ]
   }
 ]
