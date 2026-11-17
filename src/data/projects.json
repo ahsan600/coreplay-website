@@ -161,5 +161,20 @@
       "connect-dots",
       "com.coreplay.two.dots"
     ]
+  },
+  {
+    "name": "Pin & Thread: One Line Puzzle",
+    "url": "pin-and-thread",
+    "packageName": "com.coreplay.pinthread",
+    "aliases": [
+      "pin-and-thread",
+      "pinthread",
+      "pin-thread",
+      "single-line-drawing",
+      "one-line-drawing",
+      "one-line-puzzle",
+      "pin-and-thread-one-line-puzzle",
+      "com.coreplay.pinthread"
+    ]
   }
 ]

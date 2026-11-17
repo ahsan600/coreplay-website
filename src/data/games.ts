@@ -204,6 +204,35 @@ export const GAMES: Game[] = [
     status: "available",
     releaseYear: "2026",
   },
+  {
+    id: "pin-and-thread-one-line-puzzle",
+    title: "Pin & Thread: One Line Puzzle",
+    packageId: "com.coreplay.pinthread",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.coreplay.pinthread",
+    tagline: "Touch a dot and trace every line in one continuous stroke. A calm hand-drawn sketchbook puzzle.",
+    description: "Pin & Thread: One Line Puzzle is a relaxing one-line drawing puzzle game with a tactile hand-drawn sketchbook aesthetic. Touch a dot, drag your pen, and trace every line of the shape in a single continuous stroke without lifting your finger and without drawing over the same line twice. Journey across 10 aesthetic paper worlds (Sketchbook, Graph Paper, Dot Journal, Blueprint, and more), solve hundreds of procedural and hand-drawn picture puzzles, unlock 14 collectible ink styles, and conquer double-lines and one-way directional arrow challenges.",
+    genre: "Puzzle / Logic / Brain Games",
+    category: "Puzzle",
+    iconUrl: "/images/games/pin-thread/icon.png",
+    bannerUrl: "/images/games/pin-thread/hero-banner.jpg",
+    featureGraphicUrl: "/images/games/pin-thread/hero-banner.jpg",
+    screenshots: [
+      "/images/games/pin-thread/screenshot-1.png",
+      "/images/games/pin-thread/screenshot-2.png",
+      "/images/games/pin-thread/screenshot-3.png",
+      "/images/games/pin-thread/screenshot-4.png",
+    ],
+    features: [
+      "100% on-device procedural puzzle solver and lattice geometry generation",
+      "Dozens of hand-drawn picture shapes: houses, stars, hearts, cats, sailboats & rockets",
+      "Clever puzzle twists including double-lines that require retracing and one-way directional arrows",
+      "Ten handmade paper worlds with unique ruling, ink palettes, and calming Web Audio synthesized melodies",
+      "14 collectible ink and pen styles unlocked through 3-star puzzle mastery",
+      "Daily puzzle mode with streak tracking and 100% offline capability with zero in-app purchases",
+    ],
+    status: "available",
+    releaseYear: "2026",
+  },
 ];
 
 export const APPS: AppItem[] = [
