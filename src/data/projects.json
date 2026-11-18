@@ -176,5 +176,17 @@
       "pin-and-thread-one-line-puzzle",
       "com.coreplay.pinthread"
     ]
+  },
+  {
+    "name": "Block Puzzle: Block Game",
+    "url": "block-puzzle",
+    "packageName": "com.coreplay.block.puzzle",
+    "aliases": [
+      "block-puzzle",
+      "block-game",
+      "block-puzzle-block-game",
+      "block-blast-game",
+      "com.coreplay.block.puzzle"
+    ]
   }
 ]
