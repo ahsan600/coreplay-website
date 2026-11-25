@@ -3,164 +3,65 @@
     "name": "Count Rush: Crowd Runner 3D",
     "url": "count-master",
     "packageName": "com.coreplay.crowdrun",
-    "aliases": [
-      "count-rush",
-      "countrush",
-      "crowd-runner",
-      "crowdrun",
-      "com.coreplay.crowdrun"
-    ]
+    "aliases": ["count-rush", "countrush", "crowd-runner", "crowdrun", "com.coreplay.crowdrun"],
+    "category": "Action Game",
+    "summary": "a 3D crowd runner game"
   },
   {
     "name": "Bridge Race 3D: Stair Builder",
     "url": "bridge-race",
     "packageName": "com.coreplay.bridge.race",
-    "aliases": [
-      "bridge-race-3d",
-      "bridgerace",
-      "brick-isles",
-      "stair-builder",
-      "stair-race",
-      "bridge-builder",
-      "com.coreplay.bridge.race"
-    ]
+    "aliases": ["bridge-race-3d", "bridgerace", "brick-isles", "stair-builder", "stair-race", "bridge-builder", "com.coreplay.bridge.race"],
+    "category": "Casual Game",
+    "summary": "a 3D stair-building race game"
   },
   {
     "name": "Busy Stop: Bus Jam Escape",
     "url": "bus-jam-game",
     "packageName": "com.coreplay.bus.jam.escape",
-    "aliases": [
-      "busy-stop",
-      "busystop",
-      "bus-jam",
-      "bus-jam-escape",
-      "com.coreplay.bus.jam.escape"
-    ]
+    "aliases": ["busy-stop", "busystop", "bus-jam", "bus-jam-escape", "com.coreplay.bus.jam.escape"],
+    "category": "Puzzle Game",
+    "summary": "a bus jam puzzle game"
   },
   {
     "name": "Arrowly: Arrow Escape Puzzle",
     "url": "tap-arrow-away",
     "packageName": "com.coreplay.arrow.escape",
-    "aliases": [
-      "arrow-escape",
-      "arrowly",
-      "tapaway",
-      "tap-arrow-away",
-      "arrowescape",
-      "com.coreplay.arrow.escape"
-    ]
+    "aliases": ["arrow-escape", "arrowly", "tapaway", "tap-arrow-away", "arrowescape", "com.coreplay.arrow.escape"],
+    "category": "Puzzle Game",
+    "summary": "an arrow escape puzzle game"
   },
   {
     "name": "Sky Roll 3D: Rolling Ball Game",
     "url": "rolling-ball",
     "packageName": "com.coreplay.rolling.ball",
-    "aliases": [
-      "sky-roll-3d",
-      "sky-roll",
-      "skyroll",
-      "rolling-ball-game",
-      "going-balls",
-      "metal-ball",
-      "com.coreplay.rolling.ball",
-      "com.coreplay.metal.ball"
-    ]
+    "aliases": ["sky-roll-3d", "sky-roll", "skyroll", "rolling-ball-game", "going-balls", "metal-ball", "com.coreplay.rolling.ball", "com.coreplay.metal.ball"],
+    "category": "Casual Game",
+    "summary": "a 3D rolling ball game"
   },
   {
     "name": "Dash Race 3D: Fun Parkour Game",
     "url": "parkour-game",
     "packageName": "com.coreplay.race.parkour",
-    "aliases": [
-      "dash-run",
-      "dash-race",
-      "dash-race-3d",
-      "parkour-run",
-      "com.coreplay.race.parkour"
-    ]
-  },
-  {
-    "name": "NickCraft: Nickname Generator",
-    "url": "nickname-generator",
-    "packageName": "com.coreplay.nickname",
-    "aliases": [
-      "nickname-app",
-      "nickcraft",
-      "nickname",
-      "nameforge",
-      "com.coreplay.nicknamegenerator",
-      "com.coreplay.nickname"
-    ]
-  },
-  {
-    "name": "ScanCraft: QR & Barcode Scanner",
-    "url": "qrscanner",
-    "packageName": "com.coreplay.qrscanner",
-    "aliases": [
-      "qr-banner-scanner",
-      "qr-scanner",
-      "scanpro",
-      "com.coreplay.qrscanner"
-    ]
-  },
-  {
-    "name": "RepeatIt: Text Repeater",
-    "url": "text-repeater",
-    "packageName": "com.coreplay.textrepeater",
-    "aliases": [
-      "repeatit",
-      "repeat-it",
-      "com.coreplay.textrepeater"
-    ]
-  },
-  {
-    "name": "Tic Tac Toe XO: Strategy Games",
-    "url": "tic-tac-toe",
-    "packageName": "com.coreplay.tictactoe",
-    "aliases": [
-      "tictactoe",
-      "glow-tic-tac-toe",
-      "tic-tac-toe-glow",
-      "com.coreplay.tictactoe"
-    ]
-  },
-  {
-    "name": "TaskFlow: To-Do List & Planner",
-    "url": "todo-list",
-    "packageName": "com.coreplay.todolist",
-    "aliases": [
-      "focusdo",
-      "todolist",
-      "taskflow",
-      "com.coreplay.todolist"
-    ]
+    "aliases": ["dash-run", "dash-race", "dash-race-3d", "parkour-run", "com.coreplay.race.parkour"],
+    "category": "Casual Game",
+    "summary": "a 3D parkour race game"
   },
   {
     "name": "Ridge Rumble: Mountain Climb",
     "url": "mountain-climb",
     "packageName": "com.coreplay.mountain.climb",
-    "aliases": [
-      "ridge-rumble",
-      "ridge-rumble-mountain-climb",
-      "mountainclimb",
-      "ridgerumble",
-      "hill-climbing-game",
-      "hill-climb",
-      "com.coreplay.mountain.climb"
-    ]
+    "aliases": ["ridge-rumble", "ridge-rumble-mountain-climb", "mountainclimb", "ridgerumble", "hill-climbing-game", "hill-climb", "com.coreplay.mountain.climb"],
+    "category": "Racing Game",
+    "summary": "a hill climb driving game"
   },
   {
     "name": "Two Dots: Connect Loop Puzzle",
     "url": "two-dots",
     "packageName": "com.coreplay.two.dots",
-    "aliases": [
-      "two-dots",
-      "lumi-dots",
-      "lumidots",
-      "two-dots-puzzle",
-      "lumi-dots-connect-loop-puzzle",
-      "dots-puzzle",
-      "connect-dots",
-      "com.coreplay.two.dots"
-    ]
+    "aliases": ["two-dots", "lumi-dots", "lumidots", "two-dots-puzzle", "lumi-dots-connect-loop-puzzle", "dots-puzzle", "connect-dots", "com.coreplay.two.dots"],
+    "category": "Puzzle Game",
+    "summary": "a dot-connecting puzzle game"
   },
   {
     "name": "Pin & Thread: One Line Puzzle",
@@ -175,18 +76,157 @@
       "one-line-puzzle",
       "pin-and-thread-one-line-puzzle",
       "com.coreplay.pinthread"
-    ]
+    ],
+    "category": "Puzzle Game",
+    "summary": "a one-line drawing puzzle game"
   },
   {
     "name": "Block Puzzle: Block Game",
     "url": "block-puzzle",
     "packageName": "com.coreplay.block.puzzle",
-    "aliases": [
-      "block-puzzle",
-      "block-game",
-      "block-puzzle-block-game",
-      "block-blast-game",
-      "com.coreplay.block.puzzle"
+    "aliases": ["block-puzzle", "block-game", "block-puzzle-block-game", "block-blast-game", "com.coreplay.block.puzzle"],
+    "category": "Puzzle Game",
+    "summary": "a block puzzle game"
+  },
+  {
+    "name": "Tic Tac Toe XO: Strategy Games",
+    "url": "tic-tac-toe",
+    "packageName": "com.coreplay.tictactoe",
+    "aliases": ["tictactoe", "glow-tic-tac-toe", "tic-tac-toe-glow", "com.coreplay.tictactoe"],
+    "category": "Board Game",
+    "summary": "a Tic Tac Toe and Drop Four strategy game",
+    "crashlytics": true,
+    "features": [
+      "**Offline play:** Matches against the on-device AI, or against a friend on the same device, work without an internet connection.",
+      "**Local stats & replays:** Match history, statistics and replays are stored on your device."
+    ],
+    "storage": [
+      "**Stats, match history & settings:** Stored on your device with on-device preferences. Clear them with **Reset statistics** in Settings, or by clearing the app's storage in Android settings."
+    ]
+  },
+  {
+    "name": "NickCraft: Nickname Generator",
+    "url": "nickname-generator",
+    "packageName": "com.coreplay.nickname",
+    "aliases": ["nickname-app", "nickcraft", "nickname", "nameforge", "com.coreplay.nicknamegenerator", "com.coreplay.nickname"],
+    "type": "app",
+    "category": "Utility App",
+    "summary": "a nickname generator and fancy text styler",
+    "features": [
+      "**On-device text styling:** Font conversion, decorations, symbols and random nickname generation run entirely on your device. What you type is never uploaded.",
+      "**Works offline:** All fonts, decorations and symbols ship inside the app.",
+      "**Copy & share:** Copying writes to your clipboard and sharing uses the Android share sheet, only when you tap them. We do not read your clipboard."
+    ],
+    "storage": [
+      "**Favourites, history & settings:** Saved on your device with on-device preferences. Delete them in the app, or clear the app's storage in Android settings."
+    ]
+  },
+  {
+    "name": "ScanCraft: QR & Barcode Scanner",
+    "url": "qrscanner",
+    "packageName": "com.coreplay.qrscanner",
+    "aliases": ["qr-banner-scanner", "qr-scanner", "scanpro", "com.coreplay.qrscanner"],
+    "type": "app",
+    "category": "Utility App",
+    "summary": "a QR code and barcode scanner and generator",
+    "crashlytics": true,
+    "features": [
+      "**On-device scanning:** The camera preview is analysed in real time by Google ML Kit's on-device barcode model. Camera frames are never stored or uploaded.",
+      "**Scan from an image:** You can pick an image with the Android picker; it is decoded on your device and not uploaded.",
+      "**Code generator:** Create QR codes and barcodes (links, Wi-Fi, contacts, text, locations and more). Images are saved only when you tap Save or Share.",
+      "**Scan history:** Results are kept in a local database on your device so you can find them again.",
+      "**Optional product lookup:** When the setting is on and you scan a product barcode, only the barcode number is sent to the open Open Food Facts database to show the product name."
+    ],
+    "permissions": [
+      {
+        "name": "Camera",
+        "id": "android.permission.CAMERA",
+        "use": "Required to scan codes. Requested the first time you open the scanner; frames are processed on the device only.",
+        "sensitive": "camera"
+      },
+      {
+        "name": "Location",
+        "id": "android.permission.ACCESS_FINE_LOCATION, android.permission.ACCESS_COARSE_LOCATION",
+        "use": "Only used when you tap **Use My Current GPS Position** in the generator to put coordinates into a location QR code. Your location is never collected, stored or shared by us.",
+        "sensitive": "location"
+      }
+    ],
+    "storage": [
+      "**Scan & creation history:** Stored in a private on-device database. Delete single items, clear the history in Settings, or turn history off.",
+      "**Settings:** Theme, sound, vibration and scanner preferences are stored with on-device preferences.",
+      "**Saved images:** Codes you save are written to your device's Documents folder and are under your control."
+    ],
+    "services": [
+      {
+        "name": "Google ML Kit Barcode Scanning (Google LLC)",
+        "use": "On-device model that decodes barcodes. No images are sent to Google for scanning.",
+        "url": "https://developers.google.com/ml-kit/terms"
+      },
+      {
+        "name": "Open Food Facts (optional)",
+        "use": "Receives only the barcode number of a scanned product when Product Lookup is on.",
+        "url": "https://world.openfoodfacts.org/privacy"
+      }
+    ],
+    "dataSafety": [
+      "**Precise location:** Not collected. It is read on the device only when you request it for a location QR code and is never sent by us.",
+      "**Photos & camera:** Not collected. Camera frames and picked images are processed on the device only."
+    ]
+  },
+  {
+    "name": "RepeatIt: Text Repeater",
+    "url": "text-repeater",
+    "packageName": "com.coreplay.textrepeater",
+    "aliases": ["repeatit", "repeat-it", "com.coreplay.textrepeater"],
+    "type": "app",
+    "category": "Utility App",
+    "summary": "a text repeater and fancy text styler",
+    "crashlytics": true,
+    "features": [
+      "**On-device text processing:** Repeating text, separators, numbering, emoji and Unicode font styles are computed entirely on your device. Your text is never uploaded.",
+      "**Templates & styles:** Built-in templates and font styles ship inside the app.",
+      "**Copy, share & save:** Results are copied to your clipboard, shared through the Android share sheet, or saved as a .txt file only when you choose to.",
+      "**History & favourites:** Recent results are kept on your device."
+    ],
+    "storage": [
+      "**History, favourites & settings:** Stored on your device with on-device preferences. Clear them in the app, or via **Settings > Apps > RepeatIt > Storage > Clear data**.",
+      "**Saved text files:** Written to your device's Documents folder only when you tap Save."
+    ]
+  },
+  {
+    "name": "TaskFlow: To-Do List & Planner",
+    "url": "todo-list",
+    "packageName": "com.coreplay.todolist",
+    "aliases": ["focusdo", "todolist", "taskflow", "com.coreplay.todolist"],
+    "type": "app",
+    "category": "Productivity App",
+    "summary": "a to-do list, planner and reminder app",
+    "crashlytics": true,
+    "features": [
+      "**Local-first tasks:** Tasks, subtasks, notes, categories, due dates and repeat rules are stored only on your device.",
+      "**Reminders:** Reminder notifications are scheduled locally by Android; no server is involved.",
+      "**Backup & restore:** You can export a backup file and import it again. The file goes wherever you choose; we never receive it."
+    ],
+    "permissions": [
+      {
+        "name": "Notifications",
+        "id": "android.permission.POST_NOTIFICATIONS",
+        "use": "Shows the task reminders you set."
+      },
+      {
+        "name": "Exact Alarms",
+        "id": "android.permission.SCHEDULE_EXACT_ALARM",
+        "use": "Delivers reminders at the exact time you chose. Android may open the \"Alarms & reminders\" screen so you can allow this."
+      },
+      {
+        "name": "Run at Startup",
+        "id": "android.permission.RECEIVE_BOOT_COMPLETED",
+        "use": "Restores your scheduled reminders after the device restarts."
+      }
+    ],
+    "storage": [
+      "**Tasks, categories & settings:** Stored on your device with on-device preferences. Delete individual tasks, empty the Trash, use **Reset App Data** in Settings, or clear the app's storage in Android settings.",
+      "**Backups:** Backup files you export are stored wherever you save or share them."
     ]
   }
 ]

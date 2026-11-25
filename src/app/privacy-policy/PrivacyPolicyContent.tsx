@@ -2,9 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import config from '@/data/privacy-policy.json';
 import { useTheme } from '@/components/ui/ThemeProvider';
-import { getAllAppPrivacyPolicies } from '@/data/app-privacy-policies';
+import { getAllAppPrivacyPolicies, UNIVERSAL_POLICY as config } from '@/data/app-privacy-policies';
 
 export interface PrivacyPolicyContentProps {
   data?: {

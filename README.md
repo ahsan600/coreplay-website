@@ -47,6 +47,35 @@ npm run start
 
 ---
 
+## Privacy Policies
+
+Every app's policy (`/privacy-policy/<url>`) and the universal policy (`/privacy-policy`) are generated from one template. The policy text is never written per app.
+
+| File | What it holds |
+| --- | --- |
+| `src/data/projects.json` | Per-app data. **The only file to edit when you add or change an app.** |
+| `src/data/policy/template.ts` | The shared policy text (AdMob, UMP, Firebase, Data safety, deletion, permissions, rights, contact…). |
+| `src/data/policy/site.ts` | Developer name, contact email, "Last updated" date. |
+
+**Add a new game**: append this to `projects.json`. Everything else (ads, Firebase, Data safety, offline play, on-device progress, deletion steps) comes from the template:
+
+```json
+{
+  "name": "My Game: Subtitle",
+  "url": "my-game",
+  "packageName": "com.coreplay.my.game",
+  "aliases": ["my-game-alias"],
+  "category": "Puzzle Game",
+  "summary": "a puzzle game"
+}
+```
+
+Optional fields (see `ProjectEntry` in `template.ts`): `"type": "app"` for non-games, `crashlytics: true`, `features`, `storage`, `permissions` (e.g. camera, with `"sensitive": "camera"`), `services` (extra third-party SDKs) and `dataSafety` (extra "not collected" notes). When an app's SDKs or permissions change, update its entry and bump `lastUpdated` in `site.ts`.
+
+**Play Console Data safety**: every app uses the same answers (approximate location, crash logs, diagnostics, app interactions, device IDs; collected and shared for analytics and advertising). The policy's "Google Play Data Safety" section mirrors them; if those answers ever change, update `DATA_SAFETY_TYPES` in `template.ts`. Use the app's policy URL (e.g. `https://coreplay-site.netlify.app/privacy-policy/count-master`) as both the privacy policy URL and the "Delete data URL"; the page has a "How to Delete Your Data" section.
+
+---
+
 ## Deploy to Netlify
 
 This repository includes a pre-configured `netlify.toml` optimized for Next.js App Router on **[Netlify](https://www.netlify.com/)**:
