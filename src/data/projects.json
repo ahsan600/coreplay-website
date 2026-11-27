@@ -16,12 +16,12 @@
     "summary": "a 3D stair-building race game"
   },
   {
-    "name": "Busy Stop: Bus Jam Escape",
-    "url": "bus-jam-game",
+    "name": "Bus Jam Escape: Parking Puzzle",
+    "url": "bus-jam-escape",
     "packageName": "com.coreplay.bus.jam.escape",
-    "aliases": ["busy-stop", "busystop", "bus-jam", "bus-jam-escape", "com.coreplay.bus.jam.escape"],
+    "aliases": ["bus-jam-escape-parking-puzzle", "bus-jam-game", "busy-stop", "busystop", "bus-jam", "com.coreplay.bus.jam.escape"],
     "category": "Puzzle Game",
-    "summary": "a bus jam puzzle game"
+    "summary": "a bus jam parking puzzle game"
   },
   {
     "name": "Arrowly: Arrow Escape Puzzle",
